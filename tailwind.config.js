@@ -1,5 +1,18 @@
 const colors = require('tailwindcss/colors')
 
+const pink = {
+  50: "#ffe6f2",
+  100: "#ffcde6",
+  200: "#ff9acc",
+  300: "#ff68b3",
+  400: "#ff3599",
+  500: "#ff0380",
+  600: "#cc0266",
+  700: "#99024d",
+  800: "#660133",
+  900: "#33011a",
+};
+
 module.exports = {
   darkMode: 'class',
   plugins: [
@@ -10,7 +23,8 @@ module.exports = {
     extend: {
       colors: {
         // Customize the feeling of your site
-        gray: colors.stone
+        gray: colors.stone,
+        pink: pink
       }
     }
   }
