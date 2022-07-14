@@ -1,25 +1,22 @@
-import { defineNuxtConfig } from 'nuxt'
+import { defineNuxtConfig } from "nuxt";
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
-  modules: [
-    '@nuxt/content',
-    '@nuxtjs/tailwindcss',
-    '@nuxtjs/color-mode'
-  ],
+  target: "static",
+  modules: ["@nuxt/content", "@nuxtjs/tailwindcss", "@nuxtjs/color-mode"],
   // https://color-mode.nuxtjs.org
   colorMode: {
-    classSuffix: ''
+    classSuffix: "",
   },
   // https://content.nuxtjs.org
   content: {
     documentDriven: true,
     navigation: {
-      fields: ['navTitle']
+      fields: ["navTitle"],
     },
     highlight: {
       // See the available themes on https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-theme
-      theme: 'dracula'
-    }
-  }
-})
+      theme: "dracula",
+    },
+  },
+});

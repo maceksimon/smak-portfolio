@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-const { navigation } = useContent()
+const { navigation } = useContent();
 </script>
 
 <template>
-  <div class="flex justify-between max-w-2xl px-4 py-4 mx-auto sm:px-8">
+  <div class="mx-auto flex max-w-2xl justify-between px-4 py-4 sm:px-8">
     <!-- Navigation -->
     <div class="text-gray-700 dark:text-gray-200">
       <NuxtLink
@@ -18,8 +18,18 @@ const { navigation } = useContent()
     </div>
     <!-- Social icons & Color Mode -->
     <div class="space-x-3 text-gray-500 transition">
-      <a href="https://twitter.com/maceksimon1" title="Twitter" class="hover:text-gray-700 dark:hover:text-gray-300"><Icon name="fa-brands:twitter" /></a>
-      <a href="https://github.com/maceksimon" title="GitHub" class="hover:text-gray-700 dark:hover:text-gray-300"><Icon name="fa-brands:github" /></a>
+      <a
+        href="https://twitter.com/maceksimon1"
+        title="Twitter"
+        class="hover:text-gray-700 dark:hover:text-gray-300"
+        ><Icon name="fa-brands:twitter"
+      /></a>
+      <a
+        href="https://github.com/maceksimon"
+        title="GitHub"
+        class="hover:text-gray-700 dark:hover:text-gray-300"
+        ><Icon name="fa-brands:github"
+      /></a>
       <ColorModeSwitch class="hover:text-gray-700 dark:hover:text-gray-300" />
     </div>
   </div>
