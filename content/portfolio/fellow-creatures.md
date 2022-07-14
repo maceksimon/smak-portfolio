@@ -4,6 +4,7 @@ head.description: Find out how I developed the e-commerce website on Shopify tha
 head.image: /og/fellow-creatures.jpg
 fields.image: /og/fellow-creatures.jpg
 fields.order: 100
+fields.skills: ["Shopify", "Liquid", "Tailwind CSS"]
 ---
 
 # Tasty treat: Designing a vegan chocolate eshop
