@@ -12,5 +12,5 @@
 </template>
 
 <script setup>
-const { data } = await useAsyncData('portfolio', () => queryContent('/portfolio').find())
+const { data } = await useAsyncData('portfolio', () => queryContent('/portfolio').sort({ 'fields.order': 1 }).find())
 </script>

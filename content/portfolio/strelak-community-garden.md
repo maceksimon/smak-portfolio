@@ -2,6 +2,7 @@
 head.title: Strelak Community Garden
 head.description: Creating a website that helps to build a community. A heartwarming work.
 head.image: /og/community-garden.jpg
+fields.order: 400
 ---
 
 # Watch it grow: Developing a community garden website

@@ -3,6 +3,7 @@ head.title: Fellow Creatures Store
 head.description: Find out how I developed the e-commerce website on Shopify that sells vegan chocolates.
 head.image: /og/fellow-creatures.jpg
 fields.image: /og/fellow-creatures.jpg
+fields.order: 100
 ---
 
 # Tasty treat: Designing a vegan chocolate eshop

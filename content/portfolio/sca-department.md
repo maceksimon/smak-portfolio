@@ -2,6 +2,7 @@
 head.title: University department website
 head.description: How to present a large variety of content to students and alumni? Let's find out!
 head.image: /og/sca-department.jpg
+fields.order: 300
 ---
 
 # Learning together: A university department website

@@ -2,6 +2,7 @@
 head.title: Upupaepop
 head.description: Redesigning a Wix site and switching to an open source e-commerce? Piece of cake! 🍰
 head.image: /og/upupaepop.jpg
+fields.order: 200
 ---
 
 My client for this project was Jakub. He is a designer and a typographer and he owns a small printing studio. He wanted to cut down on a maintenance costs of his Wix site and combine his web with an eshop. By utilizing open source software, we managed to reduce the maintenance costs to a minimum and concentrate all the important information in one place.
