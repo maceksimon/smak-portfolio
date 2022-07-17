@@ -29,7 +29,7 @@
 const { data } = await useAsyncData("portfolio", () =>
   queryContent("portfolio")
     // do not fetch the root page
-    .where({ _path: { $ne: "/portfolio" } })
+    .where({ featured: true })
     .sort({ "fields.order": 1 })
     .find()
 );

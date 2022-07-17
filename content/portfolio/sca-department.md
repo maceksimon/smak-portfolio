@@ -4,6 +4,7 @@ head.description: How to present a large variety of content to students and alum
 head.image: /og/sca-department.jpg
 fields.image: /og/sca-department.jpg
 fields.order: 300
+featured: true
 ---
 
 # Learning together: A university department website
