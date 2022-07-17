@@ -10,6 +10,7 @@ export default defineNuxtConfig({
   },
   // https://content.nuxtjs.org
   content: {
+    // note that this option has multiple effects https://content.nuxtjs.org/guide/writing/document-driven
     documentDriven: true,
     navigation: {
       fields: ["navTitle"],
