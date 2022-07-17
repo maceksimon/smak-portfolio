@@ -1,0 +1,5 @@
+<template>
+  <div class="mx-auto max-w-2xl px-4 sm:px-8">
+    <Markdown unwrap="div" />
+  </div>
+</template>
