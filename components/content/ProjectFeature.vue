@@ -26,7 +26,7 @@
 </template>
 
 <script setup>
-const { data } = await useAsyncData("portfolio", () =>
+const { data } = await useAsyncData("portfolioFeature", () =>
   queryContent("portfolio")
     // do not fetch the root page
     .where({ featured: true })

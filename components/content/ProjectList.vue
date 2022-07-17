@@ -26,7 +26,7 @@
 </template>
 
 <script setup>
-const { data } = await useAsyncData("portfolio", () =>
+const { data } = await useAsyncData("portfolioMain", () =>
   queryContent("portfolio")
     // do not fetch the root page
     .where({ _path: { $ne: "/portfolio" } })
