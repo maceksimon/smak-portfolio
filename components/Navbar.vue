@@ -22,14 +22,16 @@ const { navigation } = useContent();
         href="https://twitter.com/maceksimon1"
         title="Twitter"
         class="hover:text-gray-700 dark:hover:text-gray-300"
-        ><Icon name="fa-brands:twitter"
-      /></a>
+      >
+        <Icon name="fa-brands:twitter" />
+      </a>
       <a
         href="https://github.com/maceksimon"
         title="GitHub"
         class="hover:text-gray-700 dark:hover:text-gray-300"
-        ><Icon name="fa-brands:github"
-      /></a>
+      >
+        <Icon name="fa-brands:github" />
+      </a>
       <ColorModeSwitch class="hover:text-gray-700 dark:hover:text-gray-300" />
     </div>
   </div>
