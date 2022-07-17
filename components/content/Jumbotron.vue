@@ -13,7 +13,7 @@
     <div class="mt-6 sm:mt-12 sm:flex sm:justify-center lg:justify-start">
       <div class="rounded-md shadow">
         <a
-          href="#"
+          :href="props.link1"
           class="flex w-full items-center justify-center rounded-md border border-transparent bg-purple-600 px-4 py-2 text-base font-semibold text-white hover:bg-purple-700 md:py-4 md:px-10 md:text-lg"
         >
           {{ props.button1 }}
@@ -21,7 +21,7 @@
       </div>
       <div class="mt-3 sm:mt-0 sm:ml-3">
         <a
-          href="#"
+          :href="props.link2"
           class="flex w-full items-center justify-center rounded-md border border-transparent bg-purple-100 px-4 py-2 text-base font-semibold text-purple-700 hover:bg-purple-200 md:py-4 md:px-10 md:text-lg"
         >
           {{ props.button2 }}
@@ -35,5 +35,7 @@
 const props = defineProps({
   button1: { type: String, default: "" },
   button2: { type: String, default: "" },
+  link1: { type: String, default: "" },
+  link2: { type: String, default: "" },
 });
 </script>
