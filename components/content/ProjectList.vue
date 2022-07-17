@@ -13,7 +13,7 @@
     </div>
     <ul
       v-if="data?.length"
-      class="mx-auto my-8 grid list-none gap-10 p-0 sm:my-12 lg:grid-cols-2"
+      class="mx-auto my-8 grid list-none gap-6 p-0 sm:my-12 lg:grid-cols-2 lg:gap-10"
     >
       <li v-for="item in data" :key="item._id" class="mb-6">
         <!-- could be wrapped into a component -->
