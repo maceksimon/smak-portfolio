@@ -12,4 +12,12 @@
 body {
   @apply bg-gray-50 dark:bg-gray-900;
 }
+/* Customize headers to remove default underline */
+.prose h2 a,
+.prose h3 a {
+  @apply no-underline;
+  &:hover {
+    @apply border-b border-neutral-600 dark:border-neutral-300;
+  }
+}
 </style>
