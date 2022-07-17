@@ -1,8 +1,8 @@
 <template>
   <div class="not-prose">
-    <ul v-if="data?.length" class="list-none p-0">
+    <div v-if="data?.length" class="grid divide-y">
       <ArticleTeaser v-for="post in data" :post="post" :key="post.id" />
-    </ul>
+    </div>
   </div>
 </template>
 

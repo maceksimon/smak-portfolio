@@ -1,9 +1,30 @@
 <template>
-  <div>
+  <div class="py-6 lg:py-8">
+    <a
+      v-if="post?.fields?.image"
+      :href="post?._path"
+      class="group relative block"
+    >
+      <img :src="post.fields?.image" :alt="post.fields?.imageAlt" />
+      <div
+        class="absolute inset-0 flex h-full w-full items-center justify-center bg-purple-900 bg-opacity-0 text-white transition-all duration-300 ease-in group-hover:bg-opacity-90"
+      >
+        <div
+          class="flex items-center space-x-2 text-xl font-bold opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        >
+          <span>Read More</span>
+          <Icon
+            class="mt-1 h-5 w-5 text-purple-400"
+            aria-hidden="true"
+            name="majesticons:fast-forward-line"
+          />
+        </div>
+      </div>
+    </a>
     <div v-if="post?.fields?.tags?.length" class="-mx-2 mt-4 flex flex-wrap">
       <div v-for="tag in post.fields.tags" :key="tag" class="px-2">
         <span
-          class="inline-flex items-center rounded-full bg-pink-100 px-2.5 py-0.5 text-xs font-medium text-pink-800"
+          class="inline-flex items-center rounded-full bg-teal-100 px-2.5 py-0.5 text-xs font-medium text-teal-900"
         >
           {{ tag }}
         </span>
