@@ -19,11 +19,11 @@
         </div>
         <!-- component would end here -->
         <ul
-          v-if="item?.fields?.skills?.length"
+          v-if="item?.fields?.tags?.length"
           role="list"
           class="-mx-2 mt-4 flex flex-wrap"
         >
-          <li v-for="skill in item.fields.skills" class="px-2" :key="skill">
+          <li v-for="skill in item.fields.tags" class="px-2" :key="skill">
             <span
               class="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800"
             >
@@ -56,11 +56,10 @@
 </template>
 
 <script setup>
-const { data } = await useAsyncData("portfolio", () =>
-  queryContent("portfolio")
+const { data } = await useAsyncData("blog", () =>
+  queryContent("blog")
     // do not fetch the root page
-    .where({ _path: { $ne: "/portfolio" } })
-    .sort({ "fields.order": 1 })
+    .where({ _path: { $ne: "/blog" } })
     .find()
 );
 </script>
