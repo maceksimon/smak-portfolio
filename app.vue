@@ -20,4 +20,7 @@ body {
     @apply border-b border-neutral-600 dark:border-neutral-300;
   }
 }
+.prose img {
+  @apply rounded-sm;
+}
 </style>
