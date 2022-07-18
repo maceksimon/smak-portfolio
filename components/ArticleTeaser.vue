@@ -23,7 +23,7 @@
     <div v-if="post?.fields?.tags?.length" class="-mx-2 mt-4 flex flex-wrap">
       <div v-for="tag in post.fields.tags" :key="tag" class="px-2">
         <span
-          class="inline-flex items-center rounded-full bg-teal-100 px-2.5 py-0.5 text-xs font-medium text-teal-900"
+          class="inline-flex items-center rounded-full border border-teal-200 bg-teal-100 px-2.5 py-0.5 text-xs font-medium text-teal-900 dark:border-teal-100"
         >
           {{ tag }}
         </span>
