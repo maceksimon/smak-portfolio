@@ -21,21 +21,6 @@
         />
       </div>
     </a>
-    <a
-      v-if="project?._path"
-      class="mt-4 block text-purple-900 transition-colors duration-75 ease-out hover:text-black dark:text-purple-100 dark:hover:text-white"
-      :href="project._path"
-    >
-      <h2 v-if="project?.title" class="text-xl font-bold lg:text-2xl">
-        {{ project.title }}
-      </h2>
-    </a>
-    <div v-else>
-      <h2 v-if="project?.title" class="text-xl font-bold lg:text-2xl">
-        {{ project.title }}
-      </h2>
-    </div>
-    <!-- component would end here -->
     <ul
       v-if="project?.fields?.skills?.length"
       role="list"
@@ -43,14 +28,37 @@
     >
       <li v-for="skill in project.fields.skills" class="px-2" :key="skill">
         <span
-          class="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800"
+          class="inline-flex items-center rounded-full bg-rose-100 px-2.5 py-0.5 text-xs font-medium text-rose-800"
         >
           {{ skill }}
         </span>
       </li>
     </ul>
-    <div v-if="project?.description" class="mt-4">
-      {{ project.description }}
+    <a
+      v-if="project?._path"
+      class="mt-4 block text-purple-800 transition-colors duration-150 ease-out hover:text-purple-900 dark:text-purple-300 dark:hover:text-purple-100"
+      :href="project._path"
+    >
+      <h2 v-if="project?.title" class="text-xl font-bold lg:text-2xl">
+        {{ project.title }}
+      </h2>
+      <div
+        v-if="project?.description"
+        class="mt-3 text-base text-gray-800 dark:text-gray-300"
+      >
+        {{ project.description }}
+      </div>
+    </a>
+    <div v-else>
+      <h2 v-if="project?.title" class="text-xl font-bold lg:text-2xl">
+        {{ project.title }}
+      </h2>
+      <div
+        v-if="project?.description"
+        class="mt-3 text-base text-gray-800 dark:text-gray-300"
+      >
+        {{ project.description }}
+      </div>
     </div>
   </div>
 </template>

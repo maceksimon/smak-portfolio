@@ -32,7 +32,7 @@
     <a
       v-if="post.title || post.description"
       :href="post._path"
-      class="mt-4 block text-purple-800 transition-colors duration-75 ease-out hover:text-purple-900 dark:text-purple-300 dark:hover:text-purple-200"
+      class="mt-4 block text-purple-800 transition-colors duration-150 ease-out hover:text-purple-900 dark:text-purple-300 dark:hover:text-purple-100"
     >
       <p class="text-xl font-bold lg:text-2xl">
         {{ post.title }}
