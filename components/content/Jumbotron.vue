@@ -17,7 +17,7 @@
       <div class="rounded-md shadow">
         <a
           :href="link1"
-          class="flex w-full items-center justify-center rounded-md border border-transparent bg-purple-600 px-4 py-2 text-base font-semibold text-white hover:bg-purple-700 md:py-3 md:px-7 md:text-lg"
+          class="bg-gradient-animated flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-violet-700 via-pink-600 to-purple-600 px-4 py-2 text-base font-semibold text-white hover:bg-purple-700 md:py-3 md:px-7 md:text-lg"
         >
           {{ button1 }}
         </a>

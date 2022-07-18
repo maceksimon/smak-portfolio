@@ -23,4 +23,15 @@ body {
 .prose img {
   @apply rounded-sm;
 }
+
+.bg-gradient-animated {
+  background-size: 300% 100%;
+  moz-transition: background-position 0.4s ease-in-out;
+  -o-transition: background-position 0.4s ease-in-out;
+  -webkit-transition: background-position 0.4s ease-in-out;
+  transition: background-position 0.4s ease-in-out;
+}
+.bg-gradient-animated:hover {
+  background-position: 100% 0;
+}
 </style>
