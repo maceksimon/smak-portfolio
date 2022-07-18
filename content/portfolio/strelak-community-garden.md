@@ -4,6 +4,8 @@ head.description: Creating a website that helps to build a community. A heartwar
 head.image: /og/community-garden.jpg
 fields.image: /og/community-garden.jpg
 fields.order: 400
+featured: false
+type: "full"
 ---
 
 # Watch it grow: Developing a community garden website

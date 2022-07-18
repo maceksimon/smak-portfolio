@@ -5,6 +5,7 @@ head.image: /og/sca-department.jpg
 fields.image: /og/sca-department.jpg
 fields.order: 300
 featured: true
+type: "full"
 ---
 
 # Learning together: A university department website

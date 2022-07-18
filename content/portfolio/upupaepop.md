@@ -6,6 +6,7 @@ fields.image: /og/upupaepop.jpg
 fields.order: 200
 fields.skills: ["WordPress", "WooCommerce"]
 featured: true
+type: "full"
 ---
 
 # Letterpress in WordPress: Print studio portfolio
