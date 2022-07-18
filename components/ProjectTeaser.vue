@@ -8,18 +8,17 @@
     >
       <img :src="project.fields?.image" :alt="project.fields?.imageAlt" />
       <div
-        class="absolute inset-0 flex h-full w-full items-center justify-center bg-violet-900 bg-opacity-0 text-white transition-all duration-300 ease-in group-hover:bg-opacity-90"
+        class="absolute inset-0 flex h-full w-full items-center justify-center bg-gradient-to-br from-purple-900 via-violet-900 to-gray-900 opacity-0 transition-opacity duration-300 ease-in group-hover:opacity-90"
+      ></div>
+      <div
+        class="absolute inset-0 z-10 flex h-full w-full items-center justify-center space-x-2 text-xl font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"
       >
-        <div
-          class="flex items-center space-x-2 text-xl font-bold opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-        >
-          <span>Explore</span>
-          <Icon
-            class="mt-1 h-5 w-5 text-violet-400"
-            aria-hidden="true"
-            name="majesticons:fast-forward-line"
-          />
-        </div>
+        <span>Explore</span>
+        <Icon
+          class="mt-1 h-5 w-5 text-violet-400"
+          aria-hidden="true"
+          name="majesticons:fast-forward-line"
+        />
       </div>
     </a>
     <a
