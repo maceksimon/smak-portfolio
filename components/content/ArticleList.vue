@@ -1,7 +1,12 @@
 <template>
-  <div class="not-prose">
-    <div v-if="data?.length" class="grid divide-y">
-      <ArticleTeaser v-for="post in data" :post="post" :key="post.id" />
+  <div>
+    <DivisionPill>
+      <Markdown :use="$slots.default" unwrap="p" />
+    </DivisionPill>
+    <div class="not-prose">
+      <div v-if="data?.length" class="grid divide-y">
+        <ArticleTeaser v-for="post in data" :post="post" :key="post.id" />
+      </div>
     </div>
   </div>
 </template>
