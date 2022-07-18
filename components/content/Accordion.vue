@@ -3,7 +3,7 @@
     <DivisionPill v-if="$slots.default">
       <Markdown :use="$slots.default" unwrap="p" />
     </DivisionPill>
-    <dl class="space-y-6 divide-y divide-gray-200">
+    <dl class="space-y-6 divide-y divide-gray-200 dark:divide-gray-600">
       <Disclosure
         as="div"
         v-for="faq in faqs"
@@ -13,9 +13,11 @@
       >
         <dt class="text-lg">
           <DisclosureButton
-            class="flex w-full items-start justify-between text-left text-gray-400"
+            class="group flex w-full items-start justify-between text-left text-gray-400"
           >
-            <span class="font-medium text-gray-900">
+            <span
+              class="font-semibold text-gray-900 transition-colors duration-150 ease-out group-hover:text-purple-400 dark:text-gray-200"
+            >
               {{ faq.question }}
             </span>
             <span class="ml-6 flex h-7 items-center">
@@ -31,7 +33,7 @@
           </DisclosureButton>
         </dt>
         <DisclosurePanel as="dd" class="mt-2 pr-12">
-          <p class="text-base text-gray-500">
+          <p class="text-base text-gray-500 dark:text-gray-300">
             {{ faq.answer }}
           </p>
         </DisclosurePanel>
