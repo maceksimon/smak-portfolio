@@ -1,6 +1,6 @@
 <template>
-  <div class="my-8 sm:my-12">
-    <DivisionPill>
+  <section class="my-8 sm:my-12">
+    <DivisionPill v-if="$slots.default">
       <Markdown :use="$slots.default" unwrap="p" />
     </DivisionPill>
     <div
@@ -54,7 +54,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
