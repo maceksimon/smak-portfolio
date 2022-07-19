@@ -5,8 +5,20 @@
     <Meta name="twitter:card" content="summary_large_image" />
     <Navbar />
     <NuxtPage />
+    <ContactModal />
   </div>
 </template>
+
+<script setup>
+const open = ref(false);
+
+function toggleModal() {
+  open.value = !open.value;
+}
+
+provide("toggleModal", toggleModal);
+provide("open", open);
+</script>
 
 <style lang="postcss">
 body {

@@ -29,7 +29,13 @@
             </NuxtLink>
           </div>
           <!-- Social icons & Color Mode -->
-          <div class="space-x-3 text-gray-500 transition">
+          <div id="navbar-icons" class="space-x-3 text-gray-500 transition">
+            <button
+              @click="toggleModal()"
+              class="hover:text-gray-700 dark:hover:text-gray-300"
+            >
+              <Icon name="mi:email" class="h-5 w-auto" />
+            </button>
             <a
               href="https://twitter.com/maceksimon1"
               title="Twitter"
@@ -118,5 +124,8 @@
 
 <script lang="ts" setup>
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/vue";
+
+const toggleModal = inject("toggleModal");
+
 const { navigation } = useContent();
 </script>
