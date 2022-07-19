@@ -57,7 +57,7 @@
               as="template"
               v-for="option in jobOptions"
               :key="option.name"
-              :value="option"
+              :value="option.name"
               v-slot="{ active, checked }"
             >
               <div
