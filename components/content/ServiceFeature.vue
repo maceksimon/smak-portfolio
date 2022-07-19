@@ -38,12 +38,12 @@
                 {{ service.title }}
               </a>
             </h3>
-            <p
+            <div
               v-if="$slots[service.key]"
               class="mt-4 text-sm text-gray-600 dark:text-gray-300"
             >
               <Markdown :use="$slots[service.key]" unwrap="p" />
-            </p>
+            </div>
           </div>
           <ul role="list" class="mt-6 flex space-x-4">
             <li v-for="logo in service.logos" :key="logo.name">
