@@ -1,22 +1,19 @@
 <template>
-  <p
+  <div
     v-if="validator.$errors.length"
-    class="absolute -bottom-6 text-sm text-red-700"
+    class="absolute -bottom-6 text-sm text-pink-700 dark:text-pink-300"
   >
     <span v-for="error in validator.$errors" :key="error.$validator">
       {{ error.$message }}
     </span>
-  </p>
+  </div>
 </template>
 
-<script>
-export default {
-  name: "ErrorDisplay",
-  props: {
-    validator: {
-      type: Object,
-      default: () => {},
-    },
+<script setup>
+const props = defineProps({
+  validator: {
+    type: Object,
+    default: () => {},
   },
-};
+});
 </script>

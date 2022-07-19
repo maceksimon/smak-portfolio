@@ -21,6 +21,7 @@
           >&#8203;</span
         >
         <div
+          :class="{ 'animate-shake': v.$error }"
           class="relative inline-block transform overflow-hidden rounded-lg bg-white text-left align-bottom text-gray-800 shadow-xl transition-all dark:bg-gray-800 dark:text-gray-200 sm:my-8 sm:w-full sm:max-w-lg sm:align-middle"
         >
           <!-- Render the modal content -->
@@ -101,7 +102,7 @@
             <button
               type="button"
               class="bg-gradient-animated flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-violet-700 via-pink-600 to-purple-600 px-4 py-2 text-base font-semibold text-white hover:bg-purple-700 md:py-3 md:px-7 md:text-lg"
-              @click.prevent="handleSubmit"
+              @click.prevent="handleSubmit()"
             >
               Send
             </button>

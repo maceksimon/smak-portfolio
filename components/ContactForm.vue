@@ -23,7 +23,7 @@
           class="focus:border-primary-500 focus:ring-primary-500 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-inset focus:ring-violet-500 dark:border-gray-500 dark:bg-gray-700 dark:text-white sm:text-sm"
           @blur="validations.name.$touch"
         />
-        <!-- <ErrorDisplay :validator="validations.name" /> -->
+        <ErrorDisplay :validator="validations.name" />
       </div>
 
       <div class="relative col-span-8 lg:col-span-4">
@@ -42,7 +42,7 @@
           class="focus:border-primary-500 focus:ring-primary-500 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-inset focus:ring-violet-500 dark:border-gray-500 dark:bg-gray-700 dark:text-white sm:text-sm"
           @blur="validations.email.$touch"
         />
-        <!-- <ErrorDisplay :validator="validations.email" /> -->
+        <ErrorDisplay :validator="validations.email" />
       </div>
 
       <div class="col-span-8">
@@ -102,7 +102,6 @@
 <script setup>
 import { computed } from "vue";
 import { RadioGroup, RadioGroupLabel, RadioGroupOption } from "@headlessui/vue";
-import ErrorDisplay from "./ErrorDisplay";
 
 const props = defineProps({
   modelValue: {
