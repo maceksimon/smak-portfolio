@@ -20,4 +20,7 @@ export default defineNuxtConfig({
       theme: "dracula",
     },
   },
+  build: {
+    transpile: ["@headlessui/vue"],
+  },
 });
