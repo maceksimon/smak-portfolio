@@ -3,7 +3,7 @@
     as="div"
     class="fixed inset-0 z-30 overflow-y-auto"
     :open="open"
-    @close="open = false"
+    @close="closeForm()"
   >
     <div
       class="flex min-h-screen items-end justify-center px-4 pt-4 pb-20 text-center sm:block sm:p-0"
@@ -36,7 +36,7 @@
               <div
                 class="mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-full border border-emerald-200 bg-emerald-100 text-emerald-700"
               >
-                <Icon name="fluent:chat-mail-20-regular" />
+                <Icon name="fluent:chat-20-regular" />
               </div>
               <DialogTitle
                 as="h3"
@@ -44,7 +44,7 @@
               >
                 Success
               </DialogTitle>
-              <p>
+              <p class="mb-3">
                 Thank you for your message! We will get in touch with you
                 shortly.
               </p>
@@ -62,9 +62,15 @@
               >
                 Error
               </DialogTitle>
-              <p>
+              <p class="mb-3">
                 An error occurred while sending the form. Please try again
-                later, or email us at {{ emailAddress }}
+                later, or email us at
+                <a
+                  class="text-emerald-600 underline hover:no-underline dark:text-emerald-300"
+                  :href="`mailto:${emailAddress}`"
+                >
+                  {{ emailAddress }}
+                </a>
               </p>
             </div>
             <!-- Form -->
@@ -109,6 +115,7 @@ import useVuelidate from "@vuelidate/core";
 import { required, email, minLength, helpers } from "@vuelidate/validators";
 import axios from "axios";
 
+// open is being injected as a ref
 const open = inject("open");
 
 const formSubmitted = ref(false);
@@ -172,5 +179,17 @@ async function handleSubmit() {
   } else {
     formError.value = true;
   }
+}
+
+function encodeData(data) {
+  return Object.keys(data)
+    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .join("&");
+}
+
+function closeForm() {
+  open.value = false;
+  formSubmitted.value = false;
+  formError.value = false;
 }
 </script>
