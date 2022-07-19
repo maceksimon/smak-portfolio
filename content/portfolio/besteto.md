@@ -4,7 +4,7 @@ head.description: Once you make a website for the marketers you really get to kn
 head.image: /og/fellow-creatures.jpg
 fields.image: /og/fellow-creatures.jpg
 fields.order: 500
-fields.skills: ["WordPress", "Tailwind CSS"]
+fields.skills: ["WordPress", "Twig", "Tailwind CSS"]
 featured: false
 type: "theme"
 ---
