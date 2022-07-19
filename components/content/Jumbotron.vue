@@ -1,19 +1,16 @@
 <template>
-  <div class="mb-8 sm:mb-12 sm:text-center lg:text-left">
+  <div class="mb-8 sm:mb-12">
     <h1
       class="not-prose text-2xl font-extrabold tracking-tight text-gray-900 dark:text-gray-50 sm:text-3xl md:text-4xl"
     >
       <Markdown :use="$slots.title" unwrap="p" />
     </h1>
     <div
-      class="mt-4 text-base leading-loose text-gray-500 dark:text-gray-300 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 lg:mx-0"
+      class="mt-4 text-base leading-loose text-gray-500 dark:text-gray-300 sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5"
     >
       <Markdown :use="$slots.perex" unwrap="p" />
     </div>
-    <div
-      v-if="button1 || button2"
-      class="not-prose mt-6 sm:mt-10 sm:flex sm:justify-center lg:justify-start"
-    >
+    <div v-if="button1 || button2" class="not-prose mt-6 sm:mt-10 sm:flex">
       <div class="rounded-md shadow">
         <a
           :href="link1"

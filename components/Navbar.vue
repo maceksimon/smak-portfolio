@@ -3,7 +3,7 @@
     <Popover>
       <nav
         aria-label="Global"
-        class="flex items-center justify-end px-4 py-2 sm:px-8 sm:py-4 md:justify-center"
+        class="flex items-center justify-end px-4 py-2 sm:py-4 md:justify-center"
       >
         <div class="-mr-2 flex items-center md:hidden">
           <PopoverButton
@@ -13,7 +13,9 @@
             <Icon name="heroicons-outline:menu-alt-3" />
           </PopoverButton>
         </div>
-        <div class="mx-auto hidden max-w-2xl md:flex md:justify-between">
+        <div
+          class="mx-auto hidden w-full max-w-2xl sm:px-8 md:flex md:justify-between"
+        >
           <!-- Navigation -->
           <div class="text-gray-700 dark:text-gray-200">
             <NuxtLink
