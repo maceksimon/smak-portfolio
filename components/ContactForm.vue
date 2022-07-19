@@ -3,8 +3,9 @@
     name="contact"
     method="POST"
     data-netlify="true"
-    data-netlify-honeypot="bot-field-contact"
+    data-netlify-honeypot="bot-field"
   >
+    <input type="hidden" name="form-name" value="contact" />
     <div class="grid grid-cols-8 gap-x-6 gap-y-8">
       <div class="relative col-span-8 lg:col-span-4">
         <label

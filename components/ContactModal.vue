@@ -107,6 +107,7 @@
 import { Dialog, DialogOverlay, DialogTitle } from "@headlessui/vue";
 import useVuelidate from "@vuelidate/core";
 import { required, email, minLength, helpers } from "@vuelidate/validators";
+import axios from "axios";
 
 const open = inject("open");
 
@@ -164,7 +165,7 @@ async function handleSubmit() {
   if (response.status === 200) {
     // Reset form by looping over properties
     Object.keys(form).forEach((key) => {
-      form[key] = formDefault[key];
+      form[key] = "";
     });
     // Display confirmation
     formSubmitted.value = true;
