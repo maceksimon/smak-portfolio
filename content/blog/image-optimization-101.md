@@ -3,7 +3,7 @@ head.title: Image optimization 101
 head.description: Read how we optimize images to make your websites blazingly fast.
 head.image: /og/image-optimization-101.jpg
 fields.image: /og/image-optimization-101.jpg
-fields.tags: ["Images", "Cloudinary", "TinyPNG", "WebP"]
+fields.tags: ["Performance", "Cloudinary", "WebP"]
 created: "2022-07-17T12:34:44"
 time: "6 min"
 ---
