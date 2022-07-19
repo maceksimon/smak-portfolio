@@ -22,7 +22,7 @@
       <div class="mt-3 sm:mt-0 sm:ml-3">
         <a
           :href="link2"
-          class="flex w-full items-center justify-center rounded-md border border-transparent bg-purple-100 px-4 py-2 text-base font-semibold text-purple-700 hover:bg-white md:py-3 md:px-7 md:text-lg"
+          class="bg-gradient-animated flex w-full items-center justify-center rounded-md border border-transparent bg-purple-100 bg-gradient-to-r from-white via-purple-200 to-white px-4 py-2 text-base font-semibold text-purple-900 md:py-3 md:px-7 md:text-lg"
         >
           {{ button2 }}
         </a>
