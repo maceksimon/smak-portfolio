@@ -6,6 +6,18 @@
     <Navbar />
     <NuxtPage />
     <ContactModal />
+    <form
+      name="contact-form"
+      data-netlify="true"
+      netlify
+      netlify-honeypot="bot-field"
+      hidden
+    >
+      <input type="text" name="name" />
+      <input type="text" name="email" />
+      <input type="radio" name="job" />
+      <textarea name="message"></textarea>
+    </form>
   </div>
 </template>
 
