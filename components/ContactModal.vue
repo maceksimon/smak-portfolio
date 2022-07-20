@@ -171,13 +171,16 @@ async function handleSubmit() {
   if (v.value.$error) {
     return;
   }
+
+  formError.value = false;
+
   const axiosConfig = {
     header: { "Content-Type": "application/x-www-form-urlencoded" },
   };
   const response = await axios.post(
     "/",
     encodeData({
-      "form-name": "contact",
+      "form-name": "contact-form",
       ...form,
     }),
     axiosConfig
