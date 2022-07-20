@@ -90,22 +90,31 @@
                   Hey, drop us a message.
                 </DialogTitle>
                 <div>
-                  <ContactForm v-model="form" :validations="v" />
+                  <form
+                    name="contact-form"
+                    method="post"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                    netlify
+                    @submit.prevent="handleSubmit()"
+                  >
+                    <input
+                      type="hidden"
+                      name="form-name"
+                      value="contact-form"
+                    />
+                    <!-- Only the contact fields -->
+                    <ContactForm v-model="form" :validations="v" />
+                    <button
+                      type="submit"
+                      class="bg-gradient-animated flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-violet-700 via-pink-600 to-purple-600 px-4 py-2 text-base font-semibold text-white hover:bg-purple-700 md:py-3 md:px-7 md:text-lg"
+                    >
+                      Send
+                    </button>
+                  </form>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            v-if="!formSubmitted && !formError"
-            class="mb-3 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6"
-          >
-            <button
-              type="button"
-              class="bg-gradient-animated flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-violet-700 via-pink-600 to-purple-600 px-4 py-2 text-base font-semibold text-white hover:bg-purple-700 md:py-3 md:px-7 md:text-lg"
-              @click.prevent="handleSubmit()"
-            >
-              Send
-            </button>
           </div>
         </div>
       </div>
