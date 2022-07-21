@@ -14,7 +14,7 @@
           </PopoverButton>
         </div>
         <div
-          class="mx-auto hidden w-full max-w-2xl sm:px-8 md:flex md:justify-between"
+          class="mx-auto hidden w-full max-w-5xl sm:px-8 md:flex md:justify-between"
         >
           <!-- Navigation -->
           <div class="text-gray-700 dark:text-gray-200">

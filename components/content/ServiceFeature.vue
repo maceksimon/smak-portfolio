@@ -9,10 +9,10 @@
       <div
         v-for="service in services"
         :key="service.title"
-        class="hover-border-violet-300 group relative rounded-md border p-6 pb-8 shadow transition-colors duration-300 ease-out focus-within:ring focus-within:ring-inset focus-within:ring-purple-200 dark:border-transparent dark:bg-gray-900 dark:hover:border-violet-900 lg:flex lg:flex-col"
+        class="hover-border-violet-300 group relative rounded-md border bg-white p-6 pb-8 shadow transition-colors duration-300 ease-out focus-within:ring focus-within:ring-inset focus-within:ring-purple-200 dark:border-transparent dark:bg-gray-900 dark:hover:border-violet-900 lg:flex lg:flex-col"
       >
         <div
-          class="pointer-none absolute inset-0 bg-gradient-to-br from-white via-white to-purple-100 opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100 dark:from-gray-900 dark:via-violet-900 dark:to-purple-800 dark:group-hover:opacity-50"
+          class="pointer-none absolute inset-0 opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100 dark:bg-gradient-to-br dark:from-gray-900 dark:via-violet-900 dark:to-purple-800 dark:group-hover:opacity-50"
         ></div>
         <div class="relative">
           <span

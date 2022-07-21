@@ -28,7 +28,7 @@
     >
       <li v-for="skill in project.fields.skills" class="px-2" :key="skill">
         <span
-          class="inline-flex items-center rounded-full border border-rose-200 bg-rose-100 px-2.5 py-0.5 text-xs font-medium text-rose-800 dark:border-rose-100"
+          class="inline-flex items-center rounded-full border border-pink-100 bg-pink-50 px-2.5 py-0.5 text-xs font-medium text-pink-800 dark:border-pink-100"
         >
           {{ skill }}
         </span>

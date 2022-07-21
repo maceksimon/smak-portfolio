@@ -34,7 +34,7 @@ provide("open", open);
 
 <style lang="postcss">
 body {
-  @apply bg-gray-50 dark:bg-gray-900;
+  @apply bg-gray-100 dark:bg-gray-900;
 }
 /* Customize headers to remove default underline */
 .prose h2 a,
