@@ -48,22 +48,27 @@ const faqs = [
   {
     question: "How do you charge?",
     answer:
-      "Typically we charge a fixed rate based on the project specifications. The price might change depending on special features requested.",
+      "Typically, I charge a fixed rate based on the project specifications. This is paid in two installments, each 50% of the final price.",
   },
   {
     question: "Do you take care of the content editing?",
     answer:
-      "We certainly can. All our websites are designed to provide simple means of editing the content with no code involved. However, we are also happy to assist you with the copywriting and content editing.",
+      "I certainly can. All my websites are designed to provide simple means of editing the content with no code involved. However, I am happy to assist you with copywriting and content editing.",
   },
   {
-    question: "How do you ensure good search engine performance?",
+    question: "What do you do for SEO?",
     answer:
-      "We provide full-featured on-site SEO services, making sure that titles, descriptions, heading structure are used according to industry standards. This is enough to significantly boost your organic traffic. We currently do not provide off-site SEO.",
+      "I provide full-featured on-site SEO services, making sure that titles, descriptions, and heading structure are used optimally. This should significantly boost your organic traffic. I do not provide off-site SEO services.",
   },
   {
     question: "Do you update existing websites?",
     answer:
-      "Yes, we can update or extend your current theme. However, we will need to inspect your website first before we agree to work on it.",
+      "Yes, I can update or extend your current theme. However, I will need to inspect your website first before I agree to work on it.",
+  },
+  {
+    question: "What do you need to get started?",
+    answer:
+      "Depending on the previous agreements, I might need a design file (Figma or Adobe XD), photos for the content. If the project is an update or a theme rework, I will ask you for access to your hosting services or a server.",
   },
 ];
 </script>
