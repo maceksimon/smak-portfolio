@@ -1,19 +1,21 @@
 <template>
-  <div class="mb-8 sm:mb-12">
-    <div
-      v-if="$slots.highlight"
-      class="mb-2 font-bold text-purple-800 dark:text-purple-300"
-    >
-      <Markdown :use="$slots.highlight" unwrap="p" />
+  <div class="relative mb-8 sm:mb-12">
+    <div class="not-prose">
+      <div
+        v-if="$slots.highlight"
+        class="mb-2 font-bold text-violet-800 dark:text-violet-300 sm:mb-4 sm:mt-12 sm:text-lg lg:mb-8 lg:text-xl"
+      >
+        <Markdown :use="$slots.highlight" unwrap="p" />
+      </div>
+      <h1
+        class="text-2xl font-extrabold uppercase tracking-tight text-gray-900 dark:text-gray-50 sm:text-3xl md:text-4xl lg:text-8xl"
+        :class="{}"
+      >
+        <Markdown :use="$slots.title" unwrap="p" />
+      </h1>
     </div>
-    <h1
-      class="not-prose text-2xl font-extrabold tracking-tight text-gray-900 dark:text-gray-50 sm:text-3xl md:text-4xl"
-      :class="{}"
-    >
-      <Markdown :use="$slots.title" unwrap="p" />
-    </h1>
     <div
-      class="mt-2 text-base font-light leading-loose text-gray-500 dark:text-gray-300 sm:max-w-xl sm:text-lg"
+      class="mt-6 leading-loose tracking-normal text-gray-500 dark:text-gray-300 sm:mt-8 sm:max-w-xl sm:text-lg lg:mt-12 lg:text-xl"
     >
       <Markdown :use="$slots.perex" unwrap="p" />
     </div>
@@ -50,3 +52,13 @@ const toggleModal = inject("toggleModal");
 
 const { button1, button2, link1, link2 } = props;
 </script>
+
+<style lang="postcss">
+h1 > strong,
+b {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @apply bg-gradient-to-r from-violet-800 via-purple-900 to-pink-600;
+}
+</style>

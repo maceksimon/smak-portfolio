@@ -38,6 +38,7 @@
                 {{ service.title }}
               </a>
             </h3>
+            <div class="mt-2 font-semibold">{{ service.subtitle }}</div>
             <div
               v-if="$slots[service.key]"
               class="mt-4 text-sm text-gray-600 dark:text-gray-300"
@@ -60,9 +61,9 @@
 <script setup>
 const services = [
   {
-    title: "Static",
+    title: "Landing Page",
     key: "static",
-    subtitle: "Flashy presentation website",
+    subtitle: "Boost your online presence",
     href: "/services#static",
     icon: "carbon:lightning",
     iconForeground: "text-pink-700 dark:text-pink-200",
@@ -74,9 +75,9 @@ const services = [
     ],
   },
   {
-    title: "WordPress",
+    title: "Blog",
     key: "wordpress",
-    subtitle: "Rich and beautiful blog",
+    subtitle: "Share your story",
     href: "/services#wordpress",
     icon: "material-symbols:menu-book-outline",
     iconForeground: "text-violet-700 dark:text-violet-200",
@@ -87,9 +88,9 @@ const services = [
     ],
   },
   {
-    title: "Shopify",
+    title: "E-commerce",
     key: "shopify",
-    subtitle: "Full-featured e-commerce store",
+    subtitle: "Sell on the web",
     href: "/services#shopify",
     icon: "material-symbols:shopping-cart-outline-rounded",
     iconForeground: "text-emerald-700 dark:text-emerald-200",

@@ -17,7 +17,7 @@
           class="mx-auto hidden w-full max-w-5xl sm:px-8 md:flex md:justify-between"
         >
           <!-- Navigation -->
-          <div class="text-gray-700 dark:text-gray-200">
+          <div class="text-gray-100">
             <NuxtLink
               v-for="link of navigation"
               :key="link._path"
@@ -29,30 +29,25 @@
             </NuxtLink>
           </div>
           <!-- Social icons & Color Mode -->
-          <div id="navbar-icons" class="space-x-3 text-gray-500 transition">
-            <button
-              @click="toggleModal()"
-              class="hover:text-gray-700 dark:hover:text-gray-300"
-            >
+          <div id="navbar-icons" class="space-x-3 text-gray-100 transition">
+            <button @click="toggleModal()" class="hover:text-white">
               <Icon name="mi:email" class="h-5 w-auto" />
             </button>
             <a
               href="https://twitter.com/maceksimon1"
               title="Twitter"
-              class="hover:text-gray-700 dark:hover:text-gray-300"
+              class="hover:text-white"
             >
               <Icon name="fa-brands:twitter" />
             </a>
             <a
               href="https://github.com/maceksimon"
               title="GitHub"
-              class="hover:text-gray-700 dark:hover:text-gray-300"
+              class="hover:text-white"
             >
               <Icon name="fa-brands:github" />
             </a>
-            <ColorModeSwitch
-              class="hover:text-gray-700 dark:hover:text-gray-300"
-            />
+            <ColorModeSwitch class="hover:text-white" />
           </div>
         </div>
       </nav>

@@ -1,5 +1,5 @@
 <template>
-  <div class="sm:py-10">
+  <div class="sm:pb-10">
     <Html lang="en" />
     <Meta property="og:image" content="/cover.jpg" />
     <Meta name="twitter:card" content="summary_large_image" />
@@ -34,7 +34,7 @@ provide("open", open);
 
 <style lang="postcss">
 body {
-  @apply bg-gray-100 dark:bg-gray-900;
+  @apply bg-gradient-to-r from-violet-800 via-pink-600 to-purple-900;
 }
 /* Customize headers to remove default underline */
 .prose h2 a,
