@@ -109,9 +109,9 @@ const props = defineProps({
 const emit = defineEmits(["update:modelValue", "change"]);
 
 const jobOptions = [
-  { name: "Static" },
-  { name: "WordPress" },
-  { name: "Shopify" },
+  { name: "Portfolio" },
+  { name: "Blog" },
+  { name: "E-shop" },
   { name: "Other" },
 ];
 

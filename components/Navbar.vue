@@ -24,6 +24,7 @@
               :to="link._path"
               active-class="font-bold"
               class="mr-4"
+              :data-text="link.navTitle || link.title"
             >
               {{ link.navTitle || link.title }}
             </NuxtLink>
@@ -85,7 +86,7 @@
                 :key="link._path"
                 :to="link._path"
                 active-class="font-bold"
-                class="dark:hover-bg-gray-500 dark:hover-text-white block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-200"
+                class="menu-link dark:hover-bg-gray-500 dark:hover-text-white block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-200"
                 @click="close()"
               >
                 {{ link.navTitle || link.title }}
@@ -124,3 +125,16 @@ const toggleModal = inject("toggleModal");
 
 const { navigation } = useContent();
 </script>
+
+<style lang="postcss">
+.menu-link::after {
+  content: attr(data-text);
+  content: attr(data-text) / "";
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  user-select: none;
+  pointer-events: none;
+  font-weight: 700;
+}
+</style>

@@ -9,10 +9,10 @@
       <div
         v-for="service in services"
         :key="service.title"
-        class="hover-border-violet-300 group relative rounded-md border bg-white p-6 pb-8 shadow transition-colors duration-300 ease-out focus-within:ring focus-within:ring-inset focus-within:ring-purple-200 dark:border-transparent dark:bg-gray-900 dark:hover:border-violet-900 lg:flex lg:flex-col"
+        class="hover-border-violet-300 group relative rounded-md border bg-white p-6 pb-8 shadow transition-colors duration-300 ease-out focus-within:ring focus-within:ring-inset focus-within:ring-purple-200 dark:border-transparent dark:bg-gray-700 dark:hover:border-violet-900 lg:flex lg:flex-col"
       >
         <div
-          class="pointer-none absolute inset-0 opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100 dark:bg-gradient-to-br dark:from-gray-900 dark:via-violet-900 dark:to-purple-800 dark:group-hover:opacity-50"
+          class="pointer-none absolute inset-0 opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100 dark:bg-gradient-to-br dark:from-gray-800 dark:via-violet-900 dark:to-purple-800 dark:group-hover:opacity-50"
         ></div>
         <div class="relative">
           <span
@@ -49,7 +49,7 @@
           <ul role="list" class="mt-6 flex space-x-4">
             <li v-for="logo in service.logos" :key="logo.name">
               <span class="sr-only">{{ logo.title }}</span>
-              <Icon :name="logo.name" class="h-5 w-auto" />
+              <Icon :name="logo.name" class="h-8 w-auto text-gray-400" />
             </li>
           </ul>
         </div>
@@ -61,17 +61,19 @@
 <script setup>
 const services = [
   {
-    title: "Landing Page",
+    title: "Portfolio",
     key: "static",
     subtitle: "Boost your online presence",
     href: "/services#static",
     icon: "carbon:lightning",
-    iconForeground: "text-pink-700 dark:text-pink-200",
-    iconBackground: "bg-pink-50 dark:bg-pink-100/25",
+    iconForeground: "text-pink-700 dark:text-pink-100",
+    iconBackground:
+      "bg-pink-50 dark:bg-pink-100/25 border border-pink-100 dark:border-pink-200/25",
     logos: [
-      { name: "logos:vue", title: "Vue logo" },
-      { name: "logos:netlify", title: "Netlify logo" },
-      { name: "logos:sanity", title: "Sanity logo" },
+      { name: "bxl:netlify", title: "Netlify logo" },
+      { name: "bxl:vuejs", title: "Vue logo" },
+      { name: "simple-icons:nuxtdotjs", title: "Nuxt logo" },
+      { name: "simple-icons:graphql", title: "GraphQL logo" },
     ],
   },
   {
@@ -81,10 +83,13 @@ const services = [
     href: "/services#wordpress",
     icon: "material-symbols:menu-book-outline",
     iconForeground: "text-violet-700 dark:text-violet-200",
-    iconBackground: "bg-violet-50 dark:bg-violet-100/25",
+    iconBackground:
+      "bg-violet-50 dark:bg-violet-100/25 border border-violet-100 dark:border-violet-200/25",
     logos: [
-      { name: "logos:wordpress", title: "WordPress logo" },
-      { name: "logos:tailwindcss-icon", title: "Tailwind CSS logo" },
+      { name: "bxl:wordpress", title: "WordPress logo" },
+      { name: "simple-icons:php", title: "PHP logo" },
+      { name: "bxl:tailwind-css", title: "Tailwind CSS logo" },
+      { name: "simple-icons:sass", title: "SASS logo" },
     ],
   },
   {
@@ -94,11 +99,13 @@ const services = [
     href: "/services#shopify",
     icon: "material-symbols:shopping-cart-outline-rounded",
     iconForeground: "text-emerald-700 dark:text-emerald-200",
-    iconBackground: "bg-emerald-50 dark:bg-emerald-100/25",
+    iconBackground:
+      "bg-emerald-50 dark:bg-emerald-100/25 border border-emerald-100 dark:border-emerald-200/25",
     logos: [
-      { name: "logos:shopify", title: "Shopify logo" },
-      { name: "logos:tailwindcss-icon", title: "Tailwind CSS logo" },
-      { name: "logos:alpinejs-icon", title: "Alpine logo" },
+      { name: "bxl:shopify", title: "Shopify logo" },
+      { name: "bxl:tailwind-css", title: "Tailwind CSS logo" },
+      { name: "simple-icons:javascript", title: "JavaScript logo" },
+      { name: "bxl:vuejs", title: "Vue logo" },
     ],
   },
 ];

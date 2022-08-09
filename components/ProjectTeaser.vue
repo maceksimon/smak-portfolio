@@ -6,9 +6,13 @@
       :href="project?._path"
       class="group relative block"
     >
-      <img :src="project.fields?.image" :alt="project.fields?.imageAlt" />
+      <img
+        :src="project.fields?.image"
+        :alt="project.fields?.imageAlt"
+        class="rounded-sm border dark:border-transparent"
+      />
       <div
-        class="absolute inset-0 flex h-full w-full items-center justify-center bg-gradient-to-br from-purple-900 via-violet-900 to-gray-900 opacity-0 transition-opacity duration-300 ease-in group-hover:opacity-90"
+        class="absolute inset-0 flex h-full w-full items-center justify-center rounded-sm bg-gradient-to-br from-purple-900 via-violet-900 to-gray-900 opacity-0 transition-opacity duration-300 ease-in group-hover:opacity-90"
       ></div>
       <div
         class="absolute inset-0 z-10 flex h-full w-full items-center justify-center space-x-2 text-xl font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"

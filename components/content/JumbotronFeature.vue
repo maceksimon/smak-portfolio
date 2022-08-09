@@ -3,7 +3,7 @@
     <div class="not-prose">
       <div
         v-if="$slots.highlight"
-        class="mb-2 font-bold text-violet-800 dark:text-violet-300 sm:mb-4 sm:mt-12 sm:text-lg lg:mb-8 lg:text-xl"
+        class="mb-2 font-bold text-violet-800 dark:text-violet-500 sm:mb-4 sm:mt-12 sm:text-lg lg:mb-8 lg:text-xl"
       >
         <Markdown :use="$slots.highlight" unwrap="p" />
       </div>
@@ -59,6 +59,6 @@ b {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  @apply bg-gradient-to-r from-violet-800 via-purple-900 to-pink-600;
+  @apply bg-gradient-to-r from-violet-700 via-purple-800 to-pink-600;
 }
 </style>
