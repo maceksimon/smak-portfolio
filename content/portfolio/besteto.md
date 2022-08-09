@@ -15,24 +15,30 @@ Marketing agencies know how to design results driven websites. That is why I tak
 
 ## Client
 
-Besteto is a marketing agency specializing in e-commerce. They commissioned an 8 page website to one of my colleagues and he requested my help on the project. I got to code the theme from start to finish and learned a good deal during the process.
+Besteto is a marketing agency specializing in e-commerce. They commissioned an 8 page website to one of my colleagues and he requested my help on the project. I got to **code the theme from start to finish** and learned a good deal during the process.
 
 ## Building fast
 
-Speed and efficiency is a key aspect of the coding work. Of course, the result still needs to be flawless. However, an hour of work can go a long way when using the proper tools and workflows.
+**Speed and efficiency** is a key aspect of the coding work. Of course, the result still needs to be flawless. However, an hour of work can go a long way when using the proper tools and workflows.
 
-A big help in this area is [WordPress Gutenberg](/blog/wordpress-gutenberg-101). By building the website from reusable blocks, one can save hours of building and updating similar blocks of content across pages. It also makes for a great editing experience as the admin offers a real time preview of the pages in the admin UI.
+A big help in this area is [WordPress Gutenberg](/blog/wordpress-gutenberg-101). By building the website from **reusable blocks**, one can save hours of building and updating similar blocks of content across pages. It also makes for a great editing experience as the admin offers a real time preview of the pages in the admin UI.
 
 For styling the code I chose [Tailwind CSS](https://tailwindcss.com/). This has become my go-to option for most projects, since it makes styling so incredibly fast and intuitive. Additionally, it allows for **modular solutions** - pieces of HTML that you can reuse as styled components and they just work!
 
-## Outcomes
+## The result
 
 The result was a clean and solid theme built in a few days. It includes a **blog section** a list of services, a contact form, a pricing page... oh and it is also multilingual!
+
+## What I learned
 
 I said earlier that marketing agencies know how to build a web for results. Here are some effective strategies that may improve the user experience and conversion rates:
 
 - **Informative use of icons**: On homepage, you can find a list of services easily distinguishable by icons. This could work as a dropdown menu, but it would be far less discoverable readable and appealing.
 - **CTAs for key page sections**: Once the potential customer finds their way onto the website, they should have an easy way of finding what they are looking for. In this case, it should be the contact. CTAs and contact forms are an ideal way to get this done.
 - **Personal approach**: Show the customers who you are. You can do this by designing a team profile section. Put a face to your business!
+
+## Final thoughts
+
+Although this time I did not work for my own client, the experience of building an agency website was definitely worthwhile. I am now ready to implement the ideas from their design in my own projects.
 
 Check out the full theme on [Besteto.cz](https://www.besteto.cz/).
