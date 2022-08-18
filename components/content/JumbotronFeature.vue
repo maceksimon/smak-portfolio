@@ -1,14 +1,20 @@
 <template>
   <div class="relative mb-8 sm:mb-12">
-    <div class="not-prose">
+    <!-- <img
+      src="/simon_macek.png"
+      alt=""
+      aria-hidden="true"
+      class="absolute inset-y-0 right-0 h-full w-auto -scale-x-100 opacity-50"
+    /> -->
+    <div class="not-prose isolate">
       <div
         v-if="$slots.highlight"
-        class="mb-2 font-bold text-violet-800 dark:text-violet-500 sm:mb-4 sm:mt-12 sm:text-lg lg:mb-8 lg:text-xl"
+        class="mb-2 font-bold text-violet-800 dark:text-violet-500 sm:mb-4 sm:mt-12 sm:text-lg lg:mb-6 lg:text-xl"
       >
         <Markdown :use="$slots.highlight" unwrap="p" />
       </div>
       <h1
-        class="text-2xl font-extrabold uppercase tracking-tight text-gray-900 dark:text-gray-50 sm:text-3xl md:text-4xl lg:text-8xl"
+        class="max-w-2xl font-extrabold uppercase tracking-tight text-gray-900 dark:text-gray-50 sm:text-3xl md:text-4xl lg:text-7xl"
         :class="{}"
       >
         <Markdown :use="$slots.title" unwrap="p" />
@@ -30,7 +36,7 @@
       </div>
       <div class="mt-3 sm:mt-0 sm:ml-3">
         <button
-          class="bg-gradient-animated flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-purple-50 via-violet-200 to-purple-100 px-4 py-2 text-base font-semibold text-purple-900 shadow md:py-3 md:px-7 md:text-lg"
+          class="bg-gradient-animated flex w-full items-center justify-center rounded-md border border-purple-100 bg-gradient-to-r from-purple-50 via-violet-200 to-purple-100 px-4 py-2 text-base font-semibold text-purple-900 shadow md:py-3 md:px-7 md:text-lg"
           @click="toggleModal()"
         >
           {{ button2 }}

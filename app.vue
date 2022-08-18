@@ -1,10 +1,11 @@
 <template>
-  <div class="sm:pb-10">
+  <div>
     <Html lang="en" />
     <Meta property="og:image" content="/cover.jpg" />
     <Meta name="twitter:card" content="summary_large_image" />
     <Navbar />
     <NuxtPage />
+    <TheFooter />
     <ContactModal />
     <form
       name="contact-form"

@@ -23,14 +23,17 @@
               :key="link._path"
               :to="link._path"
               active-class="font-bold"
-              class="mr-4"
+              class="mr-4 md:mr-6 lg:mr-8"
               :data-text="link.navTitle || link.title"
             >
               {{ link.navTitle || link.title }}
             </NuxtLink>
           </div>
           <!-- Social icons & Color Mode -->
-          <div id="navbar-icons" class="space-x-3 text-gray-100 transition">
+          <div
+            id="navbar-icons"
+            class="space-x-3 text-gray-100 transition md:space-x-4"
+          >
             <button @click="toggleModal()" class="hover:text-white">
               <Icon name="mi:email" class="h-5 w-auto" />
             </button>

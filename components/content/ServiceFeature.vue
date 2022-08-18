@@ -1,112 +1,186 @@
 <template>
-  <section class="my-8 sm:my-12">
-    <DivisionPill v-if="$slots.default">
-      <Markdown :use="$slots.default" unwrap="p" />
-    </DivisionPill>
-    <div
-      class="mx-auto my-8 gap-4 overflow-hidden sm:my-12 sm:grid lg:grid-cols-3"
-    >
-      <div
-        v-for="service in services"
-        :key="service.title"
-        class="hover-border-violet-300 group relative rounded-md border bg-white p-6 pb-8 shadow transition-colors duration-300 ease-out focus-within:ring focus-within:ring-inset focus-within:ring-purple-200 dark:border-transparent dark:bg-gray-700 dark:hover:border-violet-900 lg:flex lg:flex-col"
-      >
-        <div
-          class="pointer-none absolute inset-0 opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100 dark:bg-gradient-to-br dark:from-gray-800 dark:via-violet-900 dark:to-purple-800 dark:group-hover:opacity-50"
-        ></div>
-        <div class="relative">
-          <span
-            :class="[
-              service.iconBackground,
-              service.iconForeground,
-              'inline-flex rounded-lg p-3 ring-2 ring-transparent',
-            ]"
-          >
-            <Icon :name="service.icon" />
-          </span>
-        </div>
-        <div
-          class="not-prose relative lg:flex lg:grow lg:flex-col lg:justify-between"
+  <div class="not-prose overflow-hidden">
+    <div class="lg:grid lg:grid-cols-3 lg:gap-x-8">
+      <div class="lg:col-span-1">
+        <h2
+          :id="features[props.id].id"
+          class="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-3xl"
         >
-          <div class="mt-4">
-            <h3
-              class="text-lg font-bold text-gray-900 dark:text-gray-50 sm:text-2xl"
-            >
-              <a :href="service.href" class="focus:outline-none">
-                <!-- Extend touch target to entire panel -->
-                <span class="absolute inset-0" aria-hidden="true" />
-                {{ service.title }}
-              </a>
-            </h3>
-            <div class="mt-2 font-semibold">{{ service.subtitle }}</div>
-            <div
-              v-if="$slots[service.key]"
-              class="mt-4 text-sm text-gray-600 dark:text-gray-300"
-            >
-              <Markdown :use="$slots[service.key]" unwrap="p" />
-            </div>
-          </div>
-          <ul role="list" class="mt-6 flex space-x-4">
-            <li v-for="logo in service.logos" :key="logo.name">
-              <span class="sr-only">{{ logo.title }}</span>
-              <Icon :name="logo.name" class="h-8 w-auto text-gray-400" />
-            </li>
-          </ul>
+          {{ features[props.id].title }}
+        </h2>
+        <div class="mt-4 text-lg text-gray-500 dark:text-gray-300">
+          {{ features[props.id].perex }}
         </div>
       </div>
+      <dl
+        class="mt-10 space-y-10 sm:grid sm:grid-cols-2 sm:gap-x-8 sm:gap-y-10 sm:space-y-0 lg:col-span-2 lg:mt-0"
+      >
+        <div
+          v-for="service in features[props.id].services"
+          :key="service.title"
+        >
+          <dt>
+            <div
+              :class="[
+                service.iconBackground,
+                service.iconForeground,
+                'flex h-12 w-12 items-center justify-center rounded-sm',
+              ]"
+            >
+              <Icon :name="service.icon" />
+            </div>
+            <p
+              class="mt-5 text-lg font-medium leading-6 text-gray-900 dark:text-gray-50"
+            >
+              {{ service.title }}
+            </p>
+          </dt>
+          <dd class="mt-2 text-base text-gray-500 dark:text-gray-300">
+            {{ service.description }}
+          </dd>
+        </div>
+      </dl>
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup>
-const services = [
-  {
+const props = defineProps({
+  id: { type: String, default: "" },
+});
+
+const features = {
+  portfolio: {
     title: "Portfolio",
-    key: "static",
-    subtitle: "Boost your online presence",
-    href: "/services#static",
-    icon: "carbon:lightning",
-    iconForeground: "text-pink-700 dark:text-pink-100",
-    iconBackground:
-      "bg-pink-50 dark:bg-pink-100/25 border border-pink-100 dark:border-pink-200/25",
-    logos: [
-      { name: "bxl:netlify", title: "Netlify logo" },
-      { name: "bxl:vuejs", title: "Vue logo" },
-      { name: "simple-icons:nuxtdotjs", title: "Nuxt logo" },
-      { name: "simple-icons:graphql", title: "GraphQL logo" },
+    id: "portfolio",
+    perex:
+      "Modern lightweight solution ideal for presentation sites and personal portfolios. Market your brand and achieve higher conversion rates through efficient UX design.",
+    services: [
+      {
+        title: "Improved conversions",
+        description:
+          "With the experience of building websites for marketing agencies, I can create a web which will attract traffic and drive conversions.",
+        icon: "fluent:target-arrow-20-filled",
+        iconForeground: "text-pink-700 dark:text-pink-100",
+        iconBackground:
+          "bg-pink-50 dark:bg-pink-100/25 border border-pink-100 dark:border-pink-200/25",
+      },
+      {
+        title: "Performant web",
+        description:
+          "Static sites score high in the key performance metrics. This will improve your SEO rankings and make users love your site.",
+        icon: "tabler:bolt",
+        iconForeground: "text-pink-700 dark:text-pink-100",
+        iconBackground:
+          "bg-pink-50 dark:bg-pink-100/25 border border-pink-100 dark:border-pink-200/25",
+      },
+      {
+        title: "Secure solution",
+        description:
+          "Thanks to their simple architecure, static sites are less vulnerable to malware or spybot attacks.",
+        icon: "tabler:shield-chevron",
+        iconForeground: "text-pink-700 dark:text-pink-100",
+        iconBackground:
+          "bg-pink-50 dark:bg-pink-100/25 border border-pink-100 dark:border-pink-200/25",
+      },
+      {
+        title: "Free hosting",
+        description:
+          "Your website will be hosted on Netlify or Vercel - services that provide free hosting. All you need is a domain name and you are good to go.",
+        icon: "tabler:coin",
+        iconForeground: "text-pink-700 dark:text-pink-100",
+        iconBackground:
+          "bg-pink-50 dark:bg-pink-100/25 border border-pink-100 dark:border-pink-200/25",
+      },
     ],
   },
-  {
+  blog: {
     title: "Blog",
-    key: "wordpress",
-    subtitle: "Share your story",
-    href: "/services#wordpress",
-    icon: "material-symbols:menu-book-outline",
-    iconForeground: "text-violet-700 dark:text-violet-200",
-    iconBackground:
-      "bg-violet-50 dark:bg-violet-100/25 border border-violet-100 dark:border-violet-200/25",
-    logos: [
-      { name: "bxl:wordpress", title: "WordPress logo" },
-      { name: "simple-icons:php", title: "PHP logo" },
-      { name: "bxl:tailwind-css", title: "Tailwind CSS logo" },
-      { name: "simple-icons:sass", title: "SASS logo" },
+    id: "blog",
+    perex:
+      "Larger web or a blog built with a industry standard open-source technology.",
+    services: [
+      {
+        title: "Open-source software",
+        description:
+          "WordPress is free and open-source. This means that developers around the world have been creating solutions for various use cases that we can build on.",
+        icon: "tabler:brand-open-source",
+        iconForeground: "text-violet-700 dark:text-violet-200",
+        iconBackground:
+          "bg-violet-50 dark:bg-violet-100/25 border border-violet-100 dark:border-violet-200/25",
+      },
+      {
+        title: "Flexibile customization",
+        description:
+          "There is hardly anything that cannot be built with WordPress. Blogs, portfolios, e-commerce, event websites... this platform can get you there.",
+        icon: "tabler:world",
+        iconForeground: "text-violet-700 dark:text-violet-200",
+        iconBackground:
+          "bg-violet-50 dark:bg-violet-100/25 border border-violet-100 dark:border-violet-200/25",
+      },
+      {
+        title: "Popular platform",
+        description:
+          "Nearly half of all the websites use WordPress. Most content editors have worked with it before, and there is a plethora of guides and tutorials out there.",
+        icon: "tabler:tool",
+        iconForeground: "text-violet-700 dark:text-violet-200",
+        iconBackground:
+          "bg-violet-50 dark:bg-violet-100/25 border border-violet-100 dark:border-violet-200/25",
+      },
+      {
+        title: "Robust architecture",
+        description:
+          "The security of WordPress sites is closely followed by milions of developers. Bugs and vulnerabilities are quickly spotted and promptly fixed.",
+        icon: "tabler:lock",
+        iconForeground: "text-violet-700 dark:text-violet-200",
+        iconBackground:
+          "bg-violet-50 dark:bg-violet-100/25 border border-violet-100 dark:border-violet-200/25",
+      },
     ],
   },
-  {
+  ecommerce: {
     title: "E-commerce",
-    key: "shopify",
-    subtitle: "Sell on the web",
-    href: "/services#shopify",
-    icon: "material-symbols:shopping-cart-outline-rounded",
-    iconForeground: "text-emerald-700 dark:text-emerald-200",
-    iconBackground:
-      "bg-emerald-50 dark:bg-emerald-100/25 border border-emerald-100 dark:border-emerald-200/25",
-    logos: [
-      { name: "bxl:shopify", title: "Shopify logo" },
-      { name: "bxl:tailwind-css", title: "Tailwind CSS logo" },
-      { name: "simple-icons:javascript", title: "JavaScript logo" },
-      { name: "bxl:vuejs", title: "Vue logo" },
+    id: "e-commerce",
+    perex:
+      "Business solution built on Shopify with a website to exactly match your design.",
+    services: [
+      {
+        title: "Scaleable system",
+        description:
+          "Well-designed and easy-to-use admin UI that will help you create products, pages and posts in a couple of minutes.",
+        icon: "tabler:brand-open-source",
+        iconForeground: "text-emerald-700 dark:text-emerald-200",
+        iconBackground:
+          "bg-emerald-50 dark:bg-emerald-100/25 border border-emerald-100 dark:border-emerald-200/25",
+      },
+      {
+        title: "Payment management",
+        description:
+          "Shopify provides you with ways to secure your payment process. It allows for a variety of payment methods, takes care of calculating tax and many other important details.",
+        icon: "tabler:world",
+        iconForeground: "text-emerald-700 dark:text-emerald-200",
+        iconBackground:
+          "bg-emerald-50 dark:bg-emerald-100/25 border border-emerald-100 dark:border-emerald-200/25",
+      },
+      {
+        title: "Customer data",
+        description:
+          "You can browse and analyze the data about your customers in minutes. Shopify offers a streamlined workflow for processing orders and shipments",
+        icon: "tabler:tool",
+        iconForeground: "text-emerald-700 dark:text-emerald-200",
+        iconBackground:
+          "bg-emerald-50 dark:bg-emerald-100/25 border border-emerald-100 dark:border-emerald-200/25",
+      },
+      {
+        title: "Conversion-focused",
+        description:
+          "Nearly half of all the websites use WordPress. Most content editors have worked with it before, and there is a plethora of guides and tutorials out there.",
+        icon: "tabler:tool",
+        iconForeground: "text-emerald-700 dark:text-emerald-200",
+        iconBackground:
+          "bg-emerald-50 dark:bg-emerald-100/25 border border-emerald-100 dark:border-emerald-200/25",
+      },
     ],
   },
-];
+};
 </script>

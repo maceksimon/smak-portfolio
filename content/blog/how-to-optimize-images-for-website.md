@@ -40,8 +40,9 @@ Here are some great tools which I use almost daily to optimize my images.
 
 - [BulkResizePhotos.com](https://bulkresizephotos.com/) is a flexible tool that allows you to scale large batches of images to a desired width or height. It outputs .jpg, .png or .webp files.
 - [TinyPNG.com](https://tinypng.com/) is an amazing compression tool, which can compress images by a considerable amount while keeping their resolution.
-- [Cloudinary](https://cloudinary.com/) a full-featured service for hosting, optimizing and serving images which can be integrated to any website and can save a lot of manual work.
 - [SVGOMG](https://jakearchibald.github.io/svgomg/) is an _extra_ - it optimizes SVG graphics which I might write about later.
+- [Cloudinary](https://cloudinary.com/) a full-featured service for hosting, optimizing and serving images which can be integrated to any website and can save a lot of manual work.
+- Custom optimization is always an option. If you're only creating a static HTML + CSS page, the easiest way of optimizing images may be to just do it manually.
 
 ## Optimization workflows
 

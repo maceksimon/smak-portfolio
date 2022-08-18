@@ -4,7 +4,7 @@
       <label
         for="name"
         class="block text-sm font-medium text-gray-700 dark:text-gray-200 lg:text-base"
-        >Full name
+        >Your name
         <span class="text-pink-700 dark:text-pink-300">*</span></label
       >
       <input
@@ -24,7 +24,7 @@
         for="email"
         class="block text-sm font-medium text-gray-700 dark:text-gray-200 lg:text-base"
       >
-        E-mail <span class="text-pink-700 dark:text-pink-300">*</span>
+        Your e-mail <span class="text-pink-700 dark:text-pink-300">*</span>
       </label>
       <input
         v-model="formData.email"

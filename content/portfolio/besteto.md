@@ -5,7 +5,7 @@ head.image: /og/fellow-creatures.jpg
 fields.image: /og/fellow-creatures.jpg
 fields.order: 500
 fields.skills: ["WordPress", "Twig", "Tailwind CSS"]
-featured: false
+featured: true
 type: "theme"
 ---
 
