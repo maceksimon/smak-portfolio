@@ -1,9 +1,14 @@
 <template>
-  <div class="not-prose overflow-hidden">
-    <div class="lg:grid lg:grid-cols-3 lg:gap-x-8">
+  <div class="not-prose overflow-hidden" :id="features[props.id].id">
+    <div class="relative lg:grid lg:grid-cols-3 lg:gap-x-8">
+      <div
+        v-if="features[props.id].claim"
+        class="mb-4 text-lg italic text-gray-200 dark:text-gray-600 sm:mb-6 sm:text-xl lg:col-span-3 lg:mb-12 lg:text-6xl"
+      >
+        {{ features[props.id].claim }}
+      </div>
       <div class="lg:col-span-1">
         <h2
-          :id="features[props.id].id"
           class="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-3xl"
         >
           {{ features[props.id].title }}
@@ -41,6 +46,83 @@
         </div>
       </dl>
     </div>
+    <div class="py-12 lg:py-16">
+      <div>
+        <div
+          class="overflow-hidden rounded-lg border border-violet-100 shadow-sm lg:flex lg:max-w-none"
+        >
+          <div class="flex-1 bg-white px-6 py-8 lg:p-12">
+            <h3
+              class="text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight"
+            >
+              Get this solution
+            </h3>
+            <p class="mt-6 text-base text-gray-500">
+              Get in touch to get a free consultation and a project proposal.
+            </p>
+            <div class="mt-8">
+              <div class="flex items-center">
+                <h4
+                  class="flex-shrink-0 bg-white pr-4 text-base font-semibold text-violet-700"
+                >
+                  What's included
+                </h4>
+                <div class="flex-1 border-t-2 border-gray-200"></div>
+              </div>
+              <ul
+                role="list"
+                class="mt-8 space-y-5 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:gap-y-5 lg:space-y-0"
+              >
+                <li
+                  v-for="item in features[props.id].deliverables"
+                  :key="item"
+                  class="flex items-center lg:col-span-1"
+                >
+                  <div class="flex-shrink-0">
+                    <!-- Heroicon name: solid/check-circle -->
+                    <Icon
+                      name="ph:check-circle-duotone"
+                      class="flex-shrink-0 flex-grow-0 text-emerald-500"
+                    />
+                  </div>
+                  <div class="ml-3 text-gray-700">
+                    {{ item }}
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="bg-violet-50 py-8 px-6 text-center lg:flex lg:flex-shrink-0 lg:flex-col lg:justify-center lg:p-12"
+          >
+            <p class="text-lg font-medium leading-6 text-gray-900">Starts at</p>
+            <div
+              class="mt-4 flex items-center justify-center text-5xl font-bold tracking-tight text-gray-900"
+            >
+              <span> $325 </span>
+              <span
+                class="ml-3 text-xl font-medium tracking-normal text-gray-500"
+              >
+                USD
+              </span>
+            </div>
+            <p class="mt-4 text-sm text-gray-500">
+              Final price is based on client's individual needs.
+            </p>
+            <div class="mt-6">
+              <div class="rounded-md shadow">
+                <a
+                  href="#"
+                  class="flex items-center justify-center rounded-md border border-transparent bg-violet-700 px-5 py-3 text-base font-semibold text-white hover:bg-violet-800"
+                >
+                  Get started
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -52,9 +134,10 @@ const props = defineProps({
 const features = {
   portfolio: {
     title: "Portfolio",
+    claim: "“A gleaming business card...”",
     id: "portfolio",
     perex:
-      "Modern lightweight solution ideal for presentation sites and personal portfolios. Market your brand and achieve higher conversion rates through efficient UX design.",
+      "One-page presentation site or a portfolio. Market your brand and achieve higher conversion rates through efficient UX design.",
     services: [
       {
         title: "Improved conversions",
@@ -93,9 +176,16 @@ const features = {
           "bg-pink-50 dark:bg-pink-100/25 border border-pink-100 dark:border-pink-200/25",
       },
     ],
+    deliverables: [
+      "One-page portfolio",
+      "Original design",
+      "Responsive version",
+      "SEO optimization",
+    ],
   },
   blog: {
     title: "Blog",
+    claim: "“A beautiful home for my project...”",
     id: "blog",
     perex:
       "Larger web or a blog built with a industry standard open-source technology.",
@@ -140,6 +230,7 @@ const features = {
   },
   ecommerce: {
     title: "E-commerce",
+    claim: "“My business in online space...”",
     id: "e-commerce",
     perex:
       "Business solution built on Shopify with a website to exactly match your design.",

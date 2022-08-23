@@ -17,7 +17,7 @@ defineProps({
       :key="index"
       class="flex space-x-2 pl-0"
     >
-      <Icon :name="icon" class="h-6 w-6 flex-shrink-0 text-emerald-500" />
+      <Icon :name="icon" class="mt-1 h-5 w-5 flex-shrink-0 text-emerald-500" />
       <span><Markdown :use="() => item" unwrap="li" /></span>
     </li>
   </ul>
