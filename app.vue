@@ -35,7 +35,7 @@ provide("open", open);
 
 <style lang="postcss">
 body {
-  @apply bg-gradient-to-r from-violet-800 via-pink-600 to-purple-900;
+  @apply bg-gray-100;
 }
 /* Customize headers to remove default underline */
 .prose h2 a,

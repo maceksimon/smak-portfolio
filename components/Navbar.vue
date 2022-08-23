@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-violet-800 dark:bg-violet-700">
     <Popover>
       <nav
         aria-label="Global"

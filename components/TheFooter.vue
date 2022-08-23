@@ -1,8 +1,10 @@
 <template>
-  <div
-    class="mx-auto max-w-5xl py-4 px-4 text-sm font-semibold text-white sm:px-8"
-  >
-    Simon Macek &#8212; {{ year }}
+  <div class="bg-white text-gray-600 dark:bg-gray-700 dark:text-gray-400">
+    <div
+      class="mx-auto max-w-5xl py-6 px-4 text-right text-sm font-semibold sm:px-8"
+    >
+      Simon Macek &#8212; {{ year }}
+    </div>
   </div>
 </template>
 

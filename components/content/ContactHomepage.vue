@@ -4,7 +4,8 @@
       <Markdown :use="$slots.default" unwrap="p" />
     </DivisionPill>
     <form
-      class="mx-auto sm:max-w-lg"
+      class="my-8 sm:my-12"
+      :class="{ 'animate-shake': v.$error }"
       name="contact-form"
       method="post"
       data-netlify="true"
@@ -13,13 +14,15 @@
       @submit.prevent="handleSubmit()"
     >
       <input type="hidden" name="form-name" value="contact-form" />
-      <ContactForm v-model="form" :validations="v" />
-      <button
-        type="submit"
-        class="bg-gradient-animated mt-8 flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-violet-700 via-pink-600 to-purple-600 px-4 py-2 text-base font-semibold text-white hover:bg-purple-700 md:py-3 md:px-7 md:text-lg"
-      >
-        Send
-      </button>
+      <ContactForm v-model="form" :validations="v" :large="true" />
+      <div class="mt-8 flex justify-end">
+        <button
+          type="submit"
+          class="bg-gradient-animated rounded-md bg-gradient-to-r from-violet-700 via-pink-600 to-purple-600 px-4 py-2 text-base font-semibold text-white hover:bg-purple-700 md:py-3 md:px-7 md:text-lg"
+        >
+          Send
+        </button>
+      </div>
     </form>
   </div>
 </template>

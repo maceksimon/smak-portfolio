@@ -9,10 +9,10 @@
       <div
         v-for="service in services"
         :key="service.title"
-        class="hover-border-violet-300 group relative rounded-sm border bg-white p-6 pb-8 shadow transition-colors duration-300 ease-out focus-within:ring focus-within:ring-inset focus-within:ring-purple-200 dark:border-transparent dark:bg-gray-700 dark:hover:border-violet-900 lg:flex lg:flex-col"
+        class="group relative rounded-sm border bg-white p-6 pb-8 shadow transition-colors duration-300 ease-out focus-within:ring focus-within:ring-inset focus-within:ring-purple-200 dark:border-transparent dark:bg-gray-700 lg:flex lg:flex-col"
       >
         <div
-          class="pointer-none absolute inset-0 opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100 dark:bg-gradient-to-br dark:from-gray-800 dark:via-violet-900 dark:to-purple-800 dark:group-hover:opacity-50"
+          class="pointer-none absolute inset-0 opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100 dark:bg-gradient-to-br dark:from-gray-700 dark:via-gray-700 dark:to-violet-800 dark:group-hover:opacity-50"
         ></div>
         <div class="relative">
           <span
@@ -30,7 +30,7 @@
         >
           <div class="mt-4">
             <h3
-              class="text-lg font-bold text-gray-900 dark:text-gray-50 sm:text-2xl"
+              class="text-2xl font-bold text-gray-900 dark:text-gray-50 sm:text-2xl"
             >
               <a :href="service.href" class="focus:outline-none">
                 <!-- Extend touch target to entire panel -->
@@ -38,10 +38,10 @@
                 {{ service.title }}
               </a>
             </h3>
-            <div class="mt-2 font-semibold">{{ service.subtitle }}</div>
+            <div class="mt-2 text-lg font-semibold">{{ service.subtitle }}</div>
             <div
               v-if="$slots[service.key]"
-              class="mt-4 text-sm text-gray-600 dark:text-gray-300"
+              class="mt-4 text-gray-600 dark:text-gray-300"
             >
               <Markdown :use="$slots[service.key]" unwrap="p" />
             </div>
