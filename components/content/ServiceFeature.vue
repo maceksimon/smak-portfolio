@@ -3,7 +3,7 @@
     <div class="relative lg:grid lg:grid-cols-3 lg:gap-x-8">
       <div
         v-if="features[props.id].claim"
-        class="mb-4 text-lg italic text-gray-200 dark:text-gray-600 sm:mb-6 sm:text-xl lg:col-span-3 lg:mb-12 lg:text-6xl"
+        class="mb-4 text-lg italic text-violet-300/40 dark:text-violet-300/20 sm:mb-6 sm:text-xl lg:col-span-3 lg:mb-12 lg:text-6xl"
       >
         {{ features[props.id].claim }}
       </div>
@@ -49,25 +49,27 @@
     <div class="py-12 lg:py-16">
       <div>
         <div
-          class="overflow-hidden rounded-lg border border-violet-100 shadow-sm lg:flex lg:max-w-none"
+          class="overflow-hidden rounded-lg border border-violet-100 shadow-sm dark:border-violet-300/20 lg:flex lg:max-w-none"
         >
-          <div class="flex-1 bg-white px-6 py-8 lg:p-12">
+          <div class="flex-1 bg-white px-6 py-8 dark:bg-gray-700 lg:p-12">
             <h3
-              class="text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight"
+              class="text-2xl font-bold text-gray-900 dark:text-gray-50 sm:text-3xl sm:tracking-tight"
             >
               Get this solution
             </h3>
-            <p class="mt-6 text-base text-gray-500">
+            <p class="mt-6 text-base text-gray-500 dark:text-gray-300">
               Get in touch to get a free consultation and a project proposal.
             </p>
             <div class="mt-8">
               <div class="flex items-center">
                 <h4
-                  class="flex-shrink-0 bg-white pr-4 text-base font-semibold text-violet-700"
+                  class="flex-shrink-0 bg-white pr-4 text-base font-semibold text-violet-700 dark:bg-gray-700 dark:text-violet-300"
                 >
                   What's included
                 </h4>
-                <div class="flex-1 border-t-2 border-gray-200"></div>
+                <div
+                  class="flex-1 border-t-2 border-gray-200 dark:border-gray-500"
+                ></div>
               </div>
               <ul
                 role="list"
@@ -85,7 +87,7 @@
                       class="flex-shrink-0 flex-grow-0 text-emerald-500"
                     />
                   </div>
-                  <div class="ml-3 text-gray-700">
+                  <div class="ml-3 text-gray-700 dark:text-gray-200">
                     {{ item }}
                   </div>
                 </li>
@@ -93,27 +95,31 @@
             </div>
           </div>
           <div
-            class="bg-violet-50 py-8 px-6 text-center lg:flex lg:flex-shrink-0 lg:flex-col lg:justify-center lg:p-12"
+            class="bg-violet-50 py-8 px-6 text-center dark:bg-violet-300/20 lg:flex lg:flex-shrink-0 lg:flex-col lg:justify-center lg:p-12"
           >
-            <p class="text-lg font-medium leading-6 text-gray-900">Starts at</p>
-            <div
-              class="mt-4 flex items-center justify-center text-5xl font-bold tracking-tight text-gray-900"
+            <p
+              class="text-lg font-medium leading-6 text-gray-900 dark:text-gray-50"
             >
-              <span> $325 </span>
+              Starts at
+            </p>
+            <div
+              class="mt-4 flex items-center justify-center text-5xl font-bold tracking-tight text-gray-900 dark:text-gray-50"
+            >
+              <span> {{ features[props.id].price }} </span>
               <span
-                class="ml-3 text-xl font-medium tracking-normal text-gray-500"
+                class="ml-3 text-xl font-medium tracking-normal text-gray-500 dark:text-gray-300"
               >
                 USD
               </span>
             </div>
-            <p class="mt-4 text-sm text-gray-500">
+            <p class="mt-4 text-sm text-gray-500 dark:text-gray-300">
               Final price is based on client's individual needs.
             </p>
             <div class="mt-6">
               <div class="rounded-md shadow">
                 <a
-                  href="#"
-                  class="flex items-center justify-center rounded-md border border-transparent bg-violet-700 px-5 py-3 text-base font-semibold text-white hover:bg-violet-800"
+                  @click="toggleModal(features[props.id].id)"
+                  class="flex items-center justify-center rounded-md border border-transparent bg-violet-600 px-5 py-3 text-base font-semibold text-white hover:bg-violet-700"
                 >
                   Get started
                 </a>
@@ -131,45 +137,48 @@ const props = defineProps({
   id: { type: String, default: "" },
 });
 
+const toggleModal = inject("toggleModal");
+
 const features = {
   portfolio: {
     title: "Portfolio",
     claim: "“A gleaming business card...”",
     id: "portfolio",
     perex:
-      "One-page presentation site or a portfolio. Market your brand and achieve higher conversion rates through efficient UX design.",
+      "One-page presentation site or a portfolio. Perfect for introducing your products and services.",
+    price: "$325",
     services: [
       {
-        title: "Improved conversions",
+        title: "Tell your story",
         description:
-          "With the experience of building websites for marketing agencies, I can create a web which will attract traffic and drive conversions.",
-        icon: "fluent:target-arrow-20-filled",
+          "One-page website is a great way to introduce yourself or your idea. It will allow your branding to stand out and give you a great way to promote your work.",
+        icon: "tabler:speakerphone",
         iconForeground: "text-pink-700 dark:text-pink-100",
         iconBackground:
           "bg-pink-50 dark:bg-pink-100/25 border border-pink-100 dark:border-pink-200/25",
       },
       {
-        title: "Performant web",
+        title: "Find the right words",
         description:
-          "Static sites score high in the key performance metrics. This will improve your SEO rankings and make users love your site.",
-        icon: "tabler:bolt",
+          "It is the right kind of content that attracts your target audience to your site. I will guide you through the process of creating it, or write it for you.",
+        icon: "tabler:ballpen",
         iconForeground: "text-pink-700 dark:text-pink-100",
         iconBackground:
           "bg-pink-50 dark:bg-pink-100/25 border border-pink-100 dark:border-pink-200/25",
       },
       {
-        title: "Secure solution",
+        title: "Make it beautiful",
         description:
-          "Thanks to their simple architecure, static sites are less vulnerable to malware or spybot attacks.",
-        icon: "tabler:shield-chevron",
+          "I will turn your design file into a pixel-perfect copy on the web. And if you do not have a design ready, I can create one for you, just get in touch!",
+        icon: "tabler:flower",
         iconForeground: "text-pink-700 dark:text-pink-100",
         iconBackground:
           "bg-pink-50 dark:bg-pink-100/25 border border-pink-100 dark:border-pink-200/25",
       },
       {
-        title: "Free hosting",
+        title: "Host for free",
         description:
-          "Your website will be hosted on Netlify or Vercel - services that provide free hosting. All you need is a domain name and you are good to go.",
+          "This solution can easily be hosted using one of the modern services which offer free plans. All you need is a domain name and you are good to go.",
         icon: "tabler:coin",
         iconForeground: "text-pink-700 dark:text-pink-100",
         iconBackground:
@@ -177,10 +186,10 @@ const features = {
       },
     ],
     deliverables: [
-      "One-page portfolio",
+      "One-page website",
       "Original design",
-      "Responsive version",
-      "SEO optimization",
+      "Copywriting",
+      "Free hosting",
     ],
   },
   blog: {
@@ -189,43 +198,50 @@ const features = {
     id: "blog",
     perex:
       "Larger web or a blog built with a industry standard open-source technology.",
+    price: "$725",
     services: [
       {
-        title: "Open-source software",
+        title: "Enjoy the flexibility",
         description:
-          "WordPress is free and open-source. This means that developers around the world have been creating solutions for various use cases that we can build on.",
-        icon: "tabler:brand-open-source",
+          "There is hardly anything that this solution cannot do for you. Multi-page portfolio, event website, recipe cookbook... you name it. Your content will decide.",
+        icon: "tabler:settings",
         iconForeground: "text-violet-700 dark:text-violet-200",
         iconBackground:
           "bg-violet-50 dark:bg-violet-100/25 border border-violet-100 dark:border-violet-200/25",
       },
       {
-        title: "Flexibile customization",
+        title: "Edit comfortably",
         description:
-          "There is hardly anything that cannot be built with WordPress. Blogs, portfolios, e-commerce, event websites... this platform can get you there.",
-        icon: "tabler:world",
+          "I will provide you with a clean and easy-to-use interface for editing your website. This means you can change every piece of content on the web on your own. No code involved.",
+        icon: "tabler:adjustments-horizontal",
         iconForeground: "text-violet-700 dark:text-violet-200",
         iconBackground:
           "bg-violet-50 dark:bg-violet-100/25 border border-violet-100 dark:border-violet-200/25",
       },
       {
-        title: "Popular platform",
+        title: "Make your web move",
         description:
-          "Nearly half of all the websites use WordPress. Most content editors have worked with it before, and there is a plethora of guides and tutorials out there.",
-        icon: "tabler:tool",
+          "Users love to interact with websites. Allow them to search and filter your posts, use maps, sliders and galleries. They will keep coming back.",
+        icon: "tabler:wind",
         iconForeground: "text-violet-700 dark:text-violet-200",
         iconBackground:
           "bg-violet-50 dark:bg-violet-100/25 border border-violet-100 dark:border-violet-200/25",
       },
       {
-        title: "Robust architecture",
+        title: "Leave no user behind",
         description:
-          "The security of WordPress sites is closely followed by milions of developers. Bugs and vulnerabilities are quickly spotted and promptly fixed.",
-        icon: "tabler:lock",
+          "I strive to build websites with great accessibility to allow everyone to use them without limitations. Web must be a tool, not an obstacle.",
+        icon: "tabler:wheelchair",
         iconForeground: "text-violet-700 dark:text-violet-200",
         iconBackground:
           "bg-violet-50 dark:bg-violet-100/25 border border-violet-100 dark:border-violet-200/25",
       },
+    ],
+    deliverables: [
+      "Multi-page website",
+      "Customized admin environment",
+      "Interactive components",
+      "Accessible content",
     ],
   },
   ecommerce: {
@@ -234,43 +250,53 @@ const features = {
     id: "e-commerce",
     perex:
       "Business solution built on Shopify with a website to exactly match your design.",
+    price: "$1625",
     services: [
       {
-        title: "Scaleable system",
+        title: "Improve conversions",
         description:
-          "Well-designed and easy-to-use admin UI that will help you create products, pages and posts in a couple of minutes.",
-        icon: "tabler:brand-open-source",
+          "I design websites with efficient UX design. Well-built e-shop will attract traffic and drive customer conversions. This way, the web will pay for itself.",
+        icon: "fluent:target-arrow-20-filled",
         iconForeground: "text-emerald-700 dark:text-emerald-200",
         iconBackground:
           "bg-emerald-50 dark:bg-emerald-100/25 border border-emerald-100 dark:border-emerald-200/25",
       },
       {
-        title: "Payment management",
+        title: "Let customers find you",
         description:
-          "Shopify provides you with ways to secure your payment process. It allows for a variety of payment methods, takes care of calculating tax and many other important details.",
-        icon: "tabler:world",
+          "I rigorously optimize e-commerce websites for SEO performance. This raises your organic traffic and helps you to gain better position at search engine results pages.",
+        icon: "tabler:zoom-money",
         iconForeground: "text-emerald-700 dark:text-emerald-200",
         iconBackground:
           "bg-emerald-50 dark:bg-emerald-100/25 border border-emerald-100 dark:border-emerald-200/25",
       },
       {
-        title: "Customer data",
+        title: "Control your business",
         description:
-          "You can browse and analyze the data about your customers in minutes. Shopify offers a streamlined workflow for processing orders and shipments",
-        icon: "tabler:tool",
+          "I offer robust solutions which can be customized according to your needs. This includes shipping and payment methods, discounts, inventory management, customer emails etc. The web will put you into the driver's seat.",
+        icon: "tabler:chair-director",
         iconForeground: "text-emerald-700 dark:text-emerald-200",
         iconBackground:
           "bg-emerald-50 dark:bg-emerald-100/25 border border-emerald-100 dark:border-emerald-200/25",
       },
       {
-        title: "Conversion-focused",
+        title: "Know your audience",
         description:
-          "Nearly half of all the websites use WordPress. Most content editors have worked with it before, and there is a plethora of guides and tutorials out there.",
-        icon: "tabler:tool",
+          "I integrate analytic tools into your website. This means you will have the data about your customers right at your fingertips. This will help you to make well-informed and efficient marketing decisions in the future.",
+        icon: "tabler:users",
         iconForeground: "text-emerald-700 dark:text-emerald-200",
         iconBackground:
           "bg-emerald-50 dark:bg-emerald-100/25 border border-emerald-100 dark:border-emerald-200/25",
       },
+    ],
+    deliverables: [
+      "Multi-page e-shop",
+      "Unlimited products",
+      "Blog section",
+      "Dynamic cart functionality",
+      "Conversion oriented design",
+      "App integration",
+      "SEO optimization",
     ],
   },
 };

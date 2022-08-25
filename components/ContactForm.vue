@@ -63,7 +63,7 @@
               as="template"
               v-for="option in jobOptions"
               :key="option.name"
-              :value="option.name"
+              :value="option.value"
               v-slot="{ active, checked }"
             >
               <div
@@ -131,10 +131,10 @@ const props = defineProps({
 const emit = defineEmits(["update:modelValue", "change"]);
 
 const jobOptions = [
-  { name: "Portfolio" },
-  { name: "Blog" },
-  { name: "E-shop" },
-  { name: "Other" },
+  { name: "Portfolio", value: "portfolio" },
+  { name: "Blog", value: "blog" },
+  { name: "E-shop", value: "e-commerce" },
+  { name: "Other", value: "other" },
 ];
 
 const formData = computed({

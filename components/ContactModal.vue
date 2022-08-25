@@ -129,17 +129,11 @@ import axios from "axios";
 
 // open is being injected as a ref
 const open = inject("open");
+const form = inject("form");
 
 const formSubmitted = ref(false);
 const formError = ref(false);
 const emailAddress = "simon.macek@proficio.cz";
-
-const form = reactive({
-  name: "",
-  email: "",
-  job: "",
-  message: "",
-});
 
 const rules = {
   // "name": {
