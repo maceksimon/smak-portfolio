@@ -115,7 +115,7 @@ const services = [
 ];
 </script>
 
-<style lang="postcss">
+<style lang="postcss" scoped>
 em {
   @apply text-pink-600 dark:text-pink-300;
 }

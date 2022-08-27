@@ -59,7 +59,7 @@ const toggleModal = inject("toggleModal");
 const { button1, button2, link1, link2 } = props;
 </script>
 
-<style lang="postcss">
+<style lang="postcss" scoped>
 h1 > strong,
 b {
   background-clip: text;
