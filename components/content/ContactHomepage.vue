@@ -1,5 +1,5 @@
 <template>
-  <div class="not-prose">
+  <div class="not-prose my-8 sm:my-12">
     <DivisionPill v-if="$slots.default">
       <Markdown :use="$slots.default" unwrap="p" />
     </DivisionPill>

@@ -2,7 +2,7 @@
   <div class="mb-8 sm:mb-12">
     <div
       v-if="$slots.highlight"
-      class="mb-2 font-bold text-blue-800 dark:text-blue-300"
+      class="mb-2 font-bold text-blue-700 dark:text-blue-300"
     >
       <Markdown :use="$slots.highlight" unwrap="p" />
     </div>

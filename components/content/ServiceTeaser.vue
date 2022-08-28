@@ -4,7 +4,7 @@
       <Markdown :use="$slots.default" unwrap="p" />
     </DivisionPill>
     <div
-      class="mx-auto my-8 gap-4 overflow-hidden sm:my-12 sm:grid lg:grid-cols-3"
+      class="mx-auto my-8 gap-4 space-y-4 overflow-hidden sm:my-12 sm:grid sm:space-y-0 lg:grid-cols-3"
     >
       <div
         v-for="service in services"
@@ -30,7 +30,7 @@
         >
           <div class="mt-4">
             <h3
-              class="text-2xl font-bold text-gray-900 dark:text-gray-50 sm:text-2xl"
+              class="text-2xl font-bold text-gray-900 underline dark:text-gray-50 sm:text-2xl lg:no-underline"
             >
               <a :href="service.href" class="focus:outline-none">
                 <!-- Extend touch target to entire panel -->

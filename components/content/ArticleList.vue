@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <div class="my-8 sm:my-12">
     <DivisionPill v-if="$slots.default">
       <Markdown :use="$slots.default" unwrap="p" />
     </DivisionPill>
@@ -8,7 +8,7 @@
         <ArticleTeaser v-for="post in data" :post="post" :key="post.id" />
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup>

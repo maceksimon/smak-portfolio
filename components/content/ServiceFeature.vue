@@ -3,7 +3,7 @@
     <div class="relative lg:grid lg:grid-cols-3 lg:gap-x-8">
       <div
         v-if="features[props.id].claim"
-        class="mb-4 text-lg italic text-gray-200 dark:text-gray-600 sm:mb-6 sm:text-xl lg:col-span-3 lg:mb-12 lg:text-6xl"
+        class="mb-4 text-xl italic text-gray-400 dark:text-gray-600 sm:mb-6 sm:text-2xl lg:col-span-3 lg:mb-12 lg:text-6xl lg:text-gray-300"
       >
         {{ features[props.id].claim }}
       </div>
@@ -63,7 +63,7 @@
             <div class="mt-8">
               <div class="flex items-center">
                 <h4
-                  class="flex-shrink-0 bg-white dark:bg-gray-700 pr-4 text-base font-semibold text-blue-700 dark:text-blue-400"
+                  class="flex-shrink-0 bg-white pr-4 text-base font-semibold text-blue-700 dark:bg-gray-700 dark:text-blue-400"
                 >
                   What's included
                 </h4>
@@ -78,7 +78,7 @@
                 <li
                   v-for="item in features[props.id].deliverables"
                   :key="item"
-                  class="flex items-center lg:col-span-1"
+                  class="flex lg:col-span-1"
                 >
                   <div class="flex-shrink-0">
                     <!-- Heroicon name: solid/check-circle -->
@@ -95,7 +95,7 @@
             </div>
           </div>
           <div
-            class="bg-blue-50 dark:bg-blue-200/20 py-8 px-6 text-center lg:flex lg:flex-shrink-0 lg:flex-col lg:justify-center lg:p-12"
+            class="bg-blue-50 py-8 px-6 text-center dark:bg-blue-200/20 lg:flex lg:flex-shrink-0 lg:flex-col lg:justify-center lg:p-12"
           >
             <p
               class="text-lg font-medium leading-6 text-gray-900 dark:text-gray-50"
@@ -119,10 +119,10 @@
               <div class="rounded-md shadow">
                 <button
                   @click.prevent="toggleModal(features[props.id].id)"
-                  class="flex w-full items-center justify-center rounded-md border border-transparent bg-blue-600 hover:bg-blue-700 px-5 py-3 text-base font-semibold text-white transition-colors duration-150 ease-out"
+                  class="flex w-full items-center justify-center rounded-md border border-transparent bg-blue-600 px-5 py-3 text-base font-semibold text-white transition-colors duration-150 ease-out hover:bg-blue-700"
                 >
                   Get started
-              </button>
+                </button>
               </div>
             </div>
           </div>
@@ -239,9 +239,10 @@ const features = {
     ],
     deliverables: [
       "Multi-page website",
-      "Customized admin environment",
       "Interactive components",
       "Accessible content",
+      "Periodical reports",
+      "Customized admin environment",
     ],
   },
   ecommerce: {
@@ -293,10 +294,11 @@ const features = {
       "Multi-page e-shop",
       "Unlimited products",
       "Blog section",
+      "App integration",
       "Dynamic cart functionality",
       "Conversion oriented design",
-      "App integration",
       "SEO optimization",
+      "Periodical reports",
     ],
   },
 };

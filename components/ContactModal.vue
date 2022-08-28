@@ -22,7 +22,7 @@
         >
         <div
           :class="{ 'animate-shake': v.$error }"
-          class="relative inline-block transform overflow-hidden rounded-lg bg-white text-left align-bottom text-gray-800 shadow-xl transition-all dark:bg-gray-800 dark:text-gray-200 sm:my-8 sm:w-full sm:max-w-lg sm:align-middle"
+          class="relative inline-block w-full transform overflow-hidden rounded-lg bg-white text-left align-bottom text-gray-800 shadow-xl transition-all dark:bg-gray-800 dark:text-gray-200 sm:my-8 sm:max-w-lg sm:align-middle"
         >
           <!-- Render the modal content -->
           <div class="relative px-4 py-5 sm:p-6">
@@ -84,11 +84,11 @@
                 </div>
                 <DialogTitle
                   as="h3"
-                  class="text-primary-900 pr-4 text-left text-xl font-bold leading-6 sm:my-4 sm:pr-0 sm:text-center"
+                  class="text-primary-900 pr-4 text-center text-xl font-bold leading-6 sm:my-4 sm:pr-0"
                 >
                   Hey, drop me a message.
                 </DialogTitle>
-                <div>
+                <div class="mt-6">
                   <form
                     name="contact-form"
                     method="post"

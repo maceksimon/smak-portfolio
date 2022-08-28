@@ -2,7 +2,7 @@
   <div class="grid grid-cols-8 gap-x-6 gap-y-8">
     <div
       class="grid grid-cols-8 gap-x-6 gap-y-8"
-      :class="props.large ? 'col-span-4' : 'col-span-8'"
+      :class="props.large ? 'col-span-8 lg:col-span-4' : 'col-span-8'"
     >
       <div
         class="relative col-span-8"
@@ -28,15 +28,16 @@
       </div>
 
       <div
-        class="relative col-span-8"
-        :class="props.large ? '' : 'lg:col-span-4'"
+        class="relative"
+        :class="props.large ? 'col-span-8' : 'col-span-8 lg:col-span-4'"
       >
         <label
           for="email"
           class="block text-sm font-medium text-gray-700 dark:text-gray-200 lg:text-base"
           :class="{ 'mb-2': props.large }"
         >
-          Your e-mail <span class="text-orange-600 dark:text-orange-300">*</span>
+          Your e-mail
+          <span class="text-orange-600 dark:text-orange-300">*</span>
         </label>
         <input
           v-model="formData.email"
@@ -99,7 +100,7 @@
     </div>
 
     <div
-      :class="props.large ? 'col-span-4' : 'col-span-8'"
+      :class="props.large ? 'col-span-8 lg:col-span-4' : 'col-span-8'"
       class="sm:flex sm:flex-col"
     >
       <label

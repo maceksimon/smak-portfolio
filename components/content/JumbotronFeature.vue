@@ -9,19 +9,19 @@
     <div class="not-prose isolate">
       <div
         v-if="$slots.highlight"
-        class="mb-2 font-bold text-blue-700 dark:text-blue-500 sm:mb-4 sm:mt-12 sm:text-lg lg:mb-6 lg:text-xl"
+        class="mb-2 font-bold text-blue-700 dark:text-blue-300 sm:mb-4 sm:mt-12 sm:text-lg lg:mb-6 lg:text-xl"
       >
         <Markdown :use="$slots.highlight" unwrap="p" />
       </div>
       <h1
-        class="max-w-2xl font-extrabold uppercase tracking-tight text-gray-900 dark:text-gray-50 sm:text-3xl md:text-4xl lg:text-7xl"
+        class="max-w-2xl font-extrabold uppercase tracking-tight text-gray-900 dark:text-gray-50 text-4xl sm:text-5xl lg:text-7xl"
         :class="{}"
       >
         <Markdown :use="$slots.title" unwrap="p" />
       </h1>
     </div>
     <div
-      class="mt-6 leading-loose tracking-normal text-gray-500 dark:text-gray-300 sm:mt-8 sm:max-w-xl sm:text-lg lg:mt-12 lg:text-xl"
+      class="mt-6 leading-relaxed lg:leading-loose tracking-normal text-gray-500 dark:text-gray-300 sm:mt-8 sm:max-w-xl sm:text-lg lg:mt-12 lg:text-xl"
     >
       <Markdown :use="$slots.perex" unwrap="p" />
     </div>

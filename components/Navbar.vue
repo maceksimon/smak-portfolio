@@ -3,15 +3,30 @@
     <Popover>
       <nav
         aria-label="Global"
-        class="flex items-center justify-end px-4 py-2 sm:py-4 md:justify-center"
+        class="flex items-center justify-between px-4 py-2 sm:py-4 md:justify-center"
       >
-        <div class="-mr-2 flex items-center md:hidden">
-          <PopoverButton
-            class="dark:hover-gray-600 inline-flex items-center justify-center rounded-md bg-gray-50 p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 dark:bg-gray-700 dark:text-gray-300"
+        <NuxtLink to="/" class="font-semibold text-white md:hidden"
+          >Šimon Macek</NuxtLink
+        >
+        <div class="flex items-center md:hidden">
+          <button
+            @click="toggleModal()"
+            class="dark:hover-gray-600 mr-2 inline-flex items-center justify-center rounded-md bg-gray-50 px-3 py-2 text-gray-800 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 dark:bg-gray-700 dark:text-gray-100"
           >
-            <span class="sr-only">Open main menu</span>
-            <Icon name="heroicons-outline:menu-alt-3" />
-          </PopoverButton>
+            <Icon
+              name="mi:email"
+              class="h-5 w-auto text-gray-500 dark:text-gray-300"
+            />
+            <span class="ml-2 text-sm font-semibold">Contact Me</span>
+          </button>
+          <div class="-mr-2 flex items-center">
+            <PopoverButton
+              class="dark:hover-gray-600 inline-flex items-center justify-center rounded-md bg-gray-50 p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 dark:bg-gray-700 dark:text-gray-300"
+            >
+              <span class="sr-only">Open main menu</span>
+              <Icon name="heroicons-outline:menu-alt-3" />
+            </PopoverButton>
+          </div>
         </div>
         <div
           class="mx-auto hidden w-full max-w-5xl sm:px-8 md:flex md:justify-between"
@@ -89,7 +104,7 @@
                 :key="link._path"
                 :to="link._path"
                 active-class="font-bold"
-                class="menu-link dark:hover-bg-gray-500 dark:hover-text-white block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-200"
+                class="menu-link dark:hover-bg-gray-500 dark:hover-text-white block rounded-md px-3 py-2 text-base text-gray-700 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-200"
                 @click="close()"
               >
                 {{ link.navTitle || link.title }}

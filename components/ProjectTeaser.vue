@@ -32,7 +32,7 @@
     >
       <li v-for="skill in project.fields.skills" class="px-2" :key="skill">
         <span
-          class="inline-flex items-center rounded-full border border-transparent bg-orange-600/70 dark:bg-orange-50 px-2.5 py-0.5 text-xs font-medium text-white dark:text-orange-800 dark:border-orange-100"
+          class="inline-flex items-center rounded-full border border-transparent bg-orange-600/70 px-2.5 py-0.5 text-xs font-medium text-white dark:border-orange-100 dark:bg-orange-50 dark:text-orange-800"
         >
           {{ skill }}
         </span>
@@ -43,7 +43,10 @@
       class="mt-4 block text-blue-700 transition-colors duration-150 ease-out hover:text-blue-600 dark:text-blue-300 dark:hover:text-blue-100"
       :href="project._path"
     >
-      <h2 v-if="project?.title" class="text-xl font-bold lg:text-2xl">
+      <h2
+        v-if="project?.title"
+        class="text-xl font-bold underline lg:text-2xl lg:no-underline"
+      >
         {{ project.title }}
       </h2>
       <div
