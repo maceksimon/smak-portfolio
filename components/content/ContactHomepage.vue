@@ -32,12 +32,7 @@ import useVuelidate from "@vuelidate/core";
 import { required, email, minLength, helpers } from "@vuelidate/validators";
 import axios from "axios";
 
-const form = reactive({
-  name: "",
-  email: "",
-  job: "",
-  message: "",
-});
+const form = inject("form");
 
 const rules = {
   // "name": {

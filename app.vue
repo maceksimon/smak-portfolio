@@ -24,13 +24,23 @@
 
 <script setup>
 const open = ref(false);
+const form = reactive({
+  name: "",
+  email: "",
+  job: "",
+  message: "",
+});
 
-function toggleModal() {
+function toggleModal(service) {
+  if (service) {
+    form.job = service;
+  }
   open.value = !open.value;
 }
 
 provide("toggleModal", toggleModal);
 provide("open", open);
+provide("form", form);
 </script>
 
 <style lang="postcss">

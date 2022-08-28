@@ -68,7 +68,7 @@ const faqs = [
   {
     question: "What do you need to get started?",
     answer:
-      "Depending on the previous agreements, I might need a design file (Figma or Adobe XD), photos for the content. If the project is an update or a theme rework, I will ask you for access to your hosting services or a server.",
+      "Depending on the previous agreements, I might need a design file (Figma or Adobe XD). Also, the media content will be up to you. If the project is a theme rework or a redesign, I will ask you for access to your hosting services or a server.",
   },
 ];
 </script>
