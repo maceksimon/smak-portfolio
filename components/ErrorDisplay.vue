@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="validator.$errors.length"
-    class="absolute -bottom-6 text-sm text-pink-700 dark:text-pink-200"
+    class="absolute -bottom-6 text-sm text-orange-700 dark:text-orange-200"
   >
     <span v-for="error in validator.$errors" :key="error.$validator">
       {{ error.$message }}

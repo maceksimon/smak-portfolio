@@ -13,7 +13,7 @@
           class="block text-sm font-medium text-gray-700 dark:text-gray-200 lg:text-base"
           :class="{ 'mb-2': props.large }"
           >Your name
-          <span class="text-pink-700 dark:text-pink-300">*</span></label
+          <span class="text-orange-700 dark:text-orange-300">*</span></label
         >
         <input
           v-model="formData.name"
@@ -21,7 +21,7 @@
           name="name"
           id="name"
           autocomplete="name"
-          class="focus:border-primary-500 focus:ring-primary-500 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-inset focus:ring-violet-500 dark:border-gray-500 dark:bg-gray-700 dark:text-white sm:text-sm"
+          class="focus:border-primary-500 focus:ring-primary-500 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-700 dark:text-white sm:text-sm"
           @blur="validations.name.$touch"
         />
         <ErrorDisplay :validator="validations.name" />
@@ -36,7 +36,7 @@
           class="block text-sm font-medium text-gray-700 dark:text-gray-200 lg:text-base"
           :class="{ 'mb-2': props.large }"
         >
-          Your e-mail <span class="text-pink-700 dark:text-pink-300">*</span>
+          Your e-mail <span class="text-orange-700 dark:text-orange-300">*</span>
         </label>
         <input
           v-model="formData.email"
@@ -44,7 +44,7 @@
           name="email"
           id="email"
           autocomplete="email"
-          class="focus:border-primary-500 focus:ring-primary-500 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-inset focus:ring-violet-500 dark:border-gray-500 dark:bg-gray-700 dark:text-white sm:text-sm"
+          class="focus:border-primary-500 focus:ring-primary-500 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-700 dark:text-white sm:text-sm"
           @blur="validations.email.$touch"
         />
         <ErrorDisplay :validator="validations.email" />
@@ -68,9 +68,9 @@
             >
               <div
                 :class="[
-                  active ? 'ring-2 ring-violet-500 ring-offset-2' : '',
+                  active ? 'ring-2 ring-blue-500 ring-offset-2' : '',
                   checked
-                    ? 'border-transparent bg-violet-600 text-white hover:bg-violet-700 '
+                    ? 'border-transparent bg-blue-600 text-white hover:bg-blue-700 '
                     : 'border-gray-300 bg-white text-gray-900 shadow hover:bg-gray-50 dark:border-gray-500 dark:bg-gray-600 dark:text-gray-50 dark:hover:bg-gray-500 dark:hover:text-white',
                   'flex cursor-pointer items-center justify-center rounded-md border py-3 px-3 text-sm font-semibold focus:outline-none sm:flex-1',
                 ]"
@@ -102,7 +102,7 @@
           id="message"
           name="message"
           rows="3"
-          class="block w-full rounded-md border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-inset focus:ring-violet-500 dark:border-gray-500 dark:bg-gray-700 dark:text-white sm:grow sm:text-sm"
+          class="block w-full rounded-md border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-700 dark:text-white sm:grow sm:text-sm"
         />
       </div>
     </div>

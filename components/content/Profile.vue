@@ -8,7 +8,7 @@
     <div>
       <div v-if="name || role" class="space-y-1 text-lg font-medium leading-6">
         <h2 class="text-lg font-bold sm:text-xl">{{ name }}</h2>
-        <p class="text-emerald-700 dark:text-emerald-400">{{ role }}</p>
+        <p class="text-blue-700 dark:text-blue-400">{{ role }}</p>
       </div>
       <div class="mt-2 text-gray-500 dark:text-gray-400">
         <Markdown :use="$slots.bio" />

@@ -1,18 +1,5 @@
 const colors = require("tailwindcss/colors");
 
-const pink = {
-  50: "#ffe6f2",
-  100: "#ffcde6",
-  200: "#ff9acc",
-  300: "#ff68b3",
-  400: "#ff3599",
-  500: "#ff0380",
-  600: "#cc0266",
-  700: "#99024d",
-  800: "#660133",
-  900: "#33011a",
-};
-
 module.exports = {
   darkMode: "class",
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
@@ -22,7 +9,6 @@ module.exports = {
       colors: {
         // Customize the feeling of your site
         gray: colors.zinc,
-        pink: pink,
         blue: colors.sky,
       },
       typography: ({ theme }) => ({
@@ -32,10 +18,10 @@ module.exports = {
             "--tw-prose-headings": theme("colors.black[900]"),
             "--tw-prose-lead": theme("colors.blue[700]"),
             "--tw-prose-links": theme("colors.blue[900]"),
-            "--tw-prose-bold": theme("colors.orange[700]"),
+            "--tw-prose-bold": theme("colors.orange[600]"),
             "--tw-prose-counters": theme("colors.blue[600]"),
             "--tw-prose-bullets": theme("colors.blue[400]"),
-            "--tw-prose-hr": theme("colors.blue[300]"),
+            "--tw-prose-hr": theme("colors.gray[300]"),
             "--tw-prose-quotes": theme("colors.gray[900]"),
             "--tw-prose-quote-borders": theme("colors.blue[300]"),
             "--tw-prose-captions": theme("colors.gray[700]"),
@@ -51,7 +37,7 @@ module.exports = {
             "--tw-prose-invert-bold": theme("colors.orange[300]"),
             "--tw-prose-invert-counters": theme("colors.blue[400]"),
             "--tw-prose-invert-bullets": theme("colors.blue[600]"),
-            "--tw-prose-invert-hr": theme("colors.blue[700]"),
+            "--tw-prose-invert-hr": theme("colors.gray[700]"),
             "--tw-prose-invert-quotes": theme("colors.gray[100]"),
             "--tw-prose-invert-quote-borders": theme("colors.blue[700]"),
             "--tw-prose-invert-captions": theme("colors.gray[400]"),

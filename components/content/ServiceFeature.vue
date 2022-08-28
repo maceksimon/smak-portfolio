@@ -49,7 +49,7 @@
     <div class="py-12 lg:py-16">
       <div>
         <div
-          class="overflow-hidden rounded-lg border border-violet-100 shadow-sm lg:flex lg:max-w-none"
+          class="overflow-hidden rounded-lg border border-transparent shadow-sm lg:flex lg:max-w-none"
         >
           <div class="flex-1 bg-white px-6 py-8 lg:p-12">
             <h3
@@ -63,7 +63,7 @@
             <div class="mt-8">
               <div class="flex items-center">
                 <h4
-                  class="flex-shrink-0 bg-white pr-4 text-base font-semibold text-violet-700"
+                  class="flex-shrink-0 bg-white pr-4 text-base font-semibold text-blue-700"
                 >
                   What's included
                 </h4>
@@ -82,7 +82,7 @@
                     <!-- Heroicon name: solid/check-circle -->
                     <Icon
                       name="ph:check-circle-duotone"
-                      class="flex-shrink-0 flex-grow-0 text-emerald-500"
+                      class="flex-shrink-0 flex-grow-0 text-blue-500"
                     />
                   </div>
                   <div class="ml-3 text-gray-700">
@@ -93,7 +93,7 @@
             </div>
           </div>
           <div
-            class="bg-violet-50 py-8 px-6 text-center lg:flex lg:flex-shrink-0 lg:flex-col lg:justify-center lg:p-12"
+            class="bg-blue-50 py-8 px-6 text-center lg:flex lg:flex-shrink-0 lg:flex-col lg:justify-center lg:p-12"
           >
             <p class="text-lg font-medium leading-6 text-gray-900">Starts at</p>
             <div
@@ -113,7 +113,7 @@
               <div class="rounded-md shadow">
                 <a
                   href="#"
-                  class="flex items-center justify-center rounded-md border border-transparent bg-violet-700 px-5 py-3 text-base font-semibold text-white hover:bg-violet-800"
+                  class="flex items-center justify-center rounded-md border border-transparent bg-blue-700 px-5 py-3 text-base font-semibold text-white hover:bg-blue-800 transition-colors duration-150 ease-out"
                 >
                   Get started
                 </a>
@@ -144,36 +144,36 @@ const features = {
         description:
           "With the experience of building websites for marketing agencies, I can create a web which will attract traffic and drive conversions.",
         icon: "fluent:target-arrow-20-filled",
-        iconForeground: "text-pink-700 dark:text-pink-100",
+        iconForeground: "text-white dark:text-orange-100",
         iconBackground:
-          "bg-pink-50 dark:bg-pink-100/25 border border-pink-100 dark:border-pink-200/25",
+          "bg-orange-600/70 dark:bg-orange-100/25 border border-transparent dark:border-orange-200/25",
       },
       {
         title: "Performant web",
         description:
           "Static sites score high in the key performance metrics. This will improve your SEO rankings and make users love your site.",
         icon: "tabler:bolt",
-        iconForeground: "text-pink-700 dark:text-pink-100",
+        iconForeground: "text-white dark:text-orange-100",
         iconBackground:
-          "bg-pink-50 dark:bg-pink-100/25 border border-pink-100 dark:border-pink-200/25",
+          "bg-orange-600/70 dark:bg-orange-100/25 border border-transparent dark:border-orange-200/25",
       },
       {
         title: "Secure solution",
         description:
           "Thanks to their simple architecure, static sites are less vulnerable to malware or spybot attacks.",
         icon: "tabler:shield-chevron",
-        iconForeground: "text-pink-700 dark:text-pink-100",
+        iconForeground: "text-white dark:text-orange-100",
         iconBackground:
-          "bg-pink-50 dark:bg-pink-100/25 border border-pink-100 dark:border-pink-200/25",
+          "bg-orange-600/70 dark:bg-orange-100/25 border border-transparent dark:border-orange-200/25",
       },
       {
         title: "Free hosting",
         description:
           "Your website will be hosted on Netlify or Vercel - services that provide free hosting. All you need is a domain name and you are good to go.",
         icon: "tabler:coin",
-        iconForeground: "text-pink-700 dark:text-pink-100",
+        iconForeground: "text-white dark:text-orange-100",
         iconBackground:
-          "bg-pink-50 dark:bg-pink-100/25 border border-pink-100 dark:border-pink-200/25",
+          "bg-orange-600/70 dark:bg-orange-100/25 border border-transparent dark:border-orange-200/25",
       },
     ],
     deliverables: [
@@ -195,36 +195,36 @@ const features = {
         description:
           "WordPress is free and open-source. This means that developers around the world have been creating solutions for various use cases that we can build on.",
         icon: "tabler:brand-open-source",
-        iconForeground: "text-violet-700 dark:text-violet-200",
+        iconForeground: "text-white dark:text-blue-200",
         iconBackground:
-          "bg-violet-50 dark:bg-violet-100/25 border border-violet-100 dark:border-violet-200/25",
+          "bg-blue-600/70 dark:bg-blue-100/25 border border-transparent dark:border-blue-200/25",
       },
       {
         title: "Flexibile customization",
         description:
           "There is hardly anything that cannot be built with WordPress. Blogs, portfolios, e-commerce, event websites... this platform can get you there.",
         icon: "tabler:world",
-        iconForeground: "text-violet-700 dark:text-violet-200",
+        iconForeground: "text-white dark:text-blue-200",
         iconBackground:
-          "bg-violet-50 dark:bg-violet-100/25 border border-violet-100 dark:border-violet-200/25",
+          "bg-blue-600/70 dark:bg-blue-100/25 border border-transparent dark:border-blue-200/25",
       },
       {
         title: "Popular platform",
         description:
           "Nearly half of all the websites use WordPress. Most content editors have worked with it before, and there is a plethora of guides and tutorials out there.",
         icon: "tabler:tool",
-        iconForeground: "text-violet-700 dark:text-violet-200",
+        iconForeground: "text-white dark:text-blue-200",
         iconBackground:
-          "bg-violet-50 dark:bg-violet-100/25 border border-violet-100 dark:border-violet-200/25",
+          "bg-blue-600/70 dark:bg-blue-100/25 border border-transparent dark:border-blue-200/25",
       },
       {
         title: "Robust architecture",
         description:
           "The security of WordPress sites is closely followed by milions of developers. Bugs and vulnerabilities are quickly spotted and promptly fixed.",
         icon: "tabler:lock",
-        iconForeground: "text-violet-700 dark:text-violet-200",
+        iconForeground: "text-white dark:text-blue-200",
         iconBackground:
-          "bg-violet-50 dark:bg-violet-100/25 border border-violet-100 dark:border-violet-200/25",
+          "bg-blue-600/70 dark:bg-blue-100/25 border border-transparent dark:border-blue-200/25",
       },
     ],
   },
@@ -240,36 +240,36 @@ const features = {
         description:
           "Well-designed and easy-to-use admin UI that will help you create products, pages and posts in a couple of minutes.",
         icon: "tabler:brand-open-source",
-        iconForeground: "text-emerald-700 dark:text-emerald-200",
+        iconForeground: "text-white dark:text-emerald-200",
         iconBackground:
-          "bg-emerald-50 dark:bg-emerald-100/25 border border-emerald-100 dark:border-emerald-200/25",
+          "bg-emerald-600/70 dark:bg-emerald-100/25 border border-transparent dark:border-emerald-200/25",
       },
       {
         title: "Payment management",
         description:
           "Shopify provides you with ways to secure your payment process. It allows for a variety of payment methods, takes care of calculating tax and many other important details.",
         icon: "tabler:world",
-        iconForeground: "text-emerald-700 dark:text-emerald-200",
+        iconForeground: "text-white dark:text-emerald-200",
         iconBackground:
-          "bg-emerald-50 dark:bg-emerald-100/25 border border-emerald-100 dark:border-emerald-200/25",
+          "bg-emerald-600/70 dark:bg-emerald-100/25 border border-transparent dark:border-emerald-200/25",
       },
       {
         title: "Customer data",
         description:
           "You can browse and analyze the data about your customers in minutes. Shopify offers a streamlined workflow for processing orders and shipments",
         icon: "tabler:tool",
-        iconForeground: "text-emerald-700 dark:text-emerald-200",
+        iconForeground: "text-white dark:text-emerald-200",
         iconBackground:
-          "bg-emerald-50 dark:bg-emerald-100/25 border border-emerald-100 dark:border-emerald-200/25",
+          "bg-emerald-600/70 dark:bg-emerald-100/25 border border-transparent dark:border-emerald-200/25",
       },
       {
         title: "Conversion-focused",
         description:
           "Nearly half of all the websites use WordPress. Most content editors have worked with it before, and there is a plethora of guides and tutorials out there.",
         icon: "tabler:tool",
-        iconForeground: "text-emerald-700 dark:text-emerald-200",
+        iconForeground: "text-white dark:text-emerald-200",
         iconBackground:
-          "bg-emerald-50 dark:bg-emerald-100/25 border border-emerald-100 dark:border-emerald-200/25",
+          "bg-emerald-600/70 dark:bg-emerald-100/25 border border-transparent dark:border-emerald-200/25",
       },
     ],
   },

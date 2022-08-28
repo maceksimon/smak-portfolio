@@ -13,7 +13,7 @@
         </h3>
         <p
           v-if="tier.mostPopular"
-          class="absolute top-0 -translate-y-1/2 transform rounded-full bg-purple-500 py-1.5 px-4 text-xs font-semibold uppercase tracking-wide text-white"
+          class="absolute top-0 -translate-y-1/2 transform rounded-full bg-blue-500 py-1.5 px-4 text-xs font-semibold uppercase tracking-wide text-white"
         >
           Most popular
         </p>
@@ -42,7 +42,7 @@
       </div>
 
       <button
-        class="bg-gradient-animated mt-4 flex w-full items-center justify-center rounded-md border border-purple-200 bg-gradient-to-r from-purple-50 via-violet-200 to-purple-100 px-4 py-2 text-base text-purple-900 md:py-3 md:px-7"
+        class="bg-gradient-animated mt-4 flex w-full items-center justify-center rounded-md border border-blue-200 bg-gradient-to-r from-blue-50 via-blue-200 to-blue-100 px-4 py-2 text-base text-blue-900 md:py-3 md:px-7"
         @click.prevent="toggleModal()"
       >
         {{ tier.cta }}

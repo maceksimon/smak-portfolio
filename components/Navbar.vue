@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-violet-800 dark:bg-violet-700">
+  <div class="bg-blue-700">
     <Popover>
       <nav
         aria-label="Global"
@@ -7,7 +7,7 @@
       >
         <div class="-mr-2 flex items-center md:hidden">
           <PopoverButton
-            class="dark:hover-gray-600 inline-flex items-center justify-center rounded-md bg-gray-50 p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-violet-500 dark:bg-gray-700 dark:text-gray-300"
+            class="dark:hover-gray-600 inline-flex items-center justify-center rounded-md bg-gray-50 p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 dark:bg-gray-700 dark:text-gray-300"
           >
             <span class="sr-only">Open main menu</span>
             <Icon name="heroicons-outline:menu-alt-3" />
@@ -76,7 +76,7 @@
               <div class="text-xl font-bold">Menu</div>
               <div class="-mr-2">
                 <PopoverButton
-                  class="dark:hover-text-gray-100 inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-violet-500 dark:bg-gray-700 dark:text-gray-300"
+                  class="dark:hover-text-gray-100 inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 dark:bg-gray-700 dark:text-gray-300"
                 >
                   <span class="sr-only">Close menu</span>
                   <Icon name="heroicons-outline:x" />

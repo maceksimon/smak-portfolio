@@ -16,7 +16,7 @@
             class="group flex w-full items-start justify-between text-left text-gray-400"
           >
             <span
-              class="font-semibold text-gray-900 transition-colors duration-150 ease-out group-hover:text-purple-800 dark:text-gray-200 dark:group-hover:text-purple-300"
+              class="font-semibold text-gray-700 transition-colors duration-150 ease-out group-hover:text-blue-700 dark:text-gray-200 dark:group-hover:text-blue-300"
             >
               {{ faq.question }}
             </span>

@@ -7,14 +7,14 @@
     >
       <img :src="post.fields?.image" :alt="post.fields?.imageAlt" />
       <div
-        class="absolute inset-0 flex h-full w-full items-center justify-center bg-gradient-to-br from-purple-900 via-violet-900 to-gray-900 opacity-0 transition-opacity duration-300 ease-in group-hover:opacity-90"
+        class="absolute inset-0 flex h-full w-full items-center justify-center bg-gradient-to-br from-blue-900 via-blue-900 to-gray-900 opacity-0 transition-opacity duration-300 ease-in group-hover:opacity-90"
       ></div>
       <div
         class="absolute inset-0 z-10 flex h-full w-full items-center justify-center space-x-2 text-xl font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"
       >
         <span>Read More</span>
         <Icon
-          class="mt-1 h-5 w-5 text-violet-400"
+          class="mt-1 h-5 w-5 text-blue-400"
           aria-hidden="true"
           name="majesticons:fast-forward-line"
         />
@@ -23,7 +23,7 @@
     <div v-if="post?.fields?.tags?.length" class="-mx-2 mt-4 flex flex-wrap">
       <div v-for="tag in post.fields.tags" :key="tag" class="px-2">
         <span
-          class="inline-flex items-center rounded-full border border-teal-200 bg-teal-100 px-2.5 py-0.5 text-xs font-medium text-teal-900 dark:border-teal-100"
+          class="inline-flex items-center rounded-full border border-transparent bg-blue-600/70 text-white px-2.5 py-0.5 text-xs font-medium dark:text-blue-800 dark:bg-blue-50/90 dark:border-blue-100"
         >
           {{ tag }}
         </span>
@@ -32,7 +32,7 @@
     <a
       v-if="post.title || post.description"
       :href="post._path"
-      class="mt-4 block text-purple-800 transition-colors duration-150 ease-out hover:text-purple-900 dark:text-purple-300 dark:hover:text-purple-100"
+      class="mt-4 block text-blue-800 transition-colors duration-150 ease-out hover:text-blue-900 dark:text-blue-300 dark:hover:text-blue-100"
     >
       <p class="text-xl font-bold lg:text-2xl">
         {{ post.title }}

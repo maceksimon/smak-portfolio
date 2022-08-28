@@ -9,10 +9,10 @@
       <div
         v-for="service in services"
         :key="service.title"
-        class="group relative rounded-sm border bg-white p-6 pb-8 shadow transition-colors duration-300 ease-out focus-within:ring focus-within:ring-inset focus-within:ring-purple-200 dark:border-transparent dark:bg-gray-700 lg:flex lg:flex-col"
+        class="group relative rounded-sm border bg-white p-6 pb-8 shadow transition-colors duration-300 ease-out focus-within:ring focus-within:ring-inset focus-within:ring-blue-200 dark:border-transparent dark:bg-gray-700 lg:flex lg:flex-col"
       >
         <div
-          class="pointer-none absolute inset-0 opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100 dark:bg-gradient-to-br dark:from-gray-700 dark:via-gray-700 dark:to-violet-800 dark:group-hover:opacity-50"
+          class="pointer-none absolute inset-0 opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100 dark:bg-gradient-to-br dark:from-gray-700 dark:via-gray-700 dark:to-blue-800 dark:group-hover:opacity-50"
         ></div>
         <div class="relative">
           <span
@@ -70,9 +70,9 @@ const services = [
     subtitle: "Boost your online presence",
     href: "/services#portfolio",
     icon: "carbon:lightning",
-    iconForeground: "text-pink-700 dark:text-pink-100",
+    iconForeground: "text-white dark:text-orange-100",
     iconBackground:
-      "bg-pink-50 dark:bg-pink-100/25 border border-pink-100 dark:border-pink-200/25",
+      "bg-orange-600/75 dark:bg-orange-100/25 border border-transparent dark:border-orange-200/25",
     logos: [
       { name: "bxl:netlify", title: "Netlify logo" },
       { name: "bxl:vuejs", title: "Vue logo" },
@@ -86,9 +86,9 @@ const services = [
     subtitle: "Share your story",
     href: "/services#blog",
     icon: "material-symbols:menu-book-outline",
-    iconForeground: "text-violet-700 dark:text-violet-200",
+    iconForeground: "text-white dark:text-blue-200",
     iconBackground:
-      "bg-violet-50 dark:bg-violet-100/25 border border-violet-100 dark:border-violet-200/25",
+      "bg-blue-600/75 dark:bg-blue-100/25 border border-transparent dark:border-blue-200/25",
     logos: [
       { name: "bxl:wordpress", title: "WordPress logo" },
       { name: "simple-icons:php", title: "PHP logo" },
@@ -102,9 +102,9 @@ const services = [
     subtitle: "Sell on the web",
     href: "/services#e-commerce",
     icon: "material-symbols:shopping-cart-outline-rounded",
-    iconForeground: "text-emerald-700 dark:text-emerald-200",
+    iconForeground: "text-white dark:text-emerald-200",
     iconBackground:
-      "bg-emerald-50 dark:bg-emerald-100/25 border border-emerald-100 dark:border-emerald-200/25",
+      "bg-emerald-600/75 dark:bg-emerald-100/25 border border-transparent dark:border-emerald-200/25",
     logos: [
       { name: "bxl:shopify", title: "Shopify logo" },
       { name: "bxl:tailwind-css", title: "Tailwind CSS logo" },
@@ -117,6 +117,6 @@ const services = [
 
 <style lang="postcss" scoped>
 em {
-  @apply text-pink-600 dark:text-pink-300;
+  @apply text-orange-600 dark:text-orange-300;
 }
 </style>

@@ -1,8 +1,8 @@
 ---
-head.title: Image optimization 101
+head.title: 5 Tools for Image Optimization
 head.description: Read how we optimize images to make your websites blazingly fast.
-head.image: /og/image-optimization-101.jpg
-fields.image: /og/image-optimization-101.jpg
+head.image: /blog/5-tools-for-image-optimization.jpg
+fields.image: /blog/5-tools-for-image-optimization.jpg
 fields.tags: ["Performance", "Cloudinary", "WebP"]
 created: "2022-07-17T12:34:44"
 time: "6 min"

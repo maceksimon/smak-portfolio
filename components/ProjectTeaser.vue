@@ -12,14 +12,14 @@
         class="rounded-sm border dark:border-transparent"
       />
       <div
-        class="absolute inset-0 flex h-full w-full items-center justify-center rounded-sm bg-gradient-to-br from-purple-900 via-violet-900 to-gray-900 opacity-0 transition-opacity duration-300 ease-in group-hover:opacity-90"
+        class="absolute inset-0 flex h-full w-full items-center justify-center rounded-sm bg-gradient-to-br from-blue-700 via-blue-700 to-blue-900 opacity-0 transition-opacity duration-300 ease-in group-hover:opacity-90"
       ></div>
       <div
         class="absolute inset-0 z-10 flex h-full w-full items-center justify-center space-x-2 text-xl font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"
       >
         <span>Explore</span>
         <Icon
-          class="mt-1 h-5 w-5 text-violet-400"
+          class="mt-1 h-5 w-5 text-blue-400"
           aria-hidden="true"
           name="majesticons:fast-forward-line"
         />
@@ -32,7 +32,7 @@
     >
       <li v-for="skill in project.fields.skills" class="px-2" :key="skill">
         <span
-          class="inline-flex items-center rounded-full border border-pink-100 bg-pink-50 px-2.5 py-0.5 text-xs font-medium text-pink-800 dark:border-pink-100"
+          class="inline-flex items-center rounded-full border border-transparent bg-orange-600/70 dark:bg-orange-50 px-2.5 py-0.5 text-xs font-medium text-white dark:text-orange-800 dark:border-orange-100"
         >
           {{ skill }}
         </span>
@@ -40,7 +40,7 @@
     </ul>
     <a
       v-if="project?._path"
-      class="mt-4 block text-purple-800 transition-colors duration-150 ease-out hover:text-purple-900 dark:text-purple-300 dark:hover:text-purple-100"
+      class="mt-4 block text-blue-700 transition-colors duration-150 ease-out hover:text-blue-600 dark:text-blue-300 dark:hover:text-blue-100"
       :href="project._path"
     >
       <h2 v-if="project?.title" class="text-xl font-bold lg:text-2xl">

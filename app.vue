@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="flex flex-col min-h-screen">
     <Html lang="en" />
     <Meta property="og:image" content="/cover.jpg" />
     <Meta name="twitter:card" content="summary_large_image" />
     <Navbar />
-    <NuxtPage />
+    <NuxtPage class="grow flex flex-col" />
     <TheFooter />
     <ContactModal />
     <form
@@ -38,12 +38,17 @@ body {
   @apply bg-gray-100;
 }
 /* Customize headers to remove default underline */
-.prose h2 a,
-.prose h3 a {
+.prose-primary h2 a,
+.prose-primary h3 a {
+  color: var(--tw-prose-headings);
   @apply no-underline;
   &:hover {
     @apply border-b border-neutral-600 dark:border-neutral-300;
   }
+}
+.dark .prose-primary h2 a,
+.dark .prose-primary h3 a {
+  color: var(--tw-prose-invert-headings)
 }
 .prose img {
   @apply rounded-sm;

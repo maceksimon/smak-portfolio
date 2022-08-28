@@ -2,7 +2,7 @@
   <div class="mb-8 sm:mb-12">
     <div
       v-if="$slots.highlight"
-      class="mb-2 font-bold text-purple-800 dark:text-purple-300"
+      class="mb-2 font-bold text-blue-800 dark:text-blue-300"
     >
       <Markdown :use="$slots.highlight" unwrap="p" />
     </div>
@@ -21,14 +21,14 @@
       <div class="rounded-md shadow">
         <a
           :href="link1"
-          class="bg-gradient-animated flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-violet-700 via-pink-600 to-purple-600 px-4 py-2 text-base font-semibold text-white shadow hover:bg-purple-700 md:py-3 md:px-7 md:text-lg"
+          class="bg-gradient-animated flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-blue-700 via-orange-600 to-blue-600 px-4 py-2 text-base font-semibold text-white shadow hover:bg-blue-700 md:py-3 md:px-7 md:text-lg"
         >
           {{ button1 }}
         </a>
       </div>
       <div class="mt-3 sm:mt-0 sm:ml-3">
         <button
-          class="bg-gradient-animated flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-purple-50 via-violet-200 to-purple-100 px-4 py-2 text-base font-semibold text-purple-900 shadow md:py-3 md:px-7 md:text-lg"
+          class="bg-gradient-animated flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-blue-50 via-blue-200 to-blue-100 px-4 py-2 text-base font-semibold text-blue-900 shadow md:py-3 md:px-7 md:text-lg"
           @click="toggleModal()"
         >
           {{ button2 }}

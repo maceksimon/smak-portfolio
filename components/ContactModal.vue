@@ -54,7 +54,7 @@
               <!-- On error -->
               <div v-if="formError">
                 <div
-                  class="mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-full border border-pink-200 bg-pink-100 text-pink-700"
+                  class="mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-full border border-orange-200 bg-orange-100 text-orange-700"
                 >
                   <Icon name="fluent:chat-dismiss-20-regular" />
                 </div>
@@ -78,7 +78,7 @@
               <!-- Form -->
               <div v-if="!formSubmitted && !formError">
                 <div
-                  class="mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-full border border-violet-200 bg-violet-100 text-violet-700"
+                  class="mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-full border border-blue-200 bg-blue-100 text-blue-600"
                 >
                   <Icon name="mdi:typewriter" />
                 </div>
@@ -106,7 +106,7 @@
                     <ContactForm v-model="form" :validations="v" />
                     <button
                       type="submit"
-                      class="bg-gradient-animated mt-8 flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-violet-700 via-pink-600 to-purple-600 px-4 py-2 text-base font-semibold text-white hover:bg-purple-700 md:py-3 md:px-7 md:text-lg"
+                      class="bg-gradient-animated mt-8 flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-blue-700 via-blue-400 to-blue-500 px-4 py-2 text-base font-semibold text-white hover:bg-blue-700 md:py-3 md:px-7 md:text-lg"
                     >
                       Send
                     </button>

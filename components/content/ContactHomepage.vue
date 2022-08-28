@@ -18,7 +18,7 @@
       <div class="mt-8 flex justify-end">
         <button
           type="submit"
-          class="bg-gradient-animated rounded-md bg-gradient-to-r from-violet-700 via-pink-600 to-purple-600 px-4 py-2 text-base font-semibold text-white hover:bg-purple-700 md:py-3 md:px-7 md:text-lg"
+          class="bg-gradient-animated rounded-md bg-gradient-to-r from-blue-700 via-blue-400 to-blue-500 px-4 py-2 text-base font-semibold text-white hover:bg-blue-700 md:py-3 md:px-7 md:text-lg"
         >
           Send
         </button>

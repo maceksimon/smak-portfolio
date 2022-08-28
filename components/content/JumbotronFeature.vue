@@ -9,7 +9,7 @@
     <div class="not-prose isolate">
       <div
         v-if="$slots.highlight"
-        class="mb-2 font-bold text-violet-800 dark:text-violet-500 sm:mb-4 sm:mt-12 sm:text-lg lg:mb-6 lg:text-xl"
+        class="mb-2 font-bold text-blue-700 dark:text-blue-500 sm:mb-4 sm:mt-12 sm:text-lg lg:mb-6 lg:text-xl"
       >
         <Markdown :use="$slots.highlight" unwrap="p" />
       </div>
@@ -29,14 +29,14 @@
       <div class="rounded-md shadow">
         <a
           :href="link1"
-          class="bg-gradient-animated flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-violet-700 via-pink-600 to-purple-600 px-4 py-2 text-base font-semibold text-white shadow hover:bg-purple-700 md:py-3 md:px-7 md:text-lg"
+          class="bg-gradient-animated flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-blue-700 via-blue-400 to-blue-500 px-4 py-2 text-base font-semibold text-white shadow hover:bg-blue-700 md:py-3 md:px-7 md:text-lg"
         >
           {{ button1 }}
         </a>
       </div>
       <div class="mt-3 sm:mt-0 sm:ml-3">
         <button
-          class="bg-gradient-animated flex w-full items-center justify-center rounded-md border border-purple-100 bg-gradient-to-r from-purple-50 via-violet-200 to-purple-100 px-4 py-2 text-base font-semibold text-purple-900 shadow md:py-3 md:px-7 md:text-lg"
+          class="bg-gradient-animated flex w-full items-center justify-center rounded-md border border-blue-100 bg-gradient-to-r from-blue-100 via-white to-blue-100 dark:from-blue-200 dark:via-blue-50 dark:to-blue-100 px-4 py-2 text-base font-semibold text-blue-800 shadow md:py-3 md:px-7 md:text-lg"
           @click="toggleModal()"
         >
           {{ button2 }}
@@ -59,12 +59,12 @@ const toggleModal = inject("toggleModal");
 const { button1, button2, link1, link2 } = props;
 </script>
 
-<style lang="postcss" scoped>
+<style lang="postcss">
 h1 > strong,
 b {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  @apply bg-gradient-to-r from-violet-700 via-purple-800 to-pink-600;
+  @apply bg-gradient-to-r from-orange-600 via-orange-300 to-orange-400;
 }
 </style>

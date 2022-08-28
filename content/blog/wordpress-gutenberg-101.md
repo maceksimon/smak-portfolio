@@ -1,8 +1,8 @@
 ---
-head.title: WordPress Gutenberg 101
+head.title: The Magic of WordPress Gutenberg
 head.description: Check out our solution for WordPress admin which enables us to create amazing configurable websites.
-head.image: /og/wordpress-gutenberg-101.jpg
-fields.image: /og/wordpress-gutenberg-101.jpg
+head.image: /blog/the-magic-of-wordpress-gutenberg.jpg
+fields.image: /blog/the-magic-of-wordpress-gutenberg.jpg
 fields.tags: ["WordPress", "PHP", "Twig"]
 created: "2022-07-17T12:34:44"
 time: "6 min"
