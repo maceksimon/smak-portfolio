@@ -13,7 +13,7 @@
           class="block text-sm font-medium text-gray-700 dark:text-gray-200 lg:text-base"
           :class="{ 'mb-2': props.large }"
           >Your name
-          <span class="text-orange-700 dark:text-orange-300">*</span></label
+          <span class="text-orange-600 dark:text-orange-300">*</span></label
         >
         <input
           v-model="formData.name"
@@ -36,7 +36,7 @@
           class="block text-sm font-medium text-gray-700 dark:text-gray-200 lg:text-base"
           :class="{ 'mb-2': props.large }"
         >
-          Your e-mail <span class="text-orange-700 dark:text-orange-300">*</span>
+          Your e-mail <span class="text-orange-600 dark:text-orange-300">*</span>
         </label>
         <input
           v-model="formData.email"
@@ -83,6 +83,19 @@
           </div>
         </RadioGroup>
       </div>
+
+      <!-- <div class="col-span-8">
+        <fieldset class="mt-2">
+          <legend class="sr-only">Choose additional service</legend>
+          <div v-for="service in serviceOptions" class="grid grid-cols-3 gap-3">
+            <input v-model="formData.service" :id="service.value" type="checkbox" name="additional-service" :value="service.value" class="sr-only" aria-labelledby="memory-option-0-label">
+            <label :for="service.value" :class="['focus:ring-2 focus:ring-offset-2 ring-blue-500', formData.service.includes(service.value) ? 'bg-blue-600 border-transparent text-white hover:bg-blue-700' : 'bg-white border-gray-200 text-gray-900 hover:bg-gray-50', 'border rounded-md py-3 px-3 flex items-center justify-center text-sm font-medium uppercase sm:flex-1']">
+
+              <span id="memory-option-0-label"> {{ service.name }} </span>
+            </label>
+          </div>
+        </fieldset>
+      </div> -->
     </div>
 
     <div
@@ -135,6 +148,12 @@ const jobOptions = [
   { name: "Blog", value: "blog" },
   { name: "E-shop", value: "e-commerce" },
   { name: "Other", value: "other" },
+];
+
+const serviceOptions = [
+  { name: "Content + SEO", value: "content" },
+  { name: "Social Media", value: "smm" },
+  { name: "Complete Bundle", value: "bundle" },
 ];
 
 const formData = computed({

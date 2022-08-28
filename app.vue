@@ -24,16 +24,24 @@
 
 <script setup>
 const open = ref(false);
+
+const jobs = ['portfolio', 'blog', 'e-commerce']
+const services = ['content', 'smm', 'bundle']
+
 const form = reactive({
   name: "",
   email: "",
   job: "",
   message: "",
+  service: "",
 });
 
 function toggleModal(service) {
-  if (service) {
+  if (jobs.includes(service)) {
     form.job = service;
+  }
+  if (services.includes(service)) {
+    form.service = service
   }
   open.value = !open.value;
 }

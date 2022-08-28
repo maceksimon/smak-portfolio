@@ -15,7 +15,7 @@
           v-if="tier.mostPopular"
           class="absolute top-0 -translate-y-1/2 transform rounded-full bg-blue-500 py-1.5 px-4 text-xs font-semibold uppercase tracking-wide text-white"
         >
-          Most popular
+          15% OFF
         </p>
         <p class="mt-4 flex items-baseline text-gray-900 dark:text-gray-50">
           <span class="text-4xl font-bold tracking-tight"
@@ -32,7 +32,7 @@
           <li v-for="feature in tier.features" :key="feature" class="flex">
             <Icon
               name="ph:check-circle-duotone"
-              class="h-6 w-6 flex-shrink-0 text-emerald-500"
+              class="h-6 w-6 flex-shrink-0 text-blue-500"
             />
             <span class="ml-3 text-gray-500 dark:text-gray-300">{{
               feature
@@ -42,8 +42,9 @@
       </div>
 
       <button
-        class="bg-gradient-animated mt-4 flex w-full items-center justify-center rounded-md border border-blue-200 bg-gradient-to-r from-blue-50 via-blue-200 to-blue-100 px-4 py-2 text-base text-blue-900 md:py-3 md:px-7"
-        @click.prevent="toggleModal()"
+        class="bg-gradient-animated mt-4 sm:mt-6 lg:mt-8 flex w-full items-center justify-center rounded-md border bg-gradient-to-r  px-4 py-2 text-base md:py-3 md:px-7"
+        :class="[ tier.mostPopular ? 'from-blue-700 via-blue-400 to-blue-500 border-transparent text-white' : ' border-blue-100 from-blue-100 via-white to-blue-100 dark:from-blue-200 dark:via-blue-50 dark:to-blue-100 text-blue-800' ]"
+        @click.prevent="toggleModal(tier.id)"
       >
         {{ tier.cta }}
       </button>
@@ -57,49 +58,49 @@ const toggleModal = inject("toggleModal");
 const pricing = {
   tiers: [
     {
-      title: "Portfolio",
-      price: 325,
-      frequency: "",
-      description: "The simple and effective presentation of your business.",
+      id: 'content',
+      title: "Content + SEO",
+      price: 19,
+      frequency: "/month",
+      description: "Publish content on regular basis to increase your relevance and build a better SERP position.",
       features: [
-        "One-page portfolio",
-        "Brand promotion",
-        "Attractive animations",
-        "Option to provide custom design",
+        "One 500-word article",
+        "SEO optimization",
+        "Performance optimization",
       ],
       cta: "Request service",
       mostPopular: false,
     },
     {
-      title: "Blog",
-      price: 725,
-      frequency: "",
+      id: 'smm',
+      title: "Social Media",
+      price: 39,
+      frequency: "/month",
       description:
-        "Full-featured multi-page website to showcase your products.",
+        "Promote your project on social media and direct your online audience to your website to ensure conversions.",
       features: [
-        "Up to 8 customizable pages",
-        "Blog section",
-        "Up to 2 languages",
-        "Dynamic UX components",
-        "Optimized for SEO",
+        "4 social media posts",
+        "SEO optimization",
+        "Performance optimization",
       ],
       cta: "Request service",
       mostPopular: false,
     },
     {
-      title: "E-commerce",
-      price: 1625,
-      frequency: "",
-      description: "All you need for your online business.",
+      id: 'bundle',
+      title: "Complete Bundle",
+      price: 49,
+      frequency: "/month",
+      description: "Get a full treatment and boost your online presence through both your website and social media.",
       features: [
-        "Up to 10 pages",
-        "Shop page",
-        "Unlimited products",
-        "Core analytics",
-        "Conversion-driven design",
+        "One 500-word article",
+        "4 social media posts",
+        "SEO optimization",
+        "Performance optimization",
+        "Regular reports",
       ],
       cta: "Request service",
-      mostPopular: false,
+      mostPopular: true,
     },
   ],
 };

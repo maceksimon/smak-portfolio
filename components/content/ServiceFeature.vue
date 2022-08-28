@@ -49,7 +49,7 @@
     <div class="py-12 lg:py-16">
       <div>
         <div
-          class="overflow-hidden rounded-lg border border-transparent shadow-sm lg:flex lg:max-w-none"
+          class="overflow-hidden rounded-lg border border-blue-100 shadow-sm lg:flex lg:max-w-none"
         >
           <div class="flex-1 bg-white px-6 py-8 dark:bg-gray-700 lg:p-12">
             <h3
@@ -63,7 +63,7 @@
             <div class="mt-8">
               <div class="flex items-center">
                 <h4
-                  class="flex-shrink-0 bg-white pr-4 text-base font-semibold text-blue-700"
+                  class="flex-shrink-0 bg-white dark:bg-gray-700 pr-4 text-base font-semibold text-blue-700 dark:text-blue-400"
                 >
                   What's included
                 </h4>
@@ -95,7 +95,7 @@
             </div>
           </div>
           <div
-            class="bg-blue-50 py-8 px-6 text-center lg:flex lg:flex-shrink-0 lg:flex-col lg:justify-center lg:p-12"
+            class="bg-blue-50 dark:bg-blue-200/20 py-8 px-6 text-center lg:flex lg:flex-shrink-0 lg:flex-col lg:justify-center lg:p-12"
           >
             <p
               class="text-lg font-medium leading-6 text-gray-900 dark:text-gray-50"
@@ -117,12 +117,12 @@
             </p>
             <div class="mt-6">
               <div class="rounded-md shadow">
-                <a
-                  @click="toggleModal(features[props.id].id)"
-                  class="flex items-center justify-center rounded-md border border-transparent bg-blue-700 px-5 py-3 text-base font-semibold text-white hover:bg-blue-800 transition-colors duration-150 ease-out"
+                <button
+                  @click.prevent="toggleModal(features[props.id].id)"
+                  class="flex w-full items-center justify-center rounded-md border border-transparent bg-blue-600 hover:bg-blue-700 px-5 py-3 text-base font-semibold text-white transition-colors duration-150 ease-out"
                 >
                   Get started
-                </a>
+              </button>
               </div>
             </div>
           </div>
@@ -153,7 +153,7 @@ const features = {
         description:
           "One-page website is a great way to introduce yourself or your idea. It will allow your branding to stand out and give you a great way to promote your work.",
         icon: "tabler:speakerphone",
-        iconForeground: "text-white dark:text-orange-100",
+        iconForeground: "text-white dark:text-orange-200",
         iconBackground:
           "bg-orange-600/70 dark:bg-orange-100/25 border border-transparent dark:border-orange-200/25",
       },
@@ -162,7 +162,7 @@ const features = {
         description:
           "It is the right kind of content that attracts your target audience to your site. I will guide you through the process of creating it, or write it for you.",
         icon: "tabler:ballpen",
-        iconForeground: "text-white dark:text-orange-100",
+        iconForeground: "text-white dark:text-orange-200",
         iconBackground:
           "bg-orange-600/70 dark:bg-orange-100/25 border border-transparent dark:border-orange-200/25",
       },
@@ -171,7 +171,7 @@ const features = {
         description:
           "I will turn your design file into a pixel-perfect copy on the web. And if you do not have a design ready, I can create one for you, just get in touch!",
         icon: "tabler:flower",
-        iconForeground: "text-white dark:text-orange-100",
+        iconForeground: "text-white dark:text-orange-200",
         iconBackground:
           "bg-orange-600/70 dark:bg-orange-100/25 border border-transparent dark:border-orange-200/25",
       },
@@ -180,7 +180,7 @@ const features = {
         description:
           "This solution can easily be hosted using one of the modern services which offer free plans. All you need is a domain name and you are good to go.",
         icon: "tabler:coin",
-        iconForeground: "text-white dark:text-orange-100",
+        iconForeground: "text-white dark:text-orange-200",
         iconBackground:
           "bg-orange-600/70 dark:bg-orange-100/25 border border-transparent dark:border-orange-200/25",
       },
