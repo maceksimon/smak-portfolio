@@ -1,16 +1,16 @@
 ---
 head.title: 5 Tools for Image Optimization
 head.description: Read how we optimize images to make your websites blazingly fast.
-head.image: /blog/5-tools-for-image-optimization.jpg
-fields.image: /blog/5-tools-for-image-optimization.jpg
+head.image: /image/blog/5-tools-for-image-optimization.jpg
+fields.image: /image/blog/5-tools-for-image-optimization.jpg
 fields.tags: ["Performance", "Cloudinary", "WebP"]
 created: "2022-07-17T12:34:44"
-time: "6 min"
+time: ""
 ---
 
-# Image optimization 101
+# 5 Tools for Image Optimization
 
-Image optimization can be a big thing that makes or breaks your performance scores. It can be done in many ways, but there always needs to be at least some mechanism to prevent from unreasonably large images slowing your page loads.
+Image optimization can be a big thing that makes or breaks your performance scores. Here are some of the popular tools that help you to deal with large images.
 
 ## Key concepts of image optimization
 
@@ -42,9 +42,9 @@ Here are some great tools which I use almost daily to optimize my images.
 - [TinyPNG.com](https://tinypng.com/) is an amazing compression tool, which can compress images by a considerable amount while keeping their resolution.
 - [SVGOMG](https://jakearchibald.github.io/svgomg/) is an _extra_ - it optimizes SVG graphics which I might write about later.
 - [Cloudinary](https://cloudinary.com/) a full-featured service for hosting, optimizing and serving images which can be integrated to any website and can save a lot of manual work.
-- Custom optimization is always an option. If you're only creating a static HTML + CSS page, the easiest way of optimizing images may be to just do it manually.
+- [ImageOptim](https://imageoptim.com/mac) is tool for iOS which allows to compress images right inside your computer. Just right click and select 'ImageOptimize', and watch the app save you space.
 
-## Optimization workflows
+## Extra: Optimization workflows
 
 As you can see, there are multiple tools that help with image optimization. But how to use them? One option is to use BulkResizePhotos and TinyPNG to optimize your images before the upload. This is an ideal solution for saving space on your hosting platform. It does, however, introduce those few extra steps into the content editing.
 

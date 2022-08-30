@@ -1,11 +1,11 @@
 ---
 head.title: The Magic of WordPress Gutenberg
 head.description: Check out our solution for WordPress admin which enables us to create amazing configurable websites.
-head.image: /blog/the-magic-of-wordpress-gutenberg.jpg
-fields.image: /blog/the-magic-of-wordpress-gutenberg.jpg
+head.image: /image/blog/the-magic-of-wordpress-gutenberg.jpg
+fields.image: /image/blog/the-magic-of-wordpress-gutenberg.jpg
 fields.tags: ["WordPress", "PHP", "Twig"]
 created: "2022-07-17T12:34:44"
-time: "6 min"
+time: ""
 ---
 
 # The Magic of WordPress Gutenberg
@@ -16,7 +16,7 @@ In 2018 WordPress made a big step and transitioned from its classic editor to a 
 
 Back in the day, WordPress would allow editors to enter a block of rich text on the page and then display it within a particular template. If you wanted to add multiple text blocks, or create an interesting non-linear layout, you would have to create more complex templates with multiple input fields in the admin. Sometimes you could leverage a plugin such as [Advanced Custom Fields](https://www.advancedcustomfields.com/) to make your life easier, but in general, there would be a lot of custom work and the templates would generally be sigle-purpose.
 
-![Image of a textfield with different formatting buttons](/blog/gutenberg_classic_editor.jpg)
+![Image of a textfield with different formatting buttons](/image/blog/gutenberg_classic_editor.jpg)
 
 _A familiar view for any WordPress content editor._
 
@@ -31,7 +31,7 @@ Native technology always gives better performance, since you do not have to inst
 
 What gives you the freedom is, of course, the fact that you can build your own custom blocks that look and function exactly the way you want. You can also use them multiple times across multiple pages and thus make the web building process so much more efficient.
 
-![Info graphics that lists the advantages of Gutenberg editor](/blog/gutenberg_info.jpg)
+![Info graphics that lists the advantages of Gutenberg editor](/image/blog/gutenberg_info.jpg)
 
 ## What's the catch?
 
@@ -51,13 +51,13 @@ However, the main thing for every editor is that they will be able to see the re
 
 Here is an example of how a block might look like in the editing view.
 
-![List of input fields in the admin using](/blog/gutenberg_admin.jpg)
+![List of input fields in the admin using](/image/blog/gutenberg_admin.jpg)
 
 _Input fiedls of a block_
 
 And here is the result.
 
-![A preview of a hero section with video on the background](/blog/gutenberg_result.jpg)
+![A preview of a hero section with video on the background](/image/blog/gutenberg_result.jpg)
 
 _Preview of a block_
 

@@ -4,7 +4,7 @@ head.description: How to present a large variety of content to students and alum
 head.image: /image/portfolio/sca-department.jpg
 fields.image: /image/portfolio/sca-department.jpg
 fields.order: 300
-fields.skills: ["WordPress", "Twig", "Tailwind CSS"]
+fields.skills: ["WordPress", "Twig", "Tailwind CSS", "Figma"]
 featured: true
 type: "full"
 ---

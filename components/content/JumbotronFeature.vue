@@ -1,13 +1,13 @@
 <template>
   <div class="relative mb-8 sm:mb-12">
     <img
-      src="/profile_light.png"
+      src="/image/profile_light.png"
       alt="Simon Macek profile photo"
       aria-hidden="true"
       class="absolute bottom-0 right-0 m-0 h-full w-auto dark:hidden"
     />
     <img
-      src="/profile_dark.png"
+      src="/image/profile_dark.png"
       alt="Simon Macek profile photo"
       aria-hidden="true"
       class="absolute bottom-0 right-0 m-0 hidden h-full w-auto dark:block"

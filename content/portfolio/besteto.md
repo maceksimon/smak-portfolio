@@ -11,7 +11,7 @@ type: "theme"
 
 # Focus on value: Theme for a marketing agency website
 
-Marketing agencies know how to design results driven websites. That is why I take the opportunity to collaborate on them as a learning experience. Designing a theme for Besteto was just like that.
+Marketing agencies know how to design results driven websites. That is why I take the opportunity to collaborate on them as a learning experience. Building a theme for Besteto was just like that.
 
 ## Client
 

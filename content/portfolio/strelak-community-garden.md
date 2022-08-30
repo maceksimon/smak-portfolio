@@ -4,7 +4,7 @@ head.description: Creating a website that helps to build a community. A heartwar
 head.image: /image/portfolio/community-garden.jpg
 fields.image: /image/portfolio/community-garden.jpg
 fields.order: 400
-fields.skills: ["Netlify", "Vue.js", "Tailwind CSS"]
+fields.skills: ["Netlify", "Vue.js", "Tailwind CSS", "Figma"]
 featured: false
 type: "full"
 ---

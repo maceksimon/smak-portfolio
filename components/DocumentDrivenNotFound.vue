@@ -7,7 +7,7 @@
       <Jumbotron>
         <template v-slot:title>Sorry, we could not find this page</template>
       </Jumbotron>
-      <img src="/404.gif" alt="Confused Travolta meme" />
+      <img src="/image/404.gif" alt="Confused Travolta meme" />
       <div>Try coming back to <a href="/">homepage</a> instead.</div>
     </main>
   </div>
