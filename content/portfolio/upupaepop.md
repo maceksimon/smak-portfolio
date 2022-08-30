@@ -1,8 +1,8 @@
 ---
 head.title: Upupaepop
 head.description: Redesigning a Wix site and switching to an open source e-commerce? Piece of cake! 🍰
-head.image: /og/upupaepop.jpg
-fields.image: /og/upupaepop.jpg
+head.image: /image/portfolio/upupaepop.jpg
+fields.image: /image/portfolio/upupaepop.jpg
 fields.order: 200
 fields.skills: ["WordPress", "WooCommerce"]
 featured: true

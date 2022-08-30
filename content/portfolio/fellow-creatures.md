@@ -1,8 +1,8 @@
 ---
 head.title: Fellow Creatures Store
 head.description: Find out how I developed the e-commerce website on Shopify that sells vegan chocolates.
-head.image: /og/fellow-creatures.jpg
-fields.image: /og/fellow-creatures.jpg
+head.image: /image/portfolio/fellow-creatures.jpg
+fields.image: /image/portfolio/fellow-creatures.jpg
 fields.order: 100
 fields.skills: ["Shopify", "Liquid", "Tailwind CSS"]
 featured: true

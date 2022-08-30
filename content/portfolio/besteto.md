@@ -1,8 +1,8 @@
 ---
 head.title: Besteto WordPress theme
 head.description: Once you make a website for the marketers you really get to know how to focus on the results.
-head.image: /og/fellow-creatures.jpg
-fields.image: /og/fellow-creatures.jpg
+head.image: /image/portfolio/besteto.jpg
+fields.image: /image/portfolio/besteto.jpg
 fields.order: 500
 fields.skills: ["WordPress", "Twig", "Tailwind CSS"]
 featured: true
