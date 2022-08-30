@@ -1,11 +1,17 @@
 <template>
   <div class="relative mb-8 sm:mb-12">
-    <!-- <img
-      src="/simon_macek.png"
-      alt=""
+    <img
+      src="/profile_light.png"
+      alt="Simon Macek profile photo"
       aria-hidden="true"
-      class="absolute inset-y-0 right-0 h-full w-auto -scale-x-100 opacity-50"
-    /> -->
+      class="absolute bottom-0 right-0 m-0 h-full w-auto dark:hidden"
+    />
+    <img
+      src="/profile_dark.png"
+      alt="Simon Macek profile photo"
+      aria-hidden="true"
+      class="absolute bottom-0 right-0 m-0 hidden h-full w-auto dark:block"
+    />
     <div class="not-prose isolate">
       <div
         v-if="$slots.highlight"
@@ -14,14 +20,14 @@
         <Markdown :use="$slots.highlight" unwrap="p" />
       </div>
       <h1
-        class="max-w-2xl font-extrabold uppercase tracking-tight text-gray-900 dark:text-gray-50 text-4xl sm:text-5xl lg:text-7xl"
+        class="max-w-2xl text-4xl font-extrabold uppercase tracking-tight text-gray-900 dark:text-gray-50 sm:text-5xl lg:text-7xl"
         :class="{}"
       >
         <Markdown :use="$slots.title" unwrap="p" />
       </h1>
     </div>
     <div
-      class="mt-6 leading-relaxed lg:leading-loose tracking-normal text-gray-500 dark:text-gray-300 sm:mt-8 sm:max-w-xl sm:text-lg lg:mt-12 lg:text-xl"
+      class="mt-6 leading-relaxed tracking-normal text-gray-500 dark:text-gray-300 sm:mt-8 sm:max-w-xl sm:text-lg lg:mt-12 lg:text-xl lg:leading-loose"
     >
       <Markdown :use="$slots.perex" unwrap="p" />
     </div>
@@ -36,7 +42,7 @@
       </div>
       <div class="mt-3 sm:mt-0 sm:ml-3">
         <button
-          class="bg-gradient-animated flex w-full items-center justify-center rounded-md border border-blue-100 bg-gradient-to-r from-blue-100 via-white to-blue-100 dark:from-blue-200 dark:via-blue-50 dark:to-blue-100 px-4 py-2 text-base font-semibold text-blue-800 shadow md:py-3 md:px-7 md:text-lg"
+          class="bg-gradient-animated flex w-full items-center justify-center rounded-md border border-blue-100 bg-gradient-to-r from-blue-100 via-white to-blue-100 px-4 py-2 text-base font-semibold text-blue-800 shadow dark:from-blue-200 dark:via-blue-50 dark:to-blue-100 md:py-3 md:px-7 md:text-lg"
           @click="toggleModal()"
         >
           {{ button2 }}
