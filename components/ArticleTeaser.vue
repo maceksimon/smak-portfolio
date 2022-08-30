@@ -23,7 +23,7 @@
     <div v-if="post?.fields?.tags?.length" class="-mx-2 mt-4 flex flex-wrap">
       <div v-for="tag in post.fields.tags" :key="tag" class="px-2">
         <span
-          class="inline-flex items-center rounded-full border border-transparent bg-blue-600/70 text-white px-2.5 py-0.5 text-xs font-medium dark:text-blue-800 dark:bg-blue-50/90 dark:border-blue-100"
+          class="inline-flex items-center rounded-full border border-transparent bg-blue-600/70 px-2.5 py-0.5 text-xs font-medium text-white dark:border-blue-100 dark:bg-blue-50/90 dark:text-blue-800"
         >
           {{ tag }}
         </span>
@@ -32,11 +32,13 @@
     <a
       v-if="post.title || post.description"
       :href="post._path"
-      class="mt-4 block text-blue-800 transition-colors duration-150 ease-out hover:text-blue-900 dark:text-blue-300 dark:hover:text-blue-100"
+      class="group mt-4 block text-blue-700 dark:text-blue-300"
     >
-      <p class="text-xl font-bold lg:text-2xl">
+      <h2
+        class="text-xl font-bold underline lg:text-2xl lg:no-underline lg:group-hover:underline"
+      >
         {{ post.title }}
-      </p>
+      </h2>
       <p class="mt-3 text-base text-gray-800 dark:text-gray-300">
         {{ post.description }}
       </p>

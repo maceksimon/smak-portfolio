@@ -40,12 +40,12 @@
     </ul>
     <a
       v-if="project?._path"
-      class="mt-4 block text-blue-700 transition-colors duration-150 ease-out hover:text-blue-600 dark:text-blue-300 dark:hover:text-blue-100"
+      class="group mt-4 block text-blue-700 dark:text-blue-300"
       :href="project._path"
     >
       <h2
         v-if="project?.title"
-        class="text-xl font-bold underline lg:text-2xl lg:no-underline"
+        class="text-xl font-bold underline lg:text-2xl lg:no-underline lg:group-hover:underline"
       >
         {{ project.title }}
       </h2>

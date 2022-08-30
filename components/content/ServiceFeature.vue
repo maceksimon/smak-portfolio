@@ -49,7 +49,7 @@
     <div class="py-12 lg:py-16">
       <div>
         <div
-          class="overflow-hidden rounded-lg border border-blue-100 shadow-sm lg:flex lg:max-w-none"
+          class="overflow-hidden rounded-lg border border-blue-100 shadow-sm dark:border-transparent lg:flex lg:max-w-none"
         >
           <div class="flex-1 bg-white px-6 py-8 dark:bg-gray-700 lg:p-12">
             <h3
