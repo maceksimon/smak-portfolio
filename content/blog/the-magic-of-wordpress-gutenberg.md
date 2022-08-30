@@ -8,11 +8,11 @@ created: "2022-07-17T12:34:44"
 time: "6 min"
 ---
 
-# WordPress Gutenberg + ACF blocks
+# The Magic of WordPress Gutenberg
 
 In 2018 WordPress made a big step and transitioned from its classic editor to a new shiny block editor with live preview. Read how we make use of it and what kind of editing experience it enables.
 
-## What it was like...
+## WordPress + ACF history
 
 Back in the day, WordPress would allow editors to enter a block of rich text on the page and then display it within a particular template. If you wanted to add multiple text blocks, or create an interesting non-linear layout, you would have to create more complex templates with multiple input fields in the admin. Sometimes you could leverage a plugin such as [Advanced Custom Fields](https://www.advancedcustomfields.com/) to make your life easier, but in general, there would be a lot of custom work and the templates would generally be sigle-purpose.
 
@@ -20,7 +20,7 @@ Back in the day, WordPress would allow editors to enter a block of rich text on 
 
 _A familiar view for any WordPress content editor._
 
-## What it is now
+## Bright future of the Gutenberg editor
 
 Nowadays, WordPress [Gutenberg editor](https://wordpress.org/gutenberg/) allows you to use **blocks**. These are pieces of HTML, CSS and JavaScript which you can place directly onto your page and fill with data. In a way the approach is similar to popular builder plugins such as Elementor or DIVI. The advantage to using a native approach is twofold.
 
@@ -37,15 +37,13 @@ What gives you the freedom is, of course, the fact that you can build your own c
 
 Well, the native way of building Gutenberg blocks is React. This is a complex JavaScript framework which may not be easy to maintain or work with for many developers.
 
-## No catch, pinky-swear
+## No catch!
 
-So is there a way to get around this?
-
-Absolutely - and just like before, ACF comes to the rescue and makes everything so much more simple.
+Luckily, there is a way around this - and just like before, ACF comes to the rescue and makes everything so much more simple.
 
 By using [ACF Blocks](https://www.advancedcustomfields.com/resources/blocks/) you get a simple way of creating blocks in PHP - the standard language of WordPress. The result is a maintainable and robust code which gives you all the advantages of using the new Gutenberg editor.
 
-## The solution
+## Clean solution for easy editing
 
 On our WordPress projects we tend to use ACF Blocks paired with the [Twig](https://twig.symfony.com/) templating language and the [Tailwind CSS](https://tailwindcss.com/) framework. This makes the code even more modular and reusable.
 
