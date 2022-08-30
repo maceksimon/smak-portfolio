@@ -33,9 +33,10 @@
           </DisclosureButton>
         </dt>
         <DisclosurePanel as="dd" class="mt-2 pr-12">
-          <p class="text-base text-gray-500 dark:text-gray-300">
-            {{ faq.answer }}
-          </p>
+          <p
+            class="text-base text-gray-500 dark:text-gray-300"
+            v-html="faq.answer"
+          />
         </DisclosurePanel>
       </Disclosure>
     </dl>
@@ -46,9 +47,19 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 const faqs = [
   {
-    question: "How do you charge?",
+    question: "How much do you charge?",
     answer:
-      "Typically, I charge a fixed rate based on the project specifications. This is paid in two installments, each 50% of the final price.",
+      "The exact price depends on several variables, including the complexity of the web, and the amount of copy and design that we agree on. You can check out the <a href='/services'>services page</a> for more details.",
+  },
+  {
+    question: "What is the payment arrangement?",
+    answer:
+      "Typically, I ask for the project to be paid in two installments, each 50% of the final price.",
+  },
+  {
+    question: "What do you need to get started?",
+    answer:
+      "Depending on the previous agreements, I might ask for a design file (Figma or Adobe XD). I will need you to provide images if they are a part of the design. For the rework and redesign projects, I will ask for access to your hosting services or a server.",
   },
   {
     question: "Do you take care of the content editing?",
@@ -56,19 +67,19 @@ const faqs = [
       "I certainly can. All my websites are designed to provide simple means of editing the content with no code involved. However, I am happy to assist you with copywriting and content editing.",
   },
   {
+    question: "Can you design my web?",
+    answer:
+      "Yes. I am happy to deliver a custom design which will perfectly suit your project or a brand. The design work is not included in the estimated prices on the <a href='/services'>services page</a>.",
+  },
+  {
     question: "What do you do for SEO?",
     answer:
-      "I provide full-featured on-site SEO services, making sure that titles, descriptions, and heading structure are used optimally. This should significantly boost your organic traffic. I do not provide off-site SEO services.",
+      "I provide full-featured on-site SEO services, making sure that titles, descriptions, headings and content structure are designed optimally. I also provide advice on copywriting and I can set up analytics tools for you. I do not provide off-site SEO services.",
   },
   {
     question: "Do you update existing websites?",
     answer:
-      "Yes, I can update or extend your current theme. However, I will need to inspect your website first before I agree to work on it.",
-  },
-  {
-    question: "What do you need to get started?",
-    answer:
-      "Depending on the previous agreements, I might need a design file (Figma or Adobe XD). Also, the media content will be up to you. If the project is a theme rework or a redesign, I will ask you for access to your hosting services or a server.",
+      "Yes, I can update or extend your current theme. However, I will need to inspect your website first before I start working on it.",
   },
 ];
 </script>
