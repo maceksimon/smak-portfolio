@@ -48,8 +48,10 @@
         <time :datetime="post.datetime">
           {{ formattedDate.toLocaleDateString() }}
         </time>
-        <span aria-hidden="true"> &middot; </span>
-        <span> {{ post.time }} read </span>
+        <template v-if="post.time">
+          <span aria-hidden="true"> &middot; </span>
+          <span> {{ post.time }} read </span>
+        </template>
       </div>
     </div>
   </div>
