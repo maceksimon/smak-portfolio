@@ -3,7 +3,7 @@ head.title: Strelak Community Garden
 head.description: Creating a website that helps to build a community. A heartwarming work 🌿.
 head.image: /image/portfolio/community-garden.jpg
 fields.image: /image/portfolio/community-garden.jpg
-fields.order: 400
+fields.order: 500
 fields.skills: ["Netlify", "Vue.js", "Tailwind CSS", "Figma"]
 featured: false
 type: "full"
