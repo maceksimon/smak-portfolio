@@ -13,8 +13,6 @@ type: "theme"
 
 Marketing agencies know how to design results driven websites. That is why I take the opportunity to collaborate on them as a learning experience. Building a theme for Besteto was just like that.
 
-[Browse Besteto website](https://www.besteto.cz/).
-
 ## Client
 
 Besteto is a marketing agency specializing in e-commerce. They commissioned an 8 page website to one of my colleagues and he requested my help on the project. I got to **code the theme from start to finish** and learned a good deal during the process.

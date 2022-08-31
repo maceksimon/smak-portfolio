@@ -13,8 +13,6 @@ type: "full"
 
 Building an e-commerce website from scratch might not sound like an easy task. However, having an experienced guide can make it into an exciting and fun project.
 
-[Visit Fellow Creatures](https://www.fellowcreatures.co.uk/).
-
 ## The e-commerce journey
 
 This is how the journey started for me. Unsurprisingly, it was with a client...
@@ -61,4 +59,4 @@ Another important aspect of the Fellow Creatures brand was a fun and playful des
 
 All this work was worth it in my eyes. Zsolt is very happy with the site, it generates revenue, and we continue to work on further ideas and improvements.
 
-You can browse Zsolt's website on [FellowCreatures.co.uk](https://www.fellowcreatures.co.uk/).
+Visit the store on [FellowCreatures.co.uk](https://www.fellowcreatures.co.uk/).

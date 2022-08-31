@@ -13,8 +13,6 @@ type: "full"
 
 Building a web for a designer and typographer is a wonderful experience. Not only you get to implement a beautiful design, you also learn a lot during the process!
 
-[Read up on Upupaepop](https://upupaepop.cz/).
-
 ## Client
 
 Jakub is a graphic designer and a typographer and together with his wife he owns a small printing studio. This project was focused on updating the studio's website.
@@ -38,3 +36,5 @@ Finally, the website was also intended to sell the studio products. I integrated
 By utilizing open source software, pre-built theme, and services which offer free plans, we were able to keep the project cost very low while producing high-quality deliverables. I assisted Jakub with all the necessary steps, such as **changing the hosting service, updating domain records, and setting up WooCommerce**. I also gave him a thorough walk-through of the admin environment and made sure he was comfortable with using the web on his own. This way, Jakub was able to focus on updating his portfolio with beautiful images and descriptions, while I was taking care of the technical details.
 
 The collaboration worked out great. Jakub is fond of his new website and we continue working together on other website projects.
+
+Read up on the studio projects on [Upupaepop.cz](https://upupaepop.cz/).
