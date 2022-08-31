@@ -10,47 +10,49 @@ time: ""
 
 # 5 Tools for Image Optimization
 
-Image optimization can be a big thing that makes or breaks your performance scores. Here are some of the popular tools that help you to deal with large images.
+Image optimization can be the thing that makes or breaks your performance scores. Here are some of the popular tools that help you to deal with large images.
 
 ## Key concepts of image optimization
 
-Images such as a photographies, info-graphics, or illustrations are usually created in bitmap graphics. This means that the images are made of pixels. The more pixels you have, the more detailed and larger the image is. Modern DSLRs can easily spit out images over 3000px on each side. The size of these images can be 3-5Mb - way too much to handle for a standard internet connection.
+Images such as a photographies, info-graphics, or illustrations are made of pixels. The more pixels you have, the more detailed and larger the image is. Modern DSLR cameras can easily spit out images with width and height over 3000px. This can mean 4-5Mb of data which is far to much for images to load smoothly.
 
-The problem gets worse when you switch to **mobile devices**. Many internet users have a limited data plan, and downloading a bunch of 3Mb images can drain it in no time.
+The problem gets worse when you switch to **mobile devices**. Many internet users have a limited data plan, and downloading a bunch of large images can drain it in no time.
 
-Moreover, loading images makes up for a large part of all performance issues. And website performance recently became a factor in SEO ranking. Large images may **hurt your position on Google results page**!
+Moreover, loading images usually makes up for a large part of the website's performance issues. Since the performance recently became a [factor in SEO ranking](https://developers.google.com/search/blog/2010/04/using-site-speed-in-web-search-ranking). Large images may **hurt your position on Google results page**!
 
-### Resolution
+### Image Resolution
 
-You **do not need the full resolution** of your source image. What resolution do you need? Imagine a large computer screen. Those typically have Full HD resolution: 1920x1080 pixels. Image with higher resolution will only get **scaled down** to fit your display and the extra data will get lost.
+You should **scale down** your images from its source resolution. What resolution do you need?
 
-Remember, we are talking about a _full-screen_ image! Most of the images used on websites are much smaller than this. For a blog post, I typically use about **600-800px** wide images. They do just fine.
+Imagine a large computer screen. Those typically have Full HD resolution: 1920x1080 pixels. Image with higher resolution will only get scaled down to fit your display and the extra data will get lost.
 
-### Compression
+If your image does not take the full width of the screen, you need even less pixels. Most of the images used on websites are relatively small. For a blog post, I typically use about **600-800px** wide images, and they look great.
+
+### Image Compression
 
 Another important step aside from resizing is the image compression. Compressing the image results in lower quality, but it can make the file size much smaller. Content creators are often afraid of compression and claim that their images do not look as good compressed. But with the right tools, you can achieve **compression that is virtually indistinguishable** from the original.
 
-### Format
+### Image Format
 
 Sometimes the image format can also play a role. Importantly, the recently introduced .webp format created by Google is extremely efficient in producing high-quality images with a small file size. The catch is that not all browsers support this format. I will get to how to solve this issue later.
 
 ## Optimization tools
 
-Here are some great tools which I use almost daily to optimize my images.
+Here are some great tools which I use regularly to optimize my images.
 
 - [BulkResizePhotos.com](https://bulkresizephotos.com/) is a flexible tool that allows you to scale large batches of images to a desired width or height. It outputs .jpg, .png or .webp files.
 - [TinyPNG.com](https://tinypng.com/) is an amazing compression tool, which can compress images by a considerable amount while keeping their resolution.
-- [SVGOMG](https://jakearchibald.github.io/svgomg/) is an _extra_ - it optimizes SVG graphics which I might write about later.
 - [Cloudinary](https://cloudinary.com/) a full-featured service for hosting, optimizing and serving images which can be integrated to any website and can save a lot of manual work.
 - [ImageOptim](https://imageoptim.com/mac) is tool for iOS which allows to compress images right inside your computer. Just right click and select 'ImageOptimize', and watch the app save you space.
+- [SVGOMG](https://jakearchibald.github.io/svgomg/) - this one optimizes SVG graphics. SVGs are a topic on its own, so I will probably write about them soon.
 
-## Extra: Optimization workflows
+## Using the tools
 
 As you can see, there are multiple tools that help with image optimization. But how to use them? One option is to use BulkResizePhotos and TinyPNG to optimize your images before the upload. This is an ideal solution for saving space on your hosting platform. It does, however, introduce those few extra steps into the content editing.
 
 Instead, we could use something like Cloudinary, to make this process automatic. [Cloudinary's WordPress plugin](https://cloudinary.com/documentation/wordpress_integration) does just that. It loads images from your media library and serves them to your website from its own CDN. This ensures that you load an optimized version of the file every time, and it even **fetches the correct format** for you!
 
-Each content management system has developed at least some way of controlling the image sizes. Custom implementations can be made (on my WordPress sites, I tend to use a custom automated solution designed by one of my colleagues - with their consent). But the key takeaway is that image size matters.
+Each content management system has developed at least some way of controlling the image sizes. Custom implementations can be made (on my WordPress sites, I tend to use a custom automated solution designed by one of my colleagues - with their consent). But the key takeaway is that **image size matters**.
 
 ### Images in code
 
