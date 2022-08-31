@@ -21,7 +21,7 @@ I was asked to update the website of the Department of Social and Cultural Anthr
 
 I first supplied a [Figma](https://www.figma.com/) design for several pages to give a good idea of where I was headings. I was basing my design loosely on the previous version as there were some good elements in it. However, I redesigned and **simplified the content structure** - mainly the navigation links and the content of some pages.
 
-Milan and other members of the staff loved the design, so I moved on to the implementation. I decided for a **custom built them**e, as it would give me full control over the content types and design templates. It also allows to [combine the existing Gutenberg blocks](/blog/wordpress-gutenberg-101) to create new pages efficiently.
+Milan and other members of the staff loved the design, so I moved on to the implementation. I decided for a **custom built them**e, as it would give me full control over the content types and design templates. It also allows to combine the existing Gutenberg blocks to create new pages efficiently.
 
 ## Planning the structure
 

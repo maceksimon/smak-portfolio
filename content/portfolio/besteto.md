@@ -21,7 +21,7 @@ Besteto is a marketing agency specializing in e-commerce. They commissioned an 8
 
 **Speed and efficiency** is a key aspect of the coding work. Of course, the result still needs to be flawless. However, an hour of work can go a long way when using the proper tools and workflows.
 
-A big help in this area is [WordPress Gutenberg](/blog/wordpress-gutenberg-101). By building the website from **reusable blocks**, one can save hours of building and updating similar blocks of content across pages. It also makes for a great editing experience as the admin offers a real time preview of the pages in the admin UI.
+A big help in this area is WordPress Gutenberg. By building the website from **reusable blocks**, one can save hours of building and updating similar blocks of content across pages. It also makes for a great editing experience as the admin offers a real time preview of the pages in the admin UI.
 
 For styling the code I chose [Tailwind CSS](https://tailwindcss.com/). This has become my go-to option for most projects, since it makes styling so incredibly fast and intuitive. Additionally, it allows for **modular solutions** - pieces of HTML that you can reuse as styled components and they just work!
 
