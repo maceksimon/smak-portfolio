@@ -200,5 +200,6 @@ function closeForm() {
   open.value = false;
   formSubmitted.value = false;
   formError.value = false;
+  v.value.$reset();
 }
 </script>
