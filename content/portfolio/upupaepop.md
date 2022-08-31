@@ -13,7 +13,9 @@ type: "full"
 
 Building a web for a designer and typographer is a wonderful experience. Not only you get to implement a beautiful design, you also learn a lot during the process!
 
-# Client
+[Read up on Upupaepop](https://upupaepop.cz/).
+
+## Client
 
 Jakub is a graphic designer and a typographer and together with his wife he owns a small printing studio. This project was focused on updating the studio's website.
 

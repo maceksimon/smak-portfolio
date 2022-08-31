@@ -13,6 +13,8 @@ type: "full"
 
 In my experience, university websites are notorious for being hard to read and navigate. That's why I welcomed the challenge of creating a web for my university department.
 
+[See the Department website](https://kska.upce.cz/).
+
 ## The challenge
 
 I was asked to update the website of the Department of Social and Cultural Anthropology. Milan, a university researcher and lecturer who took care of the web had designed the previous version of the web using [Elementor](https://elementor.com/) and several other plugins. However, the site seemed to be lacking in design and readability. There were also requests for additional **content types** and an **multilingual translations**.
