@@ -29,7 +29,7 @@
           </div>
         </div>
         <div
-          class="mx-auto hidden w-full max-w-5xl sm:px-8 md:flex md:justify-between"
+          class="mx-auto hidden w-full max-w-5xl items-center sm:px-8 md:flex md:justify-between"
         >
           <!-- Navigation -->
           <div class="text-gray-100">
@@ -47,10 +47,14 @@
           <!-- Social icons & Color Mode -->
           <div
             id="navbar-icons"
-            class="space-x-3 text-gray-100 transition md:space-x-4"
+            class="flex items-center space-x-3 text-gray-100 transition md:space-x-4"
           >
-            <button @click="toggleModal()" class="hover:text-white">
-              <Icon name="mi:email" class="h-5 w-auto" />
+            <button
+              @click="toggleModal()"
+              class="dark:hover-gray-600 mr-2 inline-flex items-center justify-center rounded-md bg-gray-50 px-3 py-2 text-blue-600 hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+            >
+              <Icon name="mi:email" class="h-5 w-auto text-blue-600" />
+              <span class="ml-2 text-sm font-semibold">Contact Me</span>
             </button>
             <a
               href="https://twitter.com/maceksimon1"
