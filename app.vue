@@ -30,6 +30,13 @@
 </template>
 
 <script setup>
+useHead({
+  titleTemplate: (title) =>
+    title ? `${title} | Šimon Macek` : "Šimon Macek | Web Developer",
+  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+  charset: "utf-8",
+});
+
 const open = ref(false);
 
 const jobs = ["portfolio", "blog", "e-commerce"];
