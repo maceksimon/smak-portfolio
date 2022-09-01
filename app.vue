@@ -1,10 +1,17 @@
 <template>
-  <div class="flex flex-col min-h-screen">
+  <div class="flex min-h-screen flex-col">
     <Html lang="en" />
+    <Link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <Link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <Link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <Link rel="manifest" href="/site.webmanifest" />
+    <Link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <Meta name="msapplication-TileColor" content="#da532c" />
+    <Meta name="theme-color" content="#ffffff" />
     <Meta property="og:image" content="/cover.jpg" />
     <Meta name="twitter:card" content="summary_large_image" />
     <Navbar />
-    <NuxtPage class="grow flex flex-col" />
+    <NuxtPage class="flex grow flex-col" />
     <TheFooter />
     <ContactModal />
     <form
@@ -25,8 +32,8 @@
 <script setup>
 const open = ref(false);
 
-const jobs = ['portfolio', 'blog', 'e-commerce']
-const services = ['content', 'smm', 'bundle']
+const jobs = ["portfolio", "blog", "e-commerce"];
+const services = ["content", "smm", "bundle"];
 
 const form = reactive({
   name: "",
@@ -41,7 +48,7 @@ function toggleModal(service) {
     form.job = service;
   }
   if (services.includes(service)) {
-    form.service = service
+    form.service = service;
   }
   open.value = !open.value;
 }
@@ -66,7 +73,7 @@ body {
 }
 .dark .prose-primary h2 a,
 .dark .prose-primary h3 a {
-  color: var(--tw-prose-invert-headings)
+  color: var(--tw-prose-invert-headings);
 }
 .prose img {
   @apply rounded-sm;
