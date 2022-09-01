@@ -8,7 +8,7 @@
     <Link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
     <Meta name="msapplication-TileColor" content="#da532c" />
     <Meta name="theme-color" content="#ffffff" />
-    <Meta property="og:image" content="/cover.jpg" />
+    <Meta property="og:image" content="/image/og-default.jpg" />
     <Meta name="twitter:card" content="summary_large_image" />
     <Navbar />
     <NuxtPage class="flex grow flex-col" />
