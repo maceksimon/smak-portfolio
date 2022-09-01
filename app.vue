@@ -30,6 +30,9 @@
 </template>
 
 <script setup>
+import useVuelidate from "@vuelidate/core";
+import { required, email, minLength } from "@vuelidate/validators";
+
 useHead({
   titleTemplate: (title) =>
     title ? `${title} | Šimon Macek` : "Šimon Macek | Web Developer",
@@ -38,6 +41,8 @@ useHead({
 });
 
 const open = ref(false);
+const formSubmitted = ref(false);
+const formError = ref(false);
 
 const jobs = ["portfolio", "blog", "e-commerce"];
 const services = ["content", "smm", "bundle"];
@@ -49,6 +54,30 @@ const form = reactive({
   message: "",
   service: "",
 });
+
+const rules = {
+  // "name": {
+  //   required: helpers.withMessage("Povinné pole", required),
+  //   minLength: helpers.withMessage(
+  //     "Musí být delší než jedno písmeno",
+  //     minLength(1)
+  //   ),
+  // },
+  // "email": {
+  //   required: helpers.withMessage("Povinné pole", required),
+  //   email: helpers.withMessage("Neplatný e-mail", email),
+  // },
+  name: {
+    required: required,
+    minLength: minLength(1),
+  },
+  email: {
+    required: required,
+    email: email,
+  },
+};
+
+const v = useVuelidate(rules, form);
 
 function toggleModal(service) {
   if (jobs.includes(service)) {
@@ -63,6 +92,9 @@ function toggleModal(service) {
 provide("toggleModal", toggleModal);
 provide("open", open);
 provide("form", form);
+provide("v", v);
+provide("formSubmitted", formSubmitted);
+provide("formError", formError);
 </script>
 
 <style lang="postcss">

@@ -28,35 +28,11 @@
 </template>
 
 <script setup>
-import useVuelidate from "@vuelidate/core";
-import { required, email, minLength, helpers } from "@vuelidate/validators";
 import axios from "axios";
 
 const form = inject("form");
-
-const rules = {
-  // "name": {
-  //   required: helpers.withMessage("Povinné pole", required),
-  //   minLength: helpers.withMessage(
-  //     "Musí být delší než jedno písmeno",
-  //     minLength(1)
-  //   ),
-  // },
-  // "email": {
-  //   required: helpers.withMessage("Povinné pole", required),
-  //   email: helpers.withMessage("Neplatný e-mail", email),
-  // },
-  name: {
-    required: required,
-    minLength: minLength(1),
-  },
-  email: {
-    required: required,
-    email: email,
-  },
-};
-
-const v = useVuelidate(rules, form);
+const v = inject("v");
+const toggleModal = inject("toggleModal");
 
 async function handleSubmit() {
   v.value.$touch();
@@ -82,11 +58,13 @@ async function handleSubmit() {
     Object.keys(form).forEach((key) => {
       form[key] = "";
     });
+    v.value.$reset();
     // Display confirmation
     formSubmitted.value = true;
   } else {
     formError.value = true;
   }
+  toggleModal();
 }
 
 function encodeData(data) {

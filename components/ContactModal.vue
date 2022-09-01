@@ -36,9 +36,9 @@
               <!-- On success -->
               <div v-if="formSubmitted">
                 <div
-                  class="mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-full border border-emerald-200 bg-emerald-100 text-emerald-700"
+                  class="mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500 text-white"
                 >
-                  <Icon name="fluent:chat-20-regular" />
+                  <Icon name="heroicons-outline:check" />
                 </div>
                 <DialogTitle
                   as="h3"
@@ -47,16 +47,15 @@
                   Success
                 </DialogTitle>
                 <div class="mb-3">
-                  Thank you for your message! We will get in touch with you
-                  shortly.
+                  Thank you for your message! I will get back to you shortly.
                 </div>
               </div>
               <!-- On error -->
               <div v-if="formError">
                 <div
-                  class="mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-full border border-orange-200 bg-orange-100 text-orange-700"
+                  class="mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-orange-500 text-white"
                 >
-                  <Icon name="fluent:chat-dismiss-20-regular" />
+                  <Icon name="heroicons-outline:exclamation" />
                 </div>
                 <DialogTitle
                   as="h3"
@@ -66,9 +65,9 @@
                 </DialogTitle>
                 <div class="mb-3">
                   An error occurred while sending the form. Please try again
-                  later, or email us at
+                  later, or email me at
                   <a
-                    class="text-emerald-600 underline hover:no-underline dark:text-emerald-300"
+                    class="text-blue-600 underline hover:no-underline dark:text-blue-300"
                     :href="`mailto:${emailAddress}`"
                   >
                     {{ emailAddress }}
@@ -123,41 +122,16 @@
 
 <script setup>
 import { Dialog, DialogOverlay, DialogTitle } from "@headlessui/vue";
-import useVuelidate from "@vuelidate/core";
-import { required, email, minLength, helpers } from "@vuelidate/validators";
 import axios from "axios";
 
 // open is being injected as a ref
 const open = inject("open");
 const form = inject("form");
+const v = inject("v");
+const formSubmitted = inject("formSubmitted");
+const formError = inject("formError");
 
-const formSubmitted = ref(false);
-const formError = ref(false);
 const emailAddress = "simon.macek@proficio.cz";
-
-const rules = {
-  // "name": {
-  //   required: helpers.withMessage("Povinné pole", required),
-  //   minLength: helpers.withMessage(
-  //     "Musí být delší než jedno písmeno",
-  //     minLength(1)
-  //   ),
-  // },
-  // "email": {
-  //   required: helpers.withMessage("Povinné pole", required),
-  //   email: helpers.withMessage("Neplatný e-mail", email),
-  // },
-  name: {
-    required: required,
-    minLength: minLength(1),
-  },
-  email: {
-    required: required,
-    email: email,
-  },
-};
-
-const v = useVuelidate(rules, form);
 
 async function handleSubmit() {
   v.value.$touch();
@@ -183,6 +157,7 @@ async function handleSubmit() {
     Object.keys(form).forEach((key) => {
       form[key] = "";
     });
+    v.value.$reset();
     // Display confirmation
     formSubmitted.value = true;
   } else {
