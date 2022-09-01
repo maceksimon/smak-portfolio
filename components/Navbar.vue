@@ -57,7 +57,7 @@
               <span class="ml-2 text-sm font-semibold">Contact Me</span>
             </button>
             <a
-              href="https://twitter.com/maceksimon1"
+              href="https://twitter.com/maceksimondev"
               title="Twitter"
               class="hover:text-white"
             >
@@ -115,7 +115,7 @@
               </NuxtLink>
               <div class="space-x-3 px-3 py-2 text-gray-500 transition">
                 <a
-                  href="https://twitter.com/maceksimon1"
+                  href="https://twitter.com/maceksimondev"
                   title="Twitter"
                   class="hover:text-gray-700 dark:hover:text-gray-300"
                 >
