@@ -3,6 +3,7 @@
     <main
       class="prose prose-primary mx-auto -mb-8 max-w-5xl px-4 dark:prose-invert sm:-mb-12 sm:px-8"
     >
+      <Breadcrumbs />
       <slot />
     </main>
   </div>
