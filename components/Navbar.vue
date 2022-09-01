@@ -3,7 +3,7 @@
     <Popover>
       <nav
         aria-label="Global"
-        class="flex items-center justify-between px-4 py-2 sm:py-4 md:justify-center"
+        class="flex items-center justify-between px-4 py-2 sm:px-8 sm:py-4 md:justify-center"
       >
         <NuxtLink to="/" class="font-semibold text-white md:hidden"
           >Šimon Macek</NuxtLink
