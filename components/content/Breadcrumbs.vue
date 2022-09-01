@@ -30,19 +30,20 @@
           >
         </div>
       </li>
-      <li>
+      <li class="hidden sm:block">
         <div class="flex items-center">
           <Icon
             name="heroicons-outline:chevron-right"
             class="h-4 w-4 flex-shrink-0 text-gray-400"
             aria-hidden="true"
           />
-          <span
-            class="ml-4 text-sm font-medium text-gray-500"
+          <a
+            :href="page._path"
+            class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700"
             aria-current="page"
           >
             {{ page.title }}
-          </span>
+          </a>
         </div>
       </li>
     </ol>

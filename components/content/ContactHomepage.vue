@@ -15,10 +15,10 @@
     >
       <input type="hidden" name="form-name" value="contact-form" />
       <ContactForm v-model="form" :validations="v" :large="true" />
-      <div class="mt-8 flex justify-end">
+      <div class="mt-8 justify-end sm:flex">
         <button
           type="submit"
-          class="bg-gradient-animated rounded-md bg-gradient-to-r from-blue-700 via-blue-400 to-blue-500 px-4 py-2 text-base font-semibold text-white hover:bg-blue-700 md:py-3 md:px-7 md:text-lg"
+          class="bg-gradient-animated w-full rounded-md bg-gradient-to-r from-blue-700 via-blue-400 to-blue-500 px-4 py-2 text-base font-semibold text-white hover:bg-blue-700 sm:w-auto md:py-3 md:px-7 md:text-lg"
         >
           Send
         </button>
