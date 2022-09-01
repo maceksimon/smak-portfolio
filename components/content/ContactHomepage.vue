@@ -33,6 +33,8 @@ import axios from "axios";
 const form = inject("form");
 const v = inject("v");
 const toggleModal = inject("toggleModal");
+const formSubmitted = inject("formSubmitted");
+const formError = inject("formError");
 
 async function handleSubmit() {
   v.value.$touch();
