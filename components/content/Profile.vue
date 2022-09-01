@@ -1,6 +1,6 @@
 <template>
   <div
-    class="not-prose my-8 flex flex-col space-y-4 sm:my-12 sm:flex-row sm:space-y-0 sm:space-x-8"
+    class="not-prose my-8 flex flex-col space-y-4 sm:my-16 sm:flex-row sm:space-y-0 sm:space-x-8"
   >
     <div v-if="image" class="aspect-w-1 aspect-h-1 w-40">
       <img class="rounded-sm object-cover" :src="image" :alt="name" />

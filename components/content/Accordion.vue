@@ -1,9 +1,11 @@
 <template>
-  <section class="my-8 sm:my-12">
+  <section class="my-8 sm:my-16">
     <DivisionPill v-if="$slots.default">
       <Markdown :use="$slots.default" unwrap="p" />
     </DivisionPill>
-    <dl class="space-y-6 divide-y divide-gray-200 dark:divide-gray-600">
+    <dl
+      class="my-8 space-y-6 divide-y divide-gray-200 dark:divide-gray-600 sm:my-12"
+    >
       <Disclosure
         as="div"
         v-for="faq in faqs"
