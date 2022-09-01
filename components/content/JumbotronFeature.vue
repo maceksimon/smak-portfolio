@@ -32,10 +32,10 @@
       <Markdown :use="$slots.perex" unwrap="p" />
     </div>
     <div v-if="button1 || button2" class="not-prose mt-6 sm:mt-10 sm:flex">
-      <div class="rounded-md shadow">
+      <div class="rounded-md">
         <a
           :href="link1"
-          class="bg-gradient-animated flex w-full items-center justify-center rounded-md bg-gradient-to-r from-blue-700 via-blue-400 to-blue-500 px-4 py-2 text-base font-semibold text-white shadow hover:bg-blue-700 md:py-3 md:px-7 md:text-lg"
+          class="bg-gradient-animated flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-blue-700 via-blue-400 to-blue-500 px-4 py-2 text-base font-semibold text-white shadow hover:bg-blue-700 md:py-3 md:px-7 md:text-lg"
         >
           {{ button1 }}
         </a>
