@@ -4,13 +4,13 @@
       src="/image/profile_light.png"
       alt="Simon Macek profile photo"
       aria-hidden="true"
-      class="absolute bottom-0 right-0 m-0 h-full w-auto dark:hidden"
+      class="absolute bottom-0 right-0 isolate m-0 h-full w-auto dark:hidden"
     />
     <img
       src="/image/profile_dark.png"
       alt="Simon Macek profile photo"
       aria-hidden="true"
-      class="absolute bottom-0 right-0 m-0 hidden h-full w-auto dark:block"
+      class="absolute bottom-0 right-0 isolate m-0 hidden h-full w-auto dark:block"
     />
     <div class="not-prose isolate">
       <div
@@ -20,18 +20,21 @@
         <Markdown :use="$slots.highlight" unwrap="p" />
       </div>
       <h1
-        class="max-w-2xl text-4xl font-extrabold uppercase tracking-tight text-gray-900 dark:text-gray-50 sm:text-5xl lg:text-7xl"
+        class="sm: max-w-md text-4xl font-extrabold uppercase tracking-tight text-gray-900 dark:text-gray-50 sm:text-5xl lg:text-7xl xl:max-w-2xl"
         :class="{}"
       >
         <Markdown :use="$slots.title" unwrap="p" />
       </h1>
     </div>
     <div
-      class="mt-6 leading-relaxed tracking-normal text-gray-500 dark:text-gray-300 sm:mt-8 sm:max-w-xl sm:text-lg lg:mt-12 lg:text-xl lg:leading-loose"
+      class="isolate mt-6 max-w-xs leading-relaxed tracking-normal text-gray-500 dark:text-gray-300 sm:mt-8 sm:text-lg lg:mt-12 lg:text-xl lg:leading-loose xl:max-w-xl xl:max-w-none"
     >
       <Markdown :use="$slots.perex" unwrap="p" />
     </div>
-    <div v-if="button1 || button2" class="not-prose mt-6 sm:mt-10 sm:flex">
+    <div
+      v-if="button1 || button2"
+      class="not-prose isolate mt-6 sm:mt-10 sm:flex"
+    >
       <div class="rounded-md">
         <a
           :href="link1"
@@ -42,7 +45,7 @@
       </div>
       <div class="mt-3 sm:mt-0 sm:ml-3">
         <button
-          class="bg-gradient-animated flex w-full items-center justify-center rounded-md border border-blue-100 bg-gradient-to-r from-blue-100 via-white to-blue-100 px-4 py-2 text-base font-semibold text-blue-800 shadow dark:border-transparent dark:from-blue-200 dark:via-blue-50 dark:to-blue-100 md:py-3 md:px-7 md:text-lg"
+          class="bg-gradient-animated flex w-full items-center justify-center rounded-md border border-blue-200 bg-gradient-to-r from-blue-100 via-white to-blue-100 px-4 py-2 text-base font-semibold text-blue-800 shadow dark:border-transparent dark:from-blue-200 dark:via-blue-50 dark:to-blue-100 md:py-3 md:px-7 md:text-lg"
           @click="toggleModal()"
         >
           {{ button2 }}

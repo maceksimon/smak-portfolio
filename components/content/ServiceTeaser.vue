@@ -26,7 +26,7 @@
           </span>
         </div>
         <div
-          class="not-prose relative lg:flex lg:grow lg:flex-col lg:justify-between"
+          class="service-content not-prose relative lg:flex lg:grow lg:flex-col lg:justify-between"
         >
           <div class="mt-4">
             <h3
@@ -115,8 +115,8 @@ const services = [
 ];
 </script>
 
-<style lang="postcss" scoped>
-em {
+<style lang="postcss">
+.service-content em {
   @apply text-orange-600 dark:text-orange-300;
 }
 </style>
