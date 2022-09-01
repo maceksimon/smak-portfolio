@@ -3,7 +3,16 @@
     class="not-prose my-8 flex flex-col space-y-4 sm:my-12 sm:flex-row sm:space-y-0 sm:space-x-8 xl:my-16"
   >
     <div v-if="image" class="aspect-w-1 aspect-h-1 w-40">
-      <img class="rounded-sm object-cover" :src="image" :alt="name" />
+      <NuxtPicture
+        width="720"
+        height="720"
+        :src="image"
+        :alt="name"
+        :imgAttrs="{
+          class: 'rounded-sm',
+        }"
+        loading="lazy"
+      />
     </div>
     <div>
       <div v-if="name || role" class="space-y-1 text-lg font-medium leading-6">

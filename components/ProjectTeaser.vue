@@ -6,10 +6,15 @@
       :href="project?._path"
       class="group relative block"
     >
-      <img
+      <NuxtPicture
+        width="1200"
+        height="675"
         :src="project.fields?.image"
         :alt="project.fields?.imageAlt"
-        class="rounded-sm border dark:border-transparent"
+        :imgAttrs="{
+          class: 'rounded-sm border dark:border-transparent',
+        }"
+        loading="lazy"
       />
       <div
         class="absolute inset-0 flex h-full w-full items-center justify-center rounded-sm bg-gradient-to-br from-blue-700 via-blue-700 to-blue-900 opacity-0 transition-opacity duration-300 ease-in group-hover:opacity-90"

@@ -1,16 +1,23 @@
 <template>
-  <div class="relative mb-8 flex flex-col flex-col-reverse sm:mb-12">
-    <img
+  <div class="relative mb-8 flex flex-col-reverse sm:mb-12 sm:flex-col">
+    <NuxtPicture
       src="/image/profile_light.png"
       alt="Simon Macek profile photo"
       aria-hidden="true"
-      class="bottom-0 right-0 isolate m-0 mt-4 h-full w-auto dark:hidden sm:absolute sm:mt-0"
+      :imgAttrs="{
+        class:
+          'bottom-0 right-0 isolate m-0 mt-4 h-full w-auto dark:hidden sm:absolute sm:mt-0',
+      }"
+      class=""
     />
-    <img
-      src="/image/profile_dark.png"
+    <NuxtPicture
+      src="/image/profile_light.png"
       alt="Simon Macek profile photo"
       aria-hidden="true"
-      class="bottom-0 right-0 isolate m-0 mt-4 hidden h-full w-auto dark:block sm:absolute sm:mt-0"
+      :imgAttrs="{
+        class:
+          'bottom-0 right-0 isolate m-0 mt-4 hidden h-full w-auto dark:block sm:absolute sm:mt-0',
+      }"
     />
     <div class="isolate">
       <div class="not-prose">

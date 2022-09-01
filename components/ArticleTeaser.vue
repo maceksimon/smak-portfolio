@@ -5,7 +5,13 @@
       :href="post?._path"
       class="group relative block"
     >
-      <img :src="post.fields?.image" :alt="post.fields?.imageAlt" />
+      <NuxtPicture
+        width="1200"
+        height="675"
+        :src="post.fields?.image"
+        :alt="post.fields?.imageAlt"
+        loading="lazy"
+      />
       <div
         class="absolute inset-0 flex h-full w-full items-center justify-center bg-gradient-to-br from-blue-900 via-blue-900 to-gray-900 opacity-0 transition-opacity duration-300 ease-in group-hover:opacity-90"
       ></div>
