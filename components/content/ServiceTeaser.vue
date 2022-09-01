@@ -1,10 +1,10 @@
 <template>
-  <section class="my-8 sm:my-16">
+  <section class="my-8 sm:my-12 xl:my-16">
     <DivisionPill v-if="$slots.default">
       <Markdown :use="$slots.default" unwrap="p" />
     </DivisionPill>
     <div
-      class="mx-auto my-8 gap-4 space-y-4 overflow-hidden sm:my-16 sm:grid sm:space-y-0 lg:grid-cols-3"
+      class="mx-auto my-8 gap-4 space-y-4 overflow-hidden sm:my-12 sm:grid sm:gap-8 sm:space-y-0 lg:grid-cols-3 lg:gap-4 xl:my-16"
     >
       <div
         v-for="service in services"

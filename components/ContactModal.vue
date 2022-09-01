@@ -78,9 +78,9 @@
               <!-- Form -->
               <div v-if="!formSubmitted && !formError">
                 <div
-                  class="mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-full border border-blue-200 bg-blue-100 text-blue-600"
+                  class="mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white"
                 >
-                  <Icon name="mdi:typewriter" />
+                  <Icon name="heroicons-outline:chat-alt-2" />
                 </div>
                 <DialogTitle
                   as="h3"

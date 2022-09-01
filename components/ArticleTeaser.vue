@@ -1,5 +1,5 @@
 <template>
-  <div class="py-6 lg:py-8">
+  <div class="py-8 sm:py-12">
     <a
       v-if="post?.fields?.image"
       :href="post?._path"

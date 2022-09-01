@@ -1,10 +1,10 @@
 <template>
-  <div class="not-prose my-8 sm:my-16">
+  <div class="not-prose my-8 sm:my-12 xl:my-16">
     <DivisionPill v-if="$slots.default">
       <Markdown :use="$slots.default" unwrap="p" />
     </DivisionPill>
     <form
-      class="my-8 sm:my-16"
+      class="my-8 sm:my-12 xl:my-16"
       :class="{ 'animate-shake': v.$error }"
       name="contact-form"
       method="post"
