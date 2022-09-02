@@ -21,6 +21,9 @@ export default defineNuxtConfig({
       theme: "dracula",
     },
   },
+  image: {
+    provider: 'netlify',
+  },
   build: {
     transpile: ["@headlessui/vue"],
   },
