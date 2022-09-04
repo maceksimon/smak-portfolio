@@ -145,13 +145,13 @@ const features = {
     claim: "“A gleaming business card...”",
     id: "portfolio",
     perex:
-      "One-page presentation site or a portfolio. Perfect for introducing your products and services.",
+      "One-page website perfect for introducing yourself, or your business.",
     price: "$325",
     services: [
       {
         title: "Tell your story",
         description:
-          "One-page website is a great way to introduce yourself or your idea. It will allow your branding to stand out and give you a great way to promote your work.",
+          "This website is a great way to introduce your service or a project. It will allow your brand to stand out and give you a great way to promote your work.",
         icon: "tabler:speakerphone",
         iconForeground: "text-white dark:text-orange-200",
         iconBackground:
@@ -160,7 +160,7 @@ const features = {
       {
         title: "Find the right words",
         description:
-          "It is the right kind of content that attracts your target audience to your site. I will guide you through the process of creating it, or write it for you.",
+          "To attract the right audience to your site, you need well-structured content. I can help you write it, or do it for you.",
         icon: "tabler:ballpen",
         iconForeground: "text-white dark:text-orange-200",
         iconBackground:
@@ -169,7 +169,7 @@ const features = {
       {
         title: "Make it beautiful",
         description:
-          "I will turn your design file into a pixel-perfect copy on the web. And if you do not have a design ready, I can create one for you, just get in touch!",
+          "I will turn your design file into a pixel-perfect copy on the web. If you do not have a design ready, I can create one for you, just get in touch!",
         icon: "tabler:flower",
         iconForeground: "text-white dark:text-orange-200",
         iconBackground:
