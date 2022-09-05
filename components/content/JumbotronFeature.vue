@@ -12,7 +12,7 @@
       class=""
     />
     <NuxtPicture
-      src="/image/profile_light.png"
+      src="/image/profile_dark.png"
       alt="Simon Macek profile photo"
       aria-hidden="true"
       format="webp"
