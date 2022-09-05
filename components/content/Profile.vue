@@ -8,6 +8,7 @@
         height="720"
         :src="image"
         :alt="name"
+        format="webp"
         :imgAttrs="{
           class: 'rounded-sm',
         }"

@@ -10,6 +10,7 @@
         height="675"
         :src="post.fields?.image"
         :alt="post.fields?.imageAlt"
+        format="webp"
         loading="lazy"
       />
       <div

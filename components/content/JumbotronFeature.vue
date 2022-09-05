@@ -4,6 +4,7 @@
       src="/image/profile_light.png"
       alt="Simon Macek profile photo"
       aria-hidden="true"
+      format="webp"
       :imgAttrs="{
         class:
           'bottom-0 right-0 isolate m-0 mt-4 h-full w-auto dark:hidden sm:absolute sm:mt-0',
@@ -14,6 +15,7 @@
       src="/image/profile_light.png"
       alt="Simon Macek profile photo"
       aria-hidden="true"
+      format="webp"
       :imgAttrs="{
         class:
           'bottom-0 right-0 isolate m-0 mt-4 hidden h-full w-auto dark:block sm:absolute sm:mt-0',

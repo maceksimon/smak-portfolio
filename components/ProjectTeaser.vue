@@ -11,6 +11,7 @@
         height="675"
         :src="project.fields?.image"
         :alt="project.fields?.imageAlt"
+        format="webp"
         :imgAttrs="{
           class: 'rounded-sm border dark:border-transparent',
         }"
