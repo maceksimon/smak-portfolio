@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@iconify/vue": "^3.2.1",
+    "@intlify/nuxt3": "^0.2.4",
     "@nuxt/content": "npm:@nuxt/content-edge@latest",
     "@nuxt/image-edge": "^1.0.0-27657146.da85542",
     "@nuxtjs/color-mode": "^3.1.4",
