@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
     "@nuxt/image-edge",
+    "@nuxtjs/i18n",
   ],
   // https://color-mode.nuxtjs.org
   colorMode: {
@@ -27,6 +28,29 @@ export default defineNuxtConfig({
   },
   image: {
     provider: "netlify",
+  },
+  i18n: {
+    /* module options */
+    defaultLocale: "cs",
+    locales: [
+      {
+        code: "cs",
+        iso: "cs-CZ",
+        file: "cs-CZ.json",
+      },
+      {
+        code: "en",
+        iso: "en-US",
+        file: "en-US.json",
+      },
+    ],
+    langDir: "translations/",
+    vueI18n: {
+      locale: "cs",
+      fallbackLocale: "cs",
+      globalInjection: true,
+      legacy: false,
+    },
   },
   build: {
     transpile: ["@headlessui/vue"],
