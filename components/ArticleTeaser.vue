@@ -1,3 +1,20 @@
+<script setup>
+const props = defineProps({
+  post: {
+    type: Object,
+    default: () => {},
+  },
+});
+
+let formattedDate;
+try {
+  formattedDate = new Date(props.post.created);
+} catch (err) {
+  console.log(err);
+  console.log("could not format date");
+}
+</script>
+
 <template>
   <div class="py-8 sm:py-12">
     <a
@@ -63,20 +80,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-const props = defineProps({
-  post: {
-    type: Object,
-    default: () => {},
-  },
-});
-
-let formattedDate;
-try {
-  formattedDate = new Date(props.post.created);
-} catch (err) {
-  console.log(err);
-  console.log("could not format date");
-}
-</script>
