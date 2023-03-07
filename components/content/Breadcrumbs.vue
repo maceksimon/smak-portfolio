@@ -1,6 +1,6 @@
 <template>
   <nav
-    :class="{ hidden: page.hideBreadcrumb }"
+    :class="{ hidden: page?.hideBreadcrumb }"
     class="not-prose mb-4 flex sm:mb-8"
     aria-label="Breadcrumb"
   >
