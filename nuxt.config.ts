@@ -1,8 +1,8 @@
-import { defineNuxtConfig } from "nuxt";
+import { defineNuxtConfig } from "nuxt/config";
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
-  target: "static",
+  ssr: true,
   modules: [
     "@nuxt/content",
     "@nuxtjs/tailwindcss",
@@ -30,8 +30,6 @@ export default defineNuxtConfig({
     provider: "netlify",
   },
   i18n: {
-    /* module options */
-    defaultLocale: "cs",
     locales: [
       {
         code: "cs",
@@ -44,12 +42,16 @@ export default defineNuxtConfig({
         file: "en-US.json",
       },
     ],
-    langDir: "translations/",
+    lazy: true,
+    strategy: "no_prefix",
+    detectBrowserLanguage: false,
+    langDir: "translations",
+    defaultLocale: "cs-CZ",
     vueI18n: {
-      locale: "cs",
-      fallbackLocale: "cs",
-      globalInjection: true,
-      legacy: false,
+      availableLocales: ["cs", "en"],
+      fallbackLocale: "cs-CZ",
+      fallbackWarn: false,
+      missingWarn: false,
     },
   },
   build: {
