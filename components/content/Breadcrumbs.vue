@@ -60,6 +60,8 @@ navigation.value.forEach((route) => {
   navigationRoutes[route._path] = route;
 });
 
+const { locale } = useI18n();
+
 // loop over path params and link to pages if possible
 const pages = [];
 if (route.params.slug.length > 1) {

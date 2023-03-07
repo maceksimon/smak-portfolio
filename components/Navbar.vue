@@ -33,16 +33,16 @@
         >
           <!-- Navigation -->
           <div class="text-gray-100">
-            <NuxtLink
-              v-for="link of navigation"
+            <a
+              v-for="link in navigation"
               :key="link._path"
-              :to="link._path"
+              :href="link._path"
               active-class="font-bold"
               class="mr-4 md:mr-6 lg:mr-8"
               :data-text="link.navTitle || link.title"
             >
               {{ link.navTitle || link.title }}
-            </NuxtLink>
+            </a>
           </div>
           <!-- Social icons & Color Mode -->
           <div
@@ -143,9 +143,13 @@
 <script lang="ts" setup>
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/vue";
 
-const toggleModal = inject("toggleModal");
+const toggleModal: any = inject("toggleModal");
+const { locale } = useI18n();
 
-const { navigation } = useContent();
+const localizedQuery = queryContent(`/${locale.value}`);
+const { data: navigation } = await useAsyncData("navigation", () =>
+  fetchContentNavigation()
+);
 </script>
 
 <style lang="postcss">
