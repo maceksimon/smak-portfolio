@@ -10,7 +10,7 @@
     <Meta name="theme-color" content="#ffffff" />
     <Meta property="og:image" content="/image/og-default.jpg" />
     <Meta name="twitter:card" content="summary_large_image" />
-    <Navbar />
+    <VNavbar />
     <NuxtPage class="flex grow flex-col" />
     <TheFooter />
     <ContactModal />

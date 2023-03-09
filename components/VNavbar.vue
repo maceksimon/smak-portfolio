@@ -32,17 +32,9 @@
           class="mx-auto hidden w-full max-w-5xl items-center sm:px-8 md:flex md:justify-between"
         >
           <!-- Navigation -->
-          <div class="text-gray-100">
-            <a
-              v-for="link in navigation"
-              :key="link._path"
-              :href="link._path"
-              active-class="font-bold"
-              class="mr-4 md:mr-6 lg:mr-8"
-              :data-text="link.navTitle || link.title"
-            >
-              {{ link.navTitle || link.title }}
-            </a>
+
+          <div class="flex gap-4 text-gray-100 md:gap-6 lg:gap-8">
+            <VMenuLink v-for="link in navigation" :link="link" />
           </div>
           <!-- Social icons & Color Mode -->
           <div
@@ -103,16 +95,14 @@
               </div>
             </div>
             <div class="px-2 pt-2 pb-3">
-              <NuxtLink
+              <VMenuLink
                 v-for="link of navigation"
                 :key="link._path"
-                :to="link._path"
+                :link="link"
                 active-class="font-bold"
                 class="menu-link dark:hover-bg-gray-500 dark:hover-text-white block rounded-md px-3 py-2 text-base text-gray-700 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-200"
                 @click="close()"
-              >
-                {{ link.navTitle || link.title }}
-              </NuxtLink>
+              />
               <div class="space-x-3 px-3 py-2 text-gray-500 transition">
                 <a
                   href="https://twitter.com/maceksimondev"
@@ -144,9 +134,6 @@
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/vue";
 
 const toggleModal: any = inject("toggleModal");
-const { locale } = useI18n();
-
-const localizedQuery = queryContent(`/${locale.value}`);
 const { data: navigation } = await useAsyncData("navigation", () =>
   fetchContentNavigation()
 );
