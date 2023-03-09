@@ -1,3 +1,13 @@
+<script setup>
+const { data } = await useAsyncData("portfolioMain", () =>
+  queryContent("portfolio")
+    // do not fetch the root page
+    .where({ _path: { $ne: "/portfolio" } })
+    .sort({ "fields.order": 1 })
+    .find()
+);
+</script>
+
 <template>
   <section class="my-8 sm:my-12 xl:my-16">
     <DivisionPill v-if="$slots.default">
@@ -15,13 +25,3 @@
     </div>
   </section>
 </template>
-
-<script setup>
-const { data } = await useAsyncData("portfolioMain", () =>
-  queryContent("portfolio")
-    // do not fetch the root page
-    .where({ _path: { $ne: "/portfolio" } })
-    .sort({ "fields.order": 1 })
-    .find()
-);
-</script>

@@ -1,3 +1,21 @@
+<script setup lang="ts">
+const toggleModal: void = inject("toggleModal");
+const { button1, button2, link1, link2 } = withDefaults(
+  defineProps<{
+    button1?: string;
+    button2?: string;
+    link1?: string;
+    link2?: string;
+  }>(),
+  {
+    button1: "",
+    button2: "",
+    link1: "",
+    link2: "",
+  }
+);
+</script>
+
 <template>
   <div class="mb-8 sm:mb-12">
     <div
@@ -19,34 +37,13 @@
     </div>
     <div v-if="button1 || button2" class="not-prose mt-6 sm:mt-10 sm:flex">
       <div class="rounded-md shadow">
-        <a
-          :href="link1"
-          class="bg-gradient-animated flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-blue-700 via-orange-600 to-blue-600 px-4 py-2 text-base font-semibold text-white shadow hover:bg-blue-700 md:py-3 md:px-7 md:text-lg"
-        >
-          {{ button1 }}
-        </a>
+        <VButton :link="link1" type="primary">{{ button1 }}</VButton>
       </div>
       <div class="mt-3 sm:mt-0 sm:ml-3">
-        <button
-          class="bg-gradient-animated flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-blue-50 via-blue-200 to-blue-100 px-4 py-2 text-base font-semibold text-blue-900 shadow md:py-3 md:px-7 md:text-lg"
-          @click="toggleModal()"
-        >
+        <VButton type="secondary" @click="toggleModal()">
           {{ button2 }}
-        </button>
+        </VButton>
       </div>
     </div>
   </div>
 </template>
-
-<script setup>
-const props = defineProps({
-  button1: { type: String, default: "" },
-  button2: { type: String, default: "" },
-  link1: { type: String, default: "" },
-  link2: { type: String, default: "" },
-});
-
-const toggleModal = inject("toggleModal");
-
-const { button1, button2, link1, link2 } = props;
-</script>

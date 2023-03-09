@@ -1,3 +1,56 @@
+<script setup>
+const services = [
+  {
+    title: "Portfolio",
+    key: "portfolio",
+    subtitle: "Boost your online presence",
+    href: "/services#portfolio",
+    icon: "carbon:lightning",
+    iconForeground: "text-white dark:text-orange-100",
+    iconBackground:
+      "bg-orange-600/75 dark:bg-orange-100/25 border border-transparent dark:border-orange-200/25",
+    logos: [
+      { name: "bxl:netlify", title: "Netlify logo" },
+      { name: "bxl:vuejs", title: "Vue logo" },
+      { name: "simple-icons:nuxtdotjs", title: "Nuxt logo" },
+      { name: "simple-icons:graphql", title: "GraphQL logo" },
+    ],
+  },
+  {
+    title: "Blog",
+    key: "blog",
+    subtitle: "Share your story",
+    href: "/services#blog",
+    icon: "material-symbols:menu-book-outline",
+    iconForeground: "text-white dark:text-blue-200",
+    iconBackground:
+      "bg-blue-600/75 dark:bg-blue-100/25 border border-transparent dark:border-blue-200/25",
+    logos: [
+      { name: "bxl:wordpress", title: "WordPress logo" },
+      { name: "simple-icons:php", title: "PHP logo" },
+      { name: "bxl:tailwind-css", title: "Tailwind CSS logo" },
+      { name: "simple-icons:sass", title: "SASS logo" },
+    ],
+  },
+  {
+    title: "E-commerce",
+    key: "e-commerce",
+    subtitle: "Sell on the web",
+    href: "/services#e-commerce",
+    icon: "material-symbols:shopping-cart-outline-rounded",
+    iconForeground: "text-white dark:text-emerald-200",
+    iconBackground:
+      "bg-emerald-600/75 dark:bg-emerald-100/25 border border-transparent dark:border-emerald-200/25",
+    logos: [
+      { name: "bxl:shopify", title: "Shopify logo" },
+      { name: "bxl:tailwind-css", title: "Tailwind CSS logo" },
+      { name: "simple-icons:javascript", title: "JavaScript logo" },
+      { name: "bxl:vuejs", title: "Vue logo" },
+    ],
+  },
+];
+</script>
+
 <template>
   <section class="my-8 sm:my-12 xl:my-16">
     <DivisionPill v-if="$slots.default">
@@ -61,59 +114,6 @@
     </div>
   </section>
 </template>
-
-<script setup>
-const services = [
-  {
-    title: "Portfolio",
-    key: "portfolio",
-    subtitle: "Boost your online presence",
-    href: "/services#portfolio",
-    icon: "carbon:lightning",
-    iconForeground: "text-white dark:text-orange-100",
-    iconBackground:
-      "bg-orange-600/75 dark:bg-orange-100/25 border border-transparent dark:border-orange-200/25",
-    logos: [
-      { name: "bxl:netlify", title: "Netlify logo" },
-      { name: "bxl:vuejs", title: "Vue logo" },
-      { name: "simple-icons:nuxtdotjs", title: "Nuxt logo" },
-      { name: "simple-icons:graphql", title: "GraphQL logo" },
-    ],
-  },
-  {
-    title: "Blog",
-    key: "blog",
-    subtitle: "Share your story",
-    href: "/services#blog",
-    icon: "material-symbols:menu-book-outline",
-    iconForeground: "text-white dark:text-blue-200",
-    iconBackground:
-      "bg-blue-600/75 dark:bg-blue-100/25 border border-transparent dark:border-blue-200/25",
-    logos: [
-      { name: "bxl:wordpress", title: "WordPress logo" },
-      { name: "simple-icons:php", title: "PHP logo" },
-      { name: "bxl:tailwind-css", title: "Tailwind CSS logo" },
-      { name: "simple-icons:sass", title: "SASS logo" },
-    ],
-  },
-  {
-    title: "E-commerce",
-    key: "e-commerce",
-    subtitle: "Sell on the web",
-    href: "/services#e-commerce",
-    icon: "material-symbols:shopping-cart-outline-rounded",
-    iconForeground: "text-white dark:text-emerald-200",
-    iconBackground:
-      "bg-emerald-600/75 dark:bg-emerald-100/25 border border-transparent dark:border-emerald-200/25",
-    logos: [
-      { name: "bxl:shopify", title: "Shopify logo" },
-      { name: "bxl:tailwind-css", title: "Tailwind CSS logo" },
-      { name: "simple-icons:javascript", title: "JavaScript logo" },
-      { name: "bxl:vuejs", title: "Vue logo" },
-    ],
-  },
-];
-</script>
 
 <style lang="postcss">
 .service-content em {

@@ -1,9 +1,6 @@
-<script setup>
-defineProps({
-  icon: {
-    type: String,
-    default: "heroicons-outline:exclamation",
-  },
+<script setup lang="ts">
+withDefaults(defineProps<{ icon: string }>(), {
+  icon: "heroicons-outline:exclamation",
 });
 </script>
 
