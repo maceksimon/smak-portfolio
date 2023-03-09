@@ -1,3 +1,12 @@
+<script setup lang="ts">
+import { NavItem } from "@nuxt/content/dist/runtime/types";
+
+defineProps<{
+  link: NavItem;
+  activeClass?: string;
+}>();
+</script>
+
 <template>
   <a
     :key="link._path"
@@ -9,12 +18,3 @@
     {{ link.navTitle || link.title }}
   </a>
 </template>
-
-<script setup lang="ts">
-import { NavItem } from "@nuxt/content/dist/runtime/types";
-
-defineProps<{
-  link: NavItem;
-  activeClass?: string;
-}>();
-</script>
