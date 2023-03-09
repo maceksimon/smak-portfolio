@@ -1,12 +1,11 @@
-<script setup>
-const props = defineProps({
-  post: {
-    type: Object,
-    default: () => {},
-  },
-});
+<script setup lang="ts">
+import { ParsedContent } from "@nuxt/content/dist/runtime/types";
+const props = defineProps<{
+  post: ParsedContent;
+}>();
 
-let formattedDate;
+let formattedDate: Date;
+
 try {
   formattedDate = new Date(props.post.created);
 } catch (err) {
