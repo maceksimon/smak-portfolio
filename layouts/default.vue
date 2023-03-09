@@ -9,7 +9,7 @@
             : ' -mb-8 sm:-mb-12',
         ]"
       >
-        <!-- <Breadcrumbs /> -->
+        <Breadcrumbs />
         <slot />
       </main>
     </div>
