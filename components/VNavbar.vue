@@ -1,3 +1,35 @@
+<script setup>
+import { Popover, PopoverButton, PopoverPanel } from "@headlessui/vue";
+
+const toggleModal = inject("toggleModal");
+
+const { locale } = useI18n();
+const query = queryContent().where({ language: "en" }).find();
+let { data } = await useAsyncData("navigation", () =>
+  fetchContentNavigation(query)
+);
+
+// localize navigation
+let navigation = [];
+let localeSubtree = null;
+
+// if default locale
+const isDefaultLocale = computed(() => {
+  return locale.value === "cs";
+});
+
+if (isDefaultLocale.value) {
+  navigation = data.value.filter((link) => {
+    return link.language === "cs";
+  });
+} else {
+  [localeSubtree] = data.value.filter((link) => {
+    return link.language === locale.value;
+  });
+  navigation = localeSubtree.children;
+}
+</script>
+
 <template>
   <div class="bg-blue-700">
     <Popover>
@@ -33,7 +65,7 @@
         >
           <!-- Navigation -->
 
-          <div class="flex gap-4 text-gray-100 md:gap-6 lg:gap-8">
+          <div class="flex flex-wrap gap-4 text-gray-100 md:gap-6 lg:gap-8">
             <VMenuLink v-for="link in navigation" :link="link" />
           </div>
           <!-- Social icons & Color Mode -->
@@ -63,6 +95,7 @@
               <Icon name="fa-brands:github" />
             </a>
             <ColorModeSwitch class="hover:text-white" />
+            <LanguageSwitch />
           </div>
         </div>
       </nav>
@@ -121,6 +154,7 @@
                 <ColorModeSwitch
                   class="hover:text-gray-700 dark:hover:text-gray-300"
                 />
+                <LanguageSwitch />
               </div>
             </div>
           </div>
@@ -129,15 +163,6 @@
     </Popover>
   </div>
 </template>
-
-<script lang="ts" setup>
-import { Popover, PopoverButton, PopoverPanel } from "@headlessui/vue";
-
-const toggleModal: any = inject("toggleModal");
-const { data: navigation } = await useAsyncData("navigation", () =>
-  fetchContentNavigation()
-);
-</script>
 
 <style lang="postcss">
 .menu-link::after {

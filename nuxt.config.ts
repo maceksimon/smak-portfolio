@@ -19,13 +19,12 @@ export default defineNuxtConfig({
     // note that this option has multiple effects https://content.nuxtjs.org/guide/writing/document-driven
     documentDriven: true,
     navigation: {
-      fields: ["navTitle"],
+      fields: ["navTitle", "language"],
     },
     highlight: {
       // See the available themes on https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-theme
       theme: "dracula",
     },
-    locales: ["cs", "en"],
   },
   image: {
     provider: "netlify",
@@ -43,16 +42,32 @@ export default defineNuxtConfig({
         file: "en-US.json",
       },
     ],
-    lazy: true,
-    strategy: "no_prefix",
-    detectBrowserLanguage: false,
+    strategy: "prefix_except_default",
     langDir: "locales",
     defaultLocale: "cs",
-    vueI18n: {
-      availableLocales: ["cs", "en"],
+    detectBrowserLanguage: {
+      alwaysRedirect: true,
       fallbackLocale: "cs",
-      fallbackWarn: false,
-      missingWarn: false,
+      redirectOn: "root",
+      useCookie: true,
+      cookieCrossOrigin: false,
+      cookieDomain: null,
+      cookieKey: "i18n_redirected",
+      cookieSecure: false,
+    },
+    parsePages: false,
+    pages: {
+      services: {
+        cs: "/sluzby",
+        en: "/services",
+      },
+      about: {
+        cs: "/o-mne",
+        en: "/about",
+      },
+    },
+    vueI18n: {
+      fallbackLocale: "cs",
     },
   },
   build: {
