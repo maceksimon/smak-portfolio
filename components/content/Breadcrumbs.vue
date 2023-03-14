@@ -6,11 +6,13 @@ const { data } = await useAsyncData("navigation", () =>
   fetchContentNavigation()
 );
 
+const pathParts = route.fullPath.split("/");
+
 // localize navigation
 let navigation = [];
 let localeSubtree = null;
+const rootPageIndex = ref(1);
 
-// if default locale
 const isDefaultLocale = computed(() => {
   return locale.value === "cs";
 });
@@ -23,6 +25,7 @@ if (isDefaultLocale.value) {
   [localeSubtree] = data.value.filter((link) => {
     return link.language === locale.value;
   });
+  rootPageIndex.value = 2;
   navigation = localeSubtree.children;
 }
 
@@ -32,19 +35,27 @@ navigation.forEach((route) => {
   if (route) {
     navigationRoutes[route._path] = route;
   }
+  if (route.children) {
+    route.children.forEach((child) => {
+      navigationRoutes[child._path] = child;
+    });
+  }
 });
 
-// loop over path params and link to pages if possible
-const pages = ref([]);
-if (route.params.slug.length > 1) {
-  route.params.slug.forEach((param) => {
-    for (const key in navigationRoutes) {
-      if (key.includes(param)) {
-        pages.value.push(navigationRoutes[key]);
-      }
-    }
+// loop over routes and select children of root path
+const pages = computed(() => {
+  const keys = Object.keys(navigationRoutes).filter((key) => {
+    return key.includes(pathParts[rootPageIndex.value]);
   });
-}
+
+  const pages = [];
+
+  keys.forEach((key) => {
+    pages.push(navigationRoutes[key]);
+  });
+
+  return pages;
+});
 </script>
 
 <template>
