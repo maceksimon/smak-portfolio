@@ -17,7 +17,7 @@ export default defineNuxtConfig({
   // https://content.nuxtjs.org
   content: {
     // note that this option has multiple effects https://content.nuxtjs.org/guide/writing/document-driven
-    documentDriven: true,
+    documentDriven: false,
     navigation: {
       fields: ["navTitle", "language"],
     },
@@ -45,9 +45,10 @@ export default defineNuxtConfig({
     strategy: "prefix_except_default",
     langDir: "locales",
     defaultLocale: "cs",
+    parsePages: false,
     detectBrowserLanguage: {
       alwaysRedirect: true,
-      fallbackLocale: "cs",
+      fallbackLocale: "",
       redirectOn: "root",
       useCookie: true,
       cookieCrossOrigin: false,
@@ -55,8 +56,11 @@ export default defineNuxtConfig({
       cookieKey: "i18n_redirected",
       cookieSecure: false,
     },
-    parsePages: false,
     pages: {
+      root: {
+        cs: "/",
+        en: "/en",
+      },
       services: {
         cs: "/sluzby",
         en: "/services",
