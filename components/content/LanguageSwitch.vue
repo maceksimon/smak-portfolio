@@ -8,7 +8,7 @@ const { locale } = useI18n();
     v-if="locale !== 'en'"
     class="text-md"
     :href="switchLocalePath('en')"
-    :title="$t('language')"
+    title="English"
   >
     <Icon
       name="flag:gb-1x1"
@@ -19,7 +19,7 @@ const { locale } = useI18n();
     v-if="locale !== 'cs'"
     class="text-md"
     :href="switchLocalePath('cs')"
-    :title="$t('language')"
+    title="Čeština"
   >
     <Icon
       name="flag:cz-1x1"
