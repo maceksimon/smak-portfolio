@@ -1,4 +1,8 @@
 {
   "home": "Home",
-  "send": "Send"
+  "send": "Send",
+  "social": {
+    "twitter": "Display Twitter account",
+    "github": "Display GitHub account"
+  }
 }

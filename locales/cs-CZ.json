@@ -1,4 +1,8 @@
 {
   "home": "Domů",
-  "send": "Odeslat"
+  "send": "Odeslat",
+  "social": {
+    "twitter": "Zobrazit Twitter účet",
+    "github": "Zobrazit GitHub účet"
+  }
 }
