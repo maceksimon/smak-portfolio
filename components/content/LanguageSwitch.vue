@@ -4,10 +4,26 @@ const { locale } = useI18n();
 </script>
 
 <template>
-  <a v-if="locale !== 'en'" class="text-md ..." :href="switchLocalePath('en')">
-    EN
+  <a
+    v-if="locale !== 'en'"
+    class="text-md"
+    :href="switchLocalePath('en')"
+    :title="$t('language')"
+  >
+    <Icon
+      name="flag:gb-1x1"
+      class="h-5 w-5 flex-shrink-0 rounded-full border-2 border-white"
+    />
   </a>
-  <a v-if="locale !== 'cs'" class="text-md ..." :href="switchLocalePath('cs')">
-    CS
+  <a
+    v-if="locale !== 'cs'"
+    class="text-md"
+    :href="switchLocalePath('cs')"
+    :title="$t('language')"
+  >
+    <Icon
+      name="flag:cz-1x1"
+      class="h-5 w-5 flex-shrink-0 rounded-full border-2 border-white"
+    />
   </a>
 </template>
