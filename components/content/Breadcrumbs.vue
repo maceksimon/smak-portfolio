@@ -44,14 +44,16 @@ navigation.forEach((route) => {
 
 // loop over routes and select children of root path
 const pages = computed(() => {
-  const keys = Object.keys(navigationRoutes).filter((key) => {
-    return key.includes(pathParts[rootPageIndex.value]);
-  });
+  let path = "";
+  let pages = [];
 
-  const pages = [];
-
-  keys.forEach((key) => {
-    pages.push(navigationRoutes[key]);
+  pathParts.forEach((part) => {
+    if (part) {
+      path += `/${part}`;
+    }
+    if (path && navigationRoutes[path]) {
+      pages.push(navigationRoutes[path]);
+    }
   });
 
   return pages;
