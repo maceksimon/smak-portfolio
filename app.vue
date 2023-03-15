@@ -128,4 +128,12 @@ body {
 .bg-gradient-animated:hover {
   background-position: 100% 0;
 }
+
+h1 > strong,
+b {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @apply bg-gradient-to-r from-orange-600 via-orange-300 to-orange-400;
+}
 </style>
