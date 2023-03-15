@@ -5,8 +5,8 @@ const { locale } = useI18n();
 const { data } = await useAsyncData("navigation", () =>
   fetchContentNavigation()
 );
-
-const pathParts = route.fullPath.split("/");
+const pathCore = route.fullPath.split("#")[0];
+const pathParts = pathCore.split("/");
 
 // localize navigation
 let navigation = [];
@@ -51,7 +51,7 @@ const pages = computed(() => {
     if (part) {
       path += `/${part}`;
     }
-    if (path && navigationRoutes[path]) {
+    if (path && part !== locale.value && navigationRoutes[path]) {
       pages.push(navigationRoutes[path]);
     }
   });
