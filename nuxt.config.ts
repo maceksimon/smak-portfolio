@@ -42,6 +42,7 @@ export default defineNuxtConfig({
         file: "en-US.json",
       },
     ],
+    customRoutes: "config",
     strategy: "prefix_except_default",
     langDir: "locales",
     defaultLocale: "cs",
