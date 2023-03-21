@@ -41,5 +41,5 @@ E-shop Fellow Creatures už několik let zajišťuje stabilní odbyt Zsoltových
 
 ::alert{icon="ph:eye-duotone"}
 #title
-Obchod si můžete prohlédnout na [www.fellowcreatures.co.uk](www.fellowcreatures.co.uk).
+Obchod si můžete prohlédnout na [www.fellowcreatures.co.uk](https://www.fellowcreatures.co.uk).
 ::
