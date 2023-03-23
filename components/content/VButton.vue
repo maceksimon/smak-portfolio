@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { link, type, size } = withDefaults(
-  defineProps<{ link?: string; type: string; size: string }>(),
+  defineProps<{ link?: string; type?: string; size?: string }>(),
   {
     link: "",
     type: "default",
