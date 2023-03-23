@@ -1,3 +1,67 @@
+<script setup>
+import useVuelidate from "@vuelidate/core";
+import { required, email, minLength, helpers } from "@vuelidate/validators";
+const { locale } = useI18n();
+
+useHead({
+  titleTemplate: (title) =>
+    title ? `${title} | Šimon Macek` : "Šimon Macek | Web Developer",
+  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+  charset: "utf-8",
+});
+
+const open = ref(false);
+const formSubmitted = ref(false);
+const formError = ref(false);
+
+const jobs = ["portfolio", "blog", "e-commerce"];
+const services = ["content", "smm", "bundle"];
+
+const form = reactive({
+  name: "",
+  email: "",
+  job: "",
+  message: "",
+  service: "",
+});
+
+const requiredMessage = locale.value === "cs" ? "Povinné pole" : "Required";
+const emailMessage =
+  locale.value === "cs" ? "Neplatný e-mail" : "Invalid email";
+const minLengthMessage =
+  locale.value === "cs" ? "Musí být delší než jedno písmeno" : "Too short";
+
+const rules = {
+  name: {
+    required: helpers.withMessage(requiredMessage, required),
+    minLength: helpers.withMessage(minLengthMessage, minLength(1)),
+  },
+  email: {
+    required: helpers.withMessage(requiredMessage, required),
+    email: helpers.withMessage(emailMessage, email),
+  },
+};
+
+const v = useVuelidate(rules, form);
+
+function toggleModal(service) {
+  if (jobs.includes(service)) {
+    form.job = service;
+  }
+  if (services.includes(service)) {
+    form.service = service;
+  }
+  open.value = !open.value;
+}
+
+provide("toggleModal", toggleModal);
+provide("open", open);
+provide("form", form);
+provide("v", v);
+provide("formSubmitted", formSubmitted);
+provide("formError", formError);
+</script>
+
 <template>
   <div class="flex min-h-screen flex-col">
     <Html lang="en" />
@@ -28,74 +92,6 @@
     </form>
   </div>
 </template>
-
-<script setup>
-import useVuelidate from "@vuelidate/core";
-import { required, email, minLength } from "@vuelidate/validators";
-
-useHead({
-  titleTemplate: (title) =>
-    title ? `${title} | Šimon Macek` : "Šimon Macek | Web Developer",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
-  charset: "utf-8",
-});
-
-const open = ref(false);
-const formSubmitted = ref(false);
-const formError = ref(false);
-
-const jobs = ["portfolio", "blog", "e-commerce"];
-const services = ["content", "smm", "bundle"];
-
-const form = reactive({
-  name: "",
-  email: "",
-  job: "",
-  message: "",
-  service: "",
-});
-
-const rules = {
-  // "name": {
-  //   required: helpers.withMessage("Povinné pole", required),
-  //   minLength: helpers.withMessage(
-  //     "Musí být delší než jedno písmeno",
-  //     minLength(1)
-  //   ),
-  // },
-  // "email": {
-  //   required: helpers.withMessage("Povinné pole", required),
-  //   email: helpers.withMessage("Neplatný e-mail", email),
-  // },
-  name: {
-    required: required,
-    minLength: minLength(1),
-  },
-  email: {
-    required: required,
-    email: email,
-  },
-};
-
-const v = useVuelidate(rules, form);
-
-function toggleModal(service) {
-  if (jobs.includes(service)) {
-    form.job = service;
-  }
-  if (services.includes(service)) {
-    form.service = service;
-  }
-  open.value = !open.value;
-}
-
-provide("toggleModal", toggleModal);
-provide("open", open);
-provide("form", form);
-provide("v", v);
-provide("formSubmitted", formSubmitted);
-provide("formError", formError);
-</script>
 
 <style lang="postcss">
 body {

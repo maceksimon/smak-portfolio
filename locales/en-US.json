@@ -4,5 +4,10 @@
   "social": {
     "twitter": "Display Twitter account",
     "github": "Display GitHub account"
+  },
+  "contactForm": {
+    "labelName": "Your name",
+    "labelEmail": "Your e-mail",
+    "labelMessage": "Message"
   }
 }

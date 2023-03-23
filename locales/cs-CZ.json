@@ -4,5 +4,10 @@
   "social": {
     "twitter": "Zobrazit Twitter účet",
     "github": "Zobrazit GitHub účet"
+  },
+  "contactForm": {
+    "labelName": "Vaše jméno",
+    "labelEmail": "E-mail",
+    "labelMessage": "Zpráva"
   }
 }
