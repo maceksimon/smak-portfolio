@@ -19,6 +19,8 @@ Nápad přišel od zakladatelů hradeckého spolku Souhra (sousedský Hradec). T
 
 Pro takový cíl je nezbytná určitá forma organizace, a tady mohl pomoct nový web. Ten měl fungovat jako zdroj informací, ale i jako cesta k rezervování záhonů pro budoucí zahradníky. Cílem bylo, aby si návštěvníci mohli pomocí formuláře zaregistrovat k odběru novinek vybrat si, jakým způsobem se zapojí do dění okolo zahrady.
 
+![Ukázka webu Zahrada Střelák](/image/portfolio/strelak/strelak-homepage.webp)
+
 ## Technologie pro přírodu
 
 Pro tvorbu stránky jsem zvolil variantu statického webu. Ten má několik výhod, jako jsou například rychlé načítání, **malá uhlíková stopa** a **minimální náklady na údržbu**. Díky tomu stačilo správcům zahrady pokrýt náklady na registraci domény a web od té doby funguje zcela zdarma.
@@ -30,6 +32,8 @@ Součástí přihlášení bylo i vytvoření **uživatelsky příjemných formu
 Protože na webové stránky se mělo odkazovat na sociálních sítích, bylo důležité vytvořit optimalizované obrázky pro sdílení - [Open Graph images](https://css-tricks.com/essential-meta-tags-social-media/). Ty dodávají odkazům na Facebooku nebo Twitteru výraznost a šmrnc.
 
 Konečně, záměrem bylo vytvořit přátelský, hravý design webu, který by odrážel neformální charakter komunitní zahrady. K tomu jsem použil volně přístupné ilustrace, které jsem doplnil o několik **interaktivních animací** a UI prvků.
+
+![Ukázka webu zahrady na mobilu](/image/portfolio/strelak/strelak-homepage-mobile.webp)
 
 ## Co vyrostlo?
 
