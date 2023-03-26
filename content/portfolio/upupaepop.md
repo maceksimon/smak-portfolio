@@ -9,7 +9,7 @@ featured: true
 type: "full"
 ---
 
-# Letterpress na WordPressu: Stránky studia Upupaepop
+# **Letterpress na WordPressu:** <br>Stránky studia Upupaepop
 
 _Jak se vyrábějí stránky pro grafiky?_
 

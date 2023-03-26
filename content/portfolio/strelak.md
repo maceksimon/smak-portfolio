@@ -9,7 +9,7 @@ featured: false
 type: "full"
 ---
 
-# Od semínka ke květu: Web komunitní zahrady Střelák
+# **Od semínka ke květu:** <br>Web komunitní zahrady Střelák
 
 _Web může být skvělý způsob jak nechat rozrůst a rozkvést komunitu. Zkusili jsme to se zahradou Střelák v Hradci Králové._
 
