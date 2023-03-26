@@ -94,6 +94,9 @@ provide("formError", formError);
 </template>
 
 <style lang="postcss">
+html {
+  scroll-behavior: smooth;
+}
 body {
   @apply bg-gray-100;
 }
