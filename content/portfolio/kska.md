@@ -9,34 +9,42 @@ featured: true
 type: "full"
 ---
 
-# Learning together: A university department website
+# **Diplomka z web-designu:** Vývoj stránek univerzitní katedry
 
-In my experience, university websites are notorious for being hard to read and navigate. That's why I welcomed the challenge of creating a web for my university department.
+Z vlastní zkušenosti vím, že univerzitní stránky jsou pro uživatele často matoucí a nepřehledné. Proto jsem byl rád, za příležitost navrhnout web pro svou katedru.
 
-## The challenge
+### Vedoucí práce
 
-I was asked to update the website of the Department of Social and Cultural Anthropology. Milan, a university researcher and lecturer who took care of the web had designed the previous version of the web using [Elementor](https://elementor.com/) and several other plugins. However, the site seemed to be lacking in design and readability. There were also requests for additional **content types** and an **multilingual translations**.
+Projekt mi zadal Milan Durňak, z Katedry sociální a kulturní antropologie. Milan je všestraný badatel, a kromě kamery a kytary ovládá i počítače. Před mým příchodem sestavil základní návrh stránek pomocí WordPress pluginu Elementor a navrhl nové logo.
 
-## Design first
+### Zadání
 
-I first supplied a [Figma](https://www.figma.com/) design for several pages to give a good idea of where I was headings. I was basing my design loosely on the previous version as there were some good elements in it. However, I redesigned and **simplified the content structure** - mainly the navigation links and the content of some pages.
+Díky tomu jsem měl z čeho vycházet ve svém návrhu, který měl za cíl vizuálně sjednotit jednotlivé stránky webu a vytvořit moderní a uživatelsky příjemný design. Weby univerzit jsou charakteristické velkým množstvím informací, které je třeba dobře strukturovat a zobrazit, tak aby každý uživatel jednoduše našel to, co právě hledá.
 
-Milan and other members of the staff loved the design, so I moved on to the implementation. I decided for a **custom built them**e, as it would give me full control over the content types and design templates. It also allows to combine the existing Gutenberg blocks to create new pages efficiently.
+### Rešerše
 
-## Planning the structure
+První můj cíl byl vytvořit jednodušší webovou strukturu a zbavit se Elementoru. Přestože jsou Elementor a podobné pluginy užitečné a umožňují flexibilně pracovat s designem stránek, mají i své nevýhody. Často web zpomalují kvůli velkému objemu kódu, úpravy na jednotlivých stránkách jsou náročné na údržbu, a většinou vedou k rozbití jednotného stylu webu.
 
-I implemented an information board which shows the newest articles and short announcements about the day-to-day matters in the department. I also **provided instructions** to all staff on how to edit the content making them more comfortable with using the site.
+Namísto Elementoru jsem zvolil řešení vlastních WordPress bloků, které lze upravovat v administraci. Design bloků lze aktualizovat hromadně a vždy se bude shodovat se zbytkem webu.
 
-### Performance and maintainability
+### Hypotéza
 
-By replacing the plugin components with custom ones, I removed the overhead of the plugin which may make the website load slower. The custom code also allows for **better maintainability** as the content structure of the website is managed from a single place - the Gutenberg editor - instead of being broken up into multiple plugins.
+Pro vedení katedry jsem nachystal návrh ve [Figmě](https://www.figma.com/). Volně jsem vycházel z předchozí verze, částečně jsem ji ale přepracoval a **zjednodušil strukturu obsahu**, hlavně navigační odkazy a obsah některých stránek.
 
-### Always think about the user
+Milanovi a ostatním kolegům se návrh líbil, a tak jsem přešel k realizaci. Šablona na míru se ukázala jako ideální řešení. Dovolila mi nadefinovat vlastní obsahové typy. Ty zahrnovaly aktuální informace, upozornění pro studenty, a seznam lektorů.
 
-Thanks to the custom theme, I gained a fine-grain control over each part of the page so I could more easily make **UX improvements** such as making the staff images link to the individual profiles. On [lecturer's profile pages](https://kska.upce.cz/okatedre/lide/adam-horalek/), I used a card with tabs to more easily display various types of information.
+![Náhled webu katedry KSKA Univerzity Pardubice](/image/portfolio/kska/kska-homepage.webp)
 
-## Final thoughts
+### Ústřední myšlenka
 
-The response to the new design was great. The theme is ready to be translated into English and I continue to make updates and implement new features in collaboration with Milan and the rest of the department.
+Řešení je **přizpůsobivé a snadno rozšiřitelné** a proto ani nové typy obsahu nepředstavují problém. Nedávno na stránky nově přibyly také katedrou publikované knihy a filmy. Modulární architektura webu z toho udělala práci na pár hodin.
 
+### Závěr
+
+Nový web byl s nadšením přijat vedením katedry. V současné době se chystá jeho překlad do angličtiny a s Milanem a dalšími kolegy pokračujeme v jeho dalším rozvoji.
 Have a look at the live web on [KSKA.upce.cz](https://kska.upce.cz/)
+
+::alert{icon="ph:eye-duotone"}
+#title
+Web katedry je k vidění na [kska.upce.cz](https://kska.upce.cz/).
+::
