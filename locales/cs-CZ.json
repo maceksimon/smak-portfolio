@@ -9,5 +9,10 @@
     "labelName": "Vaše jméno",
     "labelEmail": "E-mail",
     "labelMessage": "Zpráva"
+  },
+  "projectFeature": {
+    "selectedProject": "Vybraný projekt",
+    "lookCloser": "Podívat se blíž",
+    "alertMissingData": "No portfolio item found. Try changing the parameters."
   }
 }

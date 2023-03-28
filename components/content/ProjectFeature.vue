@@ -1,27 +1,57 @@
-<script setup>
-const { data } = await useAsyncData("portfolioFeature", () =>
-  queryContent("portfolio")
+<script setup lang="ts">
+const props = defineProps({
+  name: {
+    type: String,
+    default: "",
+  },
+});
+
+const { data } = await useAsyncData("portfolioItemFeatured", () =>
+  queryContent("portfolio", "upupaepop")
     // do not fetch the root page
-    .where({ featured: true })
-    .sort({ "fields.order": 1 })
-    .find()
+    .findOne()
 );
 </script>
 
 <template>
-  <section class="my-8 sm:my-12 xl:my-16">
-    <DivisionPill v-if="$slots.default">
-      <Markdown :use="$slots.default" unwrap="p" />
-    </DivisionPill>
-    <div
-      v-if="data?.length"
-      class="not-prose mx-auto my-8 grid gap-6 sm:my-12 lg:grid-cols-2 lg:gap-10 xl:my-16"
-    >
-      <ProjectTeaser
-        v-for="project in data"
-        :project="project"
-        :key="project.id"
-      />
+  <div v-if="data" class="not-prose">
+    <div class="flex flex-col items-center lg:flex-row-reverse">
+      <div class="aspect-[7/4] shrink-0 grow">
+        <iframe
+          v-if="data.rive.mockup"
+          :src="data.rive.mockup"
+          loading="lazy"
+          class="h-full w-full border-none"
+        ></iframe>
+      </div>
+      <div class="w-2/5 shrink-0">
+        <div
+          class="mb-2 font-bold text-blue-600 dark:text-blue-300 sm:mb-4 sm:text-lg"
+        >
+          {{ $t("projectFeature.selectedProject") }}
+        </div>
+        <h2
+          class="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:max-w-md sm:text-3xl lg:text-5xl xl:max-w-3xl"
+        >
+          {{ data.head.title }}
+        </h2>
+        <div class="mt-6 text-lg text-gray-700 dark:text-gray-300 lg:text-xl">
+          {{ data.head.description }}
+        </div>
+        <div>
+          <NuxtLink
+            :href="data._path"
+            class="bg-gradient-animated mt-8 inline-flex items-center justify-center rounded-md bg-gradient-to-r from-blue-700 via-blue-400 to-blue-500 px-4 py-2 text-base font-semibold text-white hover:bg-blue-700 md:py-3 md:px-7 md:text-lg"
+          >
+            {{ $t("projectFeature.lookCloser") }}
+          </NuxtLink>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+  <div v-else>
+    <Alert>
+      {{ $t("projectFeature.alertMissingData") }}
+    </Alert>
+  </div>
 </template>

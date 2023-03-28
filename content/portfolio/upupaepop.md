@@ -1,12 +1,13 @@
 ---
-head.title: Upupaepop
-head.description: Redesigning a Wix site and switching to an open source e-commerce? Piece of cake! 🍰
+head.title: Studio Upupaepop
+head.description: Pro hradecké designové studio jsem připravil web, který teď skvěle funguje i jako internetový obchod.
 head.image: /image/portfolio/upupaepop.jpg
 fields.image: /image/portfolio/upupaepop.jpg
 fields.order: 200
 fields.skills: ["WordPress", "WooCommerce"]
 featured: true
 type: "full"
+rive.mockup: "https://rive.app/s/wi2V2T55e0KhmeUyjB4HMQ/embed"
 ---
 
 # **Letterpress na WordPressu:** <br>Stránky studia Upupaepop
