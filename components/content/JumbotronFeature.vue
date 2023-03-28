@@ -25,7 +25,7 @@
       <div class="not-prose">
         <div
           v-if="$slots.highlight"
-          class="mb-2 font-bold text-blue-700 dark:text-blue-300 sm:mb-4 sm:mt-12 sm:text-lg lg:mb-6 lg:text-xl"
+          class="mb-2 font-bold text-blue-600 dark:text-blue-300 sm:mb-4 sm:mt-12 sm:text-lg lg:mb-6 lg:text-xl"
         >
           <Markdown :use="$slots.highlight" unwrap="p" />
         </div>
