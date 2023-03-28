@@ -6,24 +6,24 @@ withDefaults(defineProps<{ icon: string }>(), {
 
 <template>
   <div
-    class="rounded-md border border-blue-200 bg-blue-50 p-4 dark:bg-blue-100/25"
+    class="rounded-md border border-orange-200 bg-orange-50 p-4 dark:bg-orange-100/25"
   >
     <div class="flex items-center">
       <div v-if="icon" class="mr-3 flex flex-shrink-0 items-center">
         <Icon
-          class="h-5 w-5 text-blue-400 dark:text-blue-200/50"
+          class="h-5 w-5 text-orange-400 dark:text-orange-200/50"
           aria-hidden="true"
           :name="icon"
         />
       </div>
       <div class="alert-text not-prose flex items-center">
-        <h3
+        <div
           v-if="$slots.title"
-          class="m-0 text-base font-medium text-blue-800 dark:text-blue-200"
+          class="m-0 text-base font-medium text-orange-800 dark:text-orange-200"
         >
           <Markdown :use="$slots.title" unwrap="p" />
-        </h3>
-        <div v-if="$slots.default" class="mt-2 text-sm text-blue-700">
+        </div>
+        <div v-if="$slots.default" class="mt-2 text-sm text-orange-700">
           <Markdown :use="$slots.default" unwrap="p" />
         </div>
       </div>
@@ -32,14 +32,14 @@ withDefaults(defineProps<{ icon: string }>(), {
 </template>
 
 <style scoped lang="postcss">
-.not-prose h3 :deep(a) {
-  color: var(--tw-prose-bold);
+.not-prose :deep(a) {
+  color: var(--tw-prose-links);
   @apply underline;
   &:hover {
     @apply border-none no-underline;
   }
 }
-.dark .not-prose h3 :deep(a) {
-  color: var(--tw-prose-invert-bold);
+.dark .not-prose :deep(a) {
+  color: var(--tw-prose-invert-links);
 }
 </style>
