@@ -1,5 +1,5 @@
 ---
-head.title: University department website
+head.title: Diplomka z web-designu - Vývoj stránek univerzitní katedry
 head.description: How to present a large variety of content to students and alumni? Let's find out!
 head.image: /image/portfolio/sca-department.jpg
 fields.image: /image/portfolio/sca-department.jpg
