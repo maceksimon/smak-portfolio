@@ -6,12 +6,12 @@ withDefaults(defineProps<{ icon: string }>(), {
 
 <template>
   <div
-    class="rounded-md border border-orange-200 bg-orange-50 p-4 dark:bg-orange-100/25"
+    class="rounded-md border border-orange-200 bg-orange-100 p-4 dark:bg-orange-400/25"
   >
     <div class="flex items-center">
       <div v-if="icon" class="mr-3 flex flex-shrink-0 items-center">
         <Icon
-          class="h-5 w-5 text-orange-400 dark:text-orange-200/50"
+          class="h-5 w-5 text-orange-800/75 dark:text-orange-100/50"
           aria-hidden="true"
           :name="icon"
         />
@@ -19,7 +19,7 @@ withDefaults(defineProps<{ icon: string }>(), {
       <div class="alert-text not-prose flex items-center">
         <div
           v-if="$slots.title"
-          class="m-0 text-base font-medium text-orange-800 dark:text-orange-200"
+          class="m-0 text-base font-medium text-orange-900 dark:text-orange-100"
         >
           <Markdown :use="$slots.title" unwrap="p" />
         </div>
