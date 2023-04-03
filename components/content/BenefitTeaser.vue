@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import type { ServiceTeaser } from "@/types";
 
-const title: string = "Na internet tudy";
+const title: string = "Na web tudy";
 const description: string =
-  "Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.";
+  'Nastupte na rychlík do stanice Internet. Vyberu pro vás digitální řešení na míru a společně projdeme procesem tvorby webu od "A" až po spuštění. Na každém kroku se budete moci opřít o know-how, které vychází z mých několikaletých zkušeností s vývojem webových stránek.';
 const features: ServiceTeaser[] = [
   {
     title: "Web, který můžete mít rychle",
