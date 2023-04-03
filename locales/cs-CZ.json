@@ -14,5 +14,8 @@
     "selectedProject": "Vybraný projekt",
     "lookCloser": "Podívat se blíž",
     "alertMissingData": "No portfolio item found. Try changing the parameters."
+  },
+  "benefitTeaser": {
+    "button": "Přečtěte si o dalších výhodách"
   }
 }

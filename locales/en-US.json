@@ -9,5 +9,8 @@
     "labelName": "Your name",
     "labelEmail": "Your e-mail",
     "labelMessage": "Message"
+  },
+  "benefitTeaser": {
+    "button": "Read more about the benefits"
   }
 }
