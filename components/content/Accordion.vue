@@ -7,7 +7,7 @@ const faqs = {
     {
       question: "Kolik mě bude stát web?",
       answer:
-        "To záleží na mnoha okolnostech. Jde o jednu přistávací stránku, nebo rozsáhlý web s různými typy obsahu? Jak má vypadat, a jaké má mít funkce? Obecně řečeno, pořídit si web stojí asi tolik co koupit si jízdní kolo. A výsledek by měl být také tak užitečný.",
+        "To záleží na mnoha okolnostech. Jde o jednu přistávací stránku, nebo rozsáhlý web s různými typy obsahu? Jak má vypadat, a jaké má mít funkce? Obecně řečeno, pořídit si web stojí asi tolik co koupit si jízdní kolo. A výsledek by měl být přinejmenším stejně tak užitečný.",
     },
     {
       question: "Jak probíhá platba?",
