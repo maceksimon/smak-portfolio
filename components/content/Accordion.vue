@@ -91,7 +91,7 @@ const faqs = {
       <Markdown :use="$slots.default" unwrap="p" />
     </DivisionPill>
     <dl
-      class="my-8 space-y-6 divide-y divide-gray-200 dark:divide-gray-600 sm:my-12"
+      class="mx-auto my-8 max-w-screen-lg space-y-6 divide-y divide-gray-200 dark:divide-gray-600 sm:my-12"
     >
       <Disclosure
         as="div"
