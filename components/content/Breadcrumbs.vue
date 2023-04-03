@@ -72,7 +72,7 @@ const pages = computed(() => {
           <div class="flex items-center">
             <a
               :href="locale === 'cs' ? '/' : '/' + locale"
-              class="text-sm font-medium text-gray-500 hover:text-gray-700"
+              class="text-sm font-medium text-gray-500 transition-colors duration-200 ease-in-out hover:text-gray-700 dark:hover:text-gray-300"
             >
               <span>{{ $t("home") }}</span>
             </a>
@@ -87,7 +87,7 @@ const pages = computed(() => {
             />
             <a
               :href="page._path"
-              class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700"
+              class="line-clamp-1 ml-4 text-sm font-medium text-gray-500 transition-colors duration-200 ease-in-out hover:text-gray-700 dark:hover:text-gray-300"
               :aria-current="page.current ? 'page' : undefined"
               >{{ page.title }}</a
             >
@@ -102,7 +102,7 @@ const pages = computed(() => {
             />
             <a
               :href="page._path"
-              class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700"
+              class="line-clamp-1 ml-4 text-sm font-medium text-gray-500 hover:text-gray-700"
               aria-current="page"
             >
               {{ page.title }}
