@@ -25,7 +25,7 @@ Protože je sám vegan, rozhodl se stát se čokoládovým baronem a svoji **veg
 
 Zsolt má velký smysl pro detail a komunikaci vizuální identity. Zásadní pro něj bylo, aby jeho brand **vypadal podle jeho představ**. Web jsme připravili podle "moodboardu" - referencí jeho oblíbených stránek. Dnes už bych určitě trval na přesné specifikaci designu, ale před lety, když jsem s vývojem stránek začínal, bylo všechno trochu víc na punk a nevadilo mi zkoušet různé návrhy přímo ve vývoji.
 
-Obchod jsme stavěli na [Shopify](https://www.shopify.com/). E-shopové platformě podobné [Shoptetu](https://www.shoptet.cz/), která je populární v anglicky mluvících zemí. Je placená měsíčním poplatkem, ale nabízí za to robustní řešení pro seriózní e-shopy a velkou knihovnu šablon a rozšíření. Shopify nabízí některé základní šablony zdarma a jiné placené. Zsoltova vize ale vyžadovala aby se jeho obchod lišil od všech ostatních, takže naším řešením byl **vývoj šablony na míru**.
+Obchod jsme stavěli na [Shopify](https://www.shopify.com/), e-shopové platformě podobné [Shoptetu](https://www.shoptet.cz/), která je populární v anglicky mluvících zemí. Je placená měsíčním poplatkem, ale nabízí za to robustní řešení pro seriózní e-shopy a velkou knihovnu šablon a rozšíření. Shopify nabízí některé základní šablony zdarma a jiné placené. Zsoltova vize ale vyžadovala aby se jeho obchod lišil od všech ostatních, takže naším řešením byl **vývoj šablony na míru**.
 
 ![Ukázka webu Fellow Creatures na mobilu](/image/portfolio/fellow-creatures/fellowcreatures-homepage-mobile.webp)
 
