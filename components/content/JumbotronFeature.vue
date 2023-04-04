@@ -37,7 +37,7 @@
         </h1>
       </div>
       <div
-        class="mt-6 max-w-xs leading-relaxed tracking-normal text-gray-500 dark:text-gray-300 sm:mt-8 sm:text-lg lg:mt-12 lg:text-xl lg:leading-loose xl:max-w-xl xl:max-w-none"
+        class="mt-6 max-w-xs leading-relaxed tracking-normal text-gray-500 dark:text-gray-300 sm:mt-8 sm:text-lg lg:mt-12 lg:text-xl lg:leading-loose xl:max-w-none"
       >
         <Markdown :use="$slots.perex" unwrap="p" />
       </div>
