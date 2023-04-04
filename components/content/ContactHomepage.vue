@@ -53,7 +53,7 @@ function encodeData(data) {
       <Markdown :use="$slots.default" unwrap="p" />
     </DivisionPill>
     <form
-      class="my-8 sm:my-12 xl:my-16"
+      class="my-8 mx-auto max-w-screen-lg sm:my-12 xl:my-16"
       :class="{ 'animate-shake': v.$error }"
       name="contact-form"
       method="post"
