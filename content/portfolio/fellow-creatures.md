@@ -43,8 +43,6 @@ Pomocí několika důležitých rozšíření jsem dokázal přidat možnost **p
 
 E-shop Fellow Creatures už několik let zajišťuje stabilní odbyt Zsoltových čokolád. Pomohl mu vystavět jeho značku a expandovat do zahraničí. Fellow Creatures prodávají do Britských nákupních řetězců, ale např. i do Jižní Koreji. Jeho webový obchod stále pomáhám udržovat a rozvíjet.
 
->
-
 ::alert{icon="ph:eye-duotone"}
 #title
 Obchod si můžete prohlédnout na [www.fellowcreatures.co.uk](https://www.fellowcreatures.co.uk).
