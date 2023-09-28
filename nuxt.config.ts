@@ -46,7 +46,7 @@ export default defineNuxtConfig({
     strategy: "prefix_except_default",
     langDir: "locales",
     defaultLocale: "cs",
-    parsePages: false,
+    // parsePages: false,
     detectBrowserLanguage: {
       alwaysRedirect: true,
       fallbackLocale: "",
@@ -70,9 +70,6 @@ export default defineNuxtConfig({
         cs: "/o-mne",
         en: "/about",
       },
-    },
-    vueI18n: {
-      fallbackLocale: "cs",
     },
   },
   build: {
