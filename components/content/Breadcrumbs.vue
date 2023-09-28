@@ -62,38 +62,25 @@ const pages = computed(() => {
 
 <template>
   <ContentQuery :path="$route.path" v-slot="{ data }">
-    <nav
-      :class="{ hidden: data[0]?.hideBreadcrumb }"
-      class="not-prose mb-4 flex sm:mb-8"
-      aria-label="Breadcrumb"
-    >
+    <nav :class="{ hidden: data[0]?.hideBreadcrumb }" class="not-prose mb-4 flex sm:mb-8" aria-label="Breadcrumb">
       <ol role="list" class="flex items-center space-x-4">
         <li class="">
           <div class="flex items-center">
-            <a
-              :href="locale === 'cs' ? '/' : '/' + locale"
-              class="text-sm font-medium text-gray-500 transition-colors duration-200 ease-in-out hover:text-gray-700 dark:hover:text-gray-300"
-            >
+            <a :href="locale === 'cs' ? '/' : '/' + locale"
+              class="text-sm font-medium text-gray-500 transition-colors duration-200 ease-in-out hover:text-gray-700 dark:hover:text-gray-300">
               <span>{{ $t("home") }}</span>
             </a>
           </div>
         </li>
         <li v-for="page in pages" :key="page.title">
           <div v-if="page" class="flex items-center">
-            <Icon
-              name="heroicons-outline:chevron-right"
-              class="h-4 w-4 flex-shrink-0 text-gray-400"
-              aria-hidden="true"
-            />
-            <a
-              :href="page._path"
+            <Icon name="heroicons-outline:chevron-right" class="h-4 w-4 flex-shrink-0 text-gray-400" aria-hidden="true" />
+            <a :href="page._path"
               class="line-clamp-1 ml-4 text-sm font-medium text-gray-500 transition-colors duration-200 ease-in-out hover:text-gray-700 dark:hover:text-gray-300"
-              :aria-current="page.current ? 'page' : undefined"
-              >{{ page.title }}</a
-            >
+              :aria-current="page.current ? 'page' : undefined">{{ page.title }}</a>
           </div>
         </li>
-        <li class="hidden sm:block">
+        <!-- <li class="hidden sm:block">
           <div v-if="page" class="flex items-center">
             <Icon
               name="heroicons-outline:chevron-right"
@@ -108,7 +95,7 @@ const pages = computed(() => {
               {{ page.title }}
             </a>
           </div>
-        </li>
+        </li> -->
       </ol>
     </nav>
   </ContentQuery>

@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@nuxt/image-edge",
     "@nuxtjs/i18n",
+    "@vueuse/nuxt",
   ],
   // https://color-mode.nuxtjs.org
   colorMode: {
@@ -26,6 +27,7 @@ export default defineNuxtConfig({
       theme: "dracula",
     },
   },
+  devtools: { enabled: true },
   image: {
     provider: "netlify",
   },
@@ -46,7 +48,6 @@ export default defineNuxtConfig({
     strategy: "prefix_except_default",
     langDir: "locales",
     defaultLocale: "cs",
-    // parsePages: false,
     detectBrowserLanguage: {
       alwaysRedirect: true,
       fallbackLocale: "",
@@ -57,18 +58,19 @@ export default defineNuxtConfig({
       cookieKey: "i18n_redirected",
       cookieSecure: false,
     },
+    parsePages: false,
     pages: {
       root: {
         cs: "/",
-        en: "/en",
+        en: "/en/",
       },
       services: {
         cs: "/sluzby",
-        en: "/services",
+        en: "/en/services",
       },
       about: {
         cs: "/o-mne",
-        en: "/about",
+        en: "/en/about",
       },
     },
   },
