@@ -50,25 +50,16 @@ function encodeData(data) {
 <template>
   <div class="not-prose my-8 sm:my-12 xl:my-16">
     <DivisionPill v-if="$slots.default">
-      <Markdown :use="$slots.default" unwrap="p" />
+      <MDCSlot :use="$slots.default" unwrap="p" />
     </DivisionPill>
-    <form
-      class="my-8 mx-auto max-w-screen-lg sm:my-12 xl:my-16"
-      :class="{ 'animate-shake': v.$error }"
-      name="contact-form"
-      method="post"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-      netlify
-      @submit.prevent="handleSubmit()"
-    >
+    <form class="my-8 mx-auto max-w-screen-lg sm:my-12 xl:my-16" :class="{ 'animate-shake': v.$error }"
+      name="contact-form" method="post" data-netlify="true" data-netlify-honeypot="bot-field" netlify
+      @submit.prevent="handleSubmit()">
       <input type="hidden" name="form-name" value="contact-form" />
       <ContactForm v-model="form" :validations="v" :large="true" />
       <div class="mt-8 justify-end sm:flex">
-        <button
-          type="submit"
-          class="bg-gradient-animated w-full rounded-md bg-gradient-to-r from-blue-700 via-blue-400 to-blue-500 px-4 py-2 text-base font-semibold text-white hover:bg-blue-700 sm:w-auto md:py-3 md:px-7 md:text-lg"
-        >
+        <button type="submit"
+          class="bg-gradient-animated w-full rounded-md bg-gradient-to-r from-blue-700 via-blue-400 to-blue-500 px-4 py-2 text-base font-semibold text-white hover:bg-blue-700 sm:w-auto md:py-3 md:px-7 md:text-lg">
           {{ $t("send") }}
         </button>
       </div>

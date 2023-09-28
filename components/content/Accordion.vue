@@ -88,44 +88,26 @@ const faqs = {
 <template>
   <section class="my-8 sm:my-12 xl:my-16">
     <DivisionPill v-if="$slots.default">
-      <Markdown :use="$slots.default" unwrap="p" />
+      <MDCSlot :use="$slots.default" unwrap="p" />
     </DivisionPill>
-    <dl
-      class="mx-auto my-8 max-w-screen-lg space-y-6 divide-y divide-gray-200 dark:divide-gray-600 sm:my-12"
-    >
-      <Disclosure
-        as="div"
-        v-for="faq in faqs[locale]"
-        :key="faq.question"
-        class="pt-6"
-        v-slot="{ open }"
-      >
+    <dl class="mx-auto my-8 max-w-screen-lg space-y-6 divide-y divide-gray-200 dark:divide-gray-600 sm:my-12">
+      <Disclosure as="div" v-for="faq in faqs[locale]" :key="faq.question" class="pt-6" v-slot="{ open }">
         <dt class="text-lg">
-          <DisclosureButton
-            class="group flex w-full items-start justify-between text-left text-gray-400"
-          >
+          <DisclosureButton class="group flex w-full items-start justify-between text-left text-gray-400">
             <span
-              class="font-semibold text-gray-700 transition-colors duration-150 ease-out group-hover:text-blue-700 dark:text-gray-200 dark:group-hover:text-blue-300"
-            >
+              class="font-semibold text-gray-700 transition-colors duration-150 ease-out group-hover:text-blue-700 dark:text-gray-200 dark:group-hover:text-blue-300">
               {{ faq.question }}
             </span>
             <span class="ml-6 flex h-7 items-center">
-              <Icon
-                name="heroicons-outline:chevron-down"
-                :class="[
-                  open ? '-rotate-180' : 'rotate-0',
-                  'h-6 w-6 transform',
-                ]"
-                aria-hidden="true"
-              />
+              <Icon name="heroicons-outline:chevron-down" :class="[
+                                open ? '-rotate-180' : 'rotate-0',
+                                'h-6 w-6 transform',
+                              ]" aria-hidden="true" />
             </span>
           </DisclosureButton>
         </dt>
         <DisclosurePanel as="dd" class="mt-2 pr-12">
-          <p
-            class="text-base text-gray-500 dark:text-gray-300"
-            v-html="faq.answer"
-          />
+          <p class="text-base text-gray-500 dark:text-gray-300" v-html="faq.answer" />
         </DisclosurePanel>
       </Disclosure>
     </dl>

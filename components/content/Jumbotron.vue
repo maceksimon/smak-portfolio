@@ -18,22 +18,15 @@ const { button1, button2, link1, link2 } = withDefaults(
 
 <template>
   <div class="mb-8 sm:mb-12">
-    <div
-      v-if="$slots.highlight"
-      class="mb-2 font-bold text-blue-700 dark:text-blue-300"
-    >
-      <Markdown :use="$slots.highlight" unwrap="p" />
+    <div v-if="$slots.highlight" class="mb-2 font-bold text-blue-700 dark:text-blue-300">
+      <MDCSlot :use="$slots.highlight" unwrap="p" />
     </div>
-    <h1
-      class="not-prose text-2xl font-extrabold tracking-tight text-gray-900 dark:text-gray-50 sm:text-3xl md:text-4xl"
-      :class="{}"
-    >
-      <Markdown :use="$slots.title" unwrap="p" />
+    <h1 class="not-prose text-2xl font-extrabold tracking-tight text-gray-900 dark:text-gray-50 sm:text-3xl md:text-4xl"
+      :class="{}">
+      <MDCSlot :use="$slots.title" unwrap="p" />
     </h1>
-    <div
-      class="mt-2 text-base font-light leading-loose text-gray-500 dark:text-gray-300 sm:max-w-xl sm:text-lg"
-    >
-      <Markdown :use="$slots.perex" unwrap="p" />
+    <div class="mt-2 text-base font-light leading-loose text-gray-500 dark:text-gray-300 sm:max-w-xl sm:text-lg">
+      <MDCSlot :use="$slots.perex" unwrap="p" />
     </div>
     <div v-if="button1 || button2" class="not-prose mt-6 sm:mt-10 sm:flex">
       <div class="rounded-md shadow">

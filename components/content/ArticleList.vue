@@ -10,7 +10,7 @@ const { data } = await useAsyncData("blog", () =>
 <template>
   <div class="my-8 sm:my-12">
     <DivisionPill v-if="$slots.default">
-      <Markdown :use="$slots.default" unwrap="p" />
+      <MDCSlot :use="$slots.default" unwrap="p" />
     </DivisionPill>
     <div class="not-prose">
       <div v-if="data?.length" class="grid divide-y">
