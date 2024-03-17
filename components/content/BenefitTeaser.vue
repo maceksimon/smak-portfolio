@@ -57,7 +57,7 @@ const features: ServiceTeaser[] = [
     </div>
     <div class="mt-8 rounded-lg bg-gray-900 py-8 sm:mt-12 sm:py-12 lg:mt-16">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl lg:max-w-none">
+        <div class="mx-auto max-w-2xl sm:max-w-none">
           <dl class="grid max-w-xl grid-cols-1 gap-x-12 gap-y-20 lg:max-w-none lg:grid-cols-2">
             <div v-for="feature in features" :key="feature.title" class="flex flex-col">
               <dt class="text-lg font-semibold leading-7 text-white">
