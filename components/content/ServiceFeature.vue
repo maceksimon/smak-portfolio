@@ -1,137 +1,3 @@
-<template>
-  <div class="not-prose overflow-hidden" :id="features[props.id].id">
-    <div class="relative lg:grid lg:grid-cols-3 lg:gap-x-8">
-      <div
-        v-if="features[props.id].claim"
-        class="mb-4 text-xl italic text-gray-400 dark:text-gray-600 sm:mb-6 sm:text-2xl lg:col-span-3 lg:mb-12 lg:text-6xl lg:text-gray-300"
-      >
-        {{ features[props.id].claim }}
-      </div>
-      <div class="lg:col-span-1">
-        <h2
-          class="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-3xl"
-        >
-          {{ features[props.id].title }}
-        </h2>
-        <div class="mt-4 text-lg text-gray-500 dark:text-gray-300">
-          {{ features[props.id].perex }}
-        </div>
-      </div>
-      <dl
-        class="mt-10 space-y-10 sm:grid sm:grid-cols-2 sm:gap-x-8 sm:gap-y-10 sm:space-y-0 lg:col-span-2 lg:mt-0"
-      >
-        <div
-          v-for="service in features[props.id].services"
-          :key="service.title"
-        >
-          <dt>
-            <div
-              :class="[
-                service.iconBackground,
-                service.iconForeground,
-                'flex h-12 w-12 items-center justify-center rounded-sm',
-              ]"
-            >
-              <Icon :name="service.icon" />
-            </div>
-            <p
-              class="mt-5 text-lg font-medium leading-6 text-gray-900 dark:text-gray-50"
-            >
-              {{ service.title }}
-            </p>
-          </dt>
-          <dd class="mt-2 text-base text-gray-500 dark:text-gray-300">
-            {{ service.description }}
-          </dd>
-        </div>
-      </dl>
-    </div>
-    <div class="py-12 lg:py-16">
-      <div>
-        <div
-          class="overflow-hidden rounded-lg border border-blue-100 shadow-sm dark:border-transparent lg:flex lg:max-w-none"
-        >
-          <div class="flex-1 bg-white px-6 py-8 dark:bg-gray-700 lg:p-12">
-            <h3
-              class="text-2xl font-bold text-gray-900 dark:text-gray-50 sm:text-3xl sm:tracking-tight"
-            >
-              Get this solution
-            </h3>
-            <p class="mt-6 text-base text-gray-500 dark:text-gray-300">
-              Get in touch to get a free consultation and a project proposal.
-            </p>
-            <div class="mt-8">
-              <div class="flex items-center">
-                <h4
-                  class="flex-shrink-0 bg-white pr-4 text-base font-semibold text-blue-700 dark:bg-gray-700 dark:text-blue-400"
-                >
-                  What's included
-                </h4>
-                <div
-                  class="flex-1 border-t-2 border-gray-200 dark:border-gray-500"
-                ></div>
-              </div>
-              <ul
-                role="list"
-                class="mt-8 space-y-5 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:gap-y-5 lg:space-y-0"
-              >
-                <li
-                  v-for="item in features[props.id].deliverables"
-                  :key="item"
-                  class="flex lg:col-span-1"
-                >
-                  <div class="flex-shrink-0">
-                    <!-- Heroicon name: solid/check-circle -->
-                    <Icon
-                      name="ph:check-circle-duotone"
-                      class="flex-shrink-0 flex-grow-0 text-blue-500"
-                    />
-                  </div>
-                  <div class="ml-3 text-gray-700 dark:text-gray-200">
-                    {{ item }}
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div
-            class="bg-blue-50 py-8 px-6 text-center dark:bg-blue-200/20 lg:flex lg:flex-shrink-0 lg:flex-col lg:justify-center lg:p-12"
-          >
-            <p
-              class="text-lg font-medium leading-6 text-gray-900 dark:text-gray-50"
-            >
-              Starts at
-            </p>
-            <div
-              class="mt-4 flex items-center justify-center text-5xl font-bold tracking-tight text-gray-900 dark:text-gray-50"
-            >
-              <span> {{ features[props.id].price }} </span>
-              <span
-                class="ml-3 text-xl font-medium tracking-normal text-gray-500 dark:text-gray-300"
-              >
-                USD
-              </span>
-            </div>
-            <p class="mt-4 text-sm text-gray-500 dark:text-gray-300">
-              Final price is based on client's individual needs.
-            </p>
-            <div class="mt-6">
-              <div class="rounded-md shadow">
-                <button
-                  @click.prevent="toggleModal(features[props.id].id)"
-                  class="flex w-full items-center justify-center rounded-md border border-transparent bg-blue-600 px-5 py-3 text-base font-semibold text-white transition-colors duration-150 ease-out hover:bg-blue-700"
-                >
-                  Get started
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
-
 <script setup>
 const props = defineProps({
   id: { type: String, default: "" },
@@ -303,3 +169,137 @@ const features = {
   },
 };
 </script>
+
+<template>
+  <div class="not-prose overflow-hidden" :id="features[props.id].id">
+    <div class="relative lg:grid lg:grid-cols-3 lg:gap-x-8">
+      <div
+        v-if="features[props.id].claim"
+        class="mb-4 text-xl italic text-gray-400 dark:text-gray-600 sm:mb-6 sm:text-2xl lg:col-span-3 lg:mb-12 lg:text-6xl lg:text-gray-300"
+      >
+        {{ features[props.id].claim }}
+      </div>
+      <div class="lg:col-span-1">
+        <h2
+          class="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-3xl"
+        >
+          {{ features[props.id].title }}
+        </h2>
+        <div class="mt-4 text-lg text-gray-500 dark:text-gray-300">
+          {{ features[props.id].perex }}
+        </div>
+      </div>
+      <dl
+        class="mt-10 space-y-10 sm:grid sm:grid-cols-2 sm:gap-x-8 sm:gap-y-10 sm:space-y-0 lg:col-span-2 lg:mt-0"
+      >
+        <div
+          v-for="service in features[props.id].services"
+          :key="service.title"
+        >
+          <dt>
+            <div
+              :class="[
+                service.iconBackground,
+                service.iconForeground,
+                'flex h-12 w-12 items-center justify-center rounded-sm',
+              ]"
+            >
+              <Icon :name="service.icon" />
+            </div>
+            <p
+              class="mt-5 text-lg font-medium leading-6 text-gray-900 dark:text-gray-50"
+            >
+              {{ service.title }}
+            </p>
+          </dt>
+          <dd class="mt-2 text-base text-gray-500 dark:text-gray-300">
+            {{ service.description }}
+          </dd>
+        </div>
+      </dl>
+    </div>
+    <div class="py-12 lg:py-16">
+      <div>
+        <div
+          class="overflow-hidden rounded-lg border border-blue-100 shadow-sm dark:border-transparent lg:flex lg:max-w-none"
+        >
+          <div class="flex-1 bg-white px-6 py-8 dark:bg-gray-700 lg:p-12">
+            <h3
+              class="text-2xl font-bold text-gray-900 dark:text-gray-50 sm:text-3xl sm:tracking-tight"
+            >
+              Get this solution
+            </h3>
+            <p class="mt-6 text-base text-gray-500 dark:text-gray-300">
+              Get in touch to get a free consultation and a project proposal.
+            </p>
+            <div class="mt-8">
+              <div class="flex items-center">
+                <h4
+                  class="flex-shrink-0 bg-white pr-4 text-base font-semibold text-blue-700 dark:bg-gray-700 dark:text-blue-400"
+                >
+                  What's included
+                </h4>
+                <div
+                  class="flex-1 border-t-2 border-gray-200 dark:border-gray-500"
+                ></div>
+              </div>
+              <ul
+                role="list"
+                class="mt-8 space-y-5 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:gap-y-5 lg:space-y-0"
+              >
+                <li
+                  v-for="item in features[props.id].deliverables"
+                  :key="item"
+                  class="flex lg:col-span-1"
+                >
+                  <div class="flex-shrink-0">
+                    <!-- Heroicon name: solid/check-circle -->
+                    <Icon
+                      name="ph:check-circle-duotone"
+                      class="flex-shrink-0 flex-grow-0 text-blue-500"
+                    />
+                  </div>
+                  <div class="ml-3 text-gray-700 dark:text-gray-200">
+                    {{ item }}
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="bg-blue-50 py-8 px-6 text-center dark:bg-blue-200/20 lg:flex lg:flex-shrink-0 lg:flex-col lg:justify-center lg:p-12"
+          >
+            <p
+              class="text-lg font-medium leading-6 text-gray-900 dark:text-gray-50"
+            >
+              Starts at
+            </p>
+            <div
+              class="mt-4 flex items-center justify-center text-5xl font-bold tracking-tight text-gray-900 dark:text-gray-50"
+            >
+              <span> {{ features[props.id].price }} </span>
+              <span
+                class="ml-3 text-xl font-medium tracking-normal text-gray-500 dark:text-gray-300"
+              >
+                USD
+              </span>
+            </div>
+            <p class="mt-4 text-sm text-gray-500 dark:text-gray-300">
+              Final price is based on client's individual needs.
+            </p>
+            <div class="mt-6">
+              <div class="rounded-md shadow">
+                <button
+                  @click.prevent="toggleModal(features[props.id].id)"
+                  class="flex w-full items-center justify-center rounded-md border border-transparent bg-blue-600 px-5 py-3 text-base font-semibold text-white transition-colors duration-150 ease-out hover:bg-blue-700"
+                >
+                  Get started
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

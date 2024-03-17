@@ -1,5 +1,5 @@
 ---
-head.title: Fellow Creatures Store
+head.title: Obchod dobrot - vývoj e-shopu s veganskou čokoládou
 head.description: Find out how I developed the e-commerce website on Shopify that sells vegan chocolates.
 head.image: /image/portfolio/fellow-creatures.jpg
 fields.image: /image/portfolio/fellow-creatures.jpg
@@ -9,54 +9,41 @@ featured: true
 type: "full"
 ---
 
-# Tasty treat: Designing a vegan chocolate eshop
+# **Obchod dobrot:** <br />Vývoj e-shopu s veganskou čokoládou.
 
-Building an e-commerce website from scratch might not sound like an easy task. However, having an experienced guide can make it into an exciting and fun project.
+_Jak vyrobit e-shop pro kamaráda, který právě rozjel byznys?_
 
-## The e-commerce journey
+## Pro koho? Pro Zsolta
 
-This is how the journey started for me. Unsurprisingly, it was with a client...
+Tentokrát jsem spolupracoval se Zsoltem, kamarádem ze studií v Edinburghu v Británii. Zsolt se zhlédl ve světě podnikání, a protože jeho hlavním zájmem byla reklamní fotografie a branding, pustil se po hlavě do vlastního projektu.
 
-### Having a great client helps
+Protože je sám vegan, rozhodl se stát se čokoládovým baronem a svoji **veganskou edici čokolád** prodávat ve velkém na internetu. Vytvořil ilustrace postaviček, z nichž každá symbolizuje svým charakterem jednu čokoládovou příchuť, a sehnal fotografy, kteří z barevných celofánových obalů stvořili překrásnou barevnou paletu obrazů. Ta má na mlsné zákazníky podobný efekt jako rozkvetlý záhon na roj včel.
 
-Zsolt is good friend of mine and a great mind for business. When he asked me to make his website, I went for it, even thought I had little experience with Shopify development.
+![Ukázka produktu na webu Fellow Creatures](/image/portfolio/fellow-creatures/fellowcreatures-product.webp)
 
-### Testing the waters
+## Velké plány aneb minimální zadání
 
-Our first theme was built on top of a free theme and I would edit it so that it would suit Zsolt's needs as well as it could. However, there was still a need for a more specific layout and fine-grain control over the individual elements, so I decided to rebuild the theme from scratch.
+Zsolt má velký smysl pro detail a komunikaci vizuální identity. Zásadní pro něj bylo, aby jeho brand **vypadal podle jeho představ**. Web jsme připravili podle "moodboardu" - referencí jeho oblíbených stránek. Dnes už bych určitě trval na přesné specifikaci designu, ale před lety, když jsem s vývojem stránek začínal, bylo všechno trochu víc na punk a nevadilo mi zkoušet různé návrhy přímo ve vývoji.
 
-This is how the current iteration came to be. The shop is designed with liquid templates and advanced functionality is added with JavaScript. This includes login modal windows. Cart panel that slides from the right. Adding to your cart and updating the items through Ajax (without reloading the page), and many other details that make the shopping experience so much smoother.
+Obchod jsme stavěli na [Shopify](https://www.shopify.com/), e-shopové platformě podobné [Shoptetu](https://www.shoptet.cz/), která je populární v anglicky mluvících zemí. Je placená měsíčním poplatkem, ale nabízí za to robustní řešení pro seriózní e-shopy a velkou knihovnu šablon a rozšíření. Shopify nabízí některé základní šablony zdarma a jiné placené. Zsoltova vize ale vyžadovala aby se jeho obchod lišil od všech ostatních, takže naším řešením byl **vývoj šablony na míru**.
 
-### Apps can be your friends
+![Ukázka webu Fellow Creatures na mobilu](/image/portfolio/fellow-creatures/fellowcreatures-homepage-mobile.webp)
 
-Additionally, there was the need to integrate several key apps.
+## Jak do toho? Učit se
 
-- [Recharge Subscriptions](https://apps.shopify.com/subscription-payments) for the ability to sell subscription products
-- [Advanced Custom Fields](https://apps.shopify.com/advanced-custom-field) for adding a bunch of important information about the products
-- [Connected Inventory](https://apps.shopify.com/connected-inventory) for the ability to sell products in bundles
-- [Customer Reviews](https://apps.shopify.com/product-reviews) for loads of stars
-- [Order Printer](https://apps.shopify.com/order-printer) for easily printing the package labels and receipts
+Mým hlavním úkolem bylo aby web nejen dobře vypadal, ale také **spolehlivě fungoval**. Do šablony e-shopu jsem přidal možnost vkládání do košíku pomocí metody Ajax (bez obnovení stránky). Také jsem stránku upravil tak, aby se košík přehledně vypisoval ve vyjížděcím interaktivním panelu na pravé straně. Vše pomocí Javascriptu, konkrétně mini-frameworku [Alpine.js](https://alpinejs.dev/).
 
-For Recharge Subscription, I made sure that the subscription products are added to cart with the correct monthly billing information. I also implemented a **one-click checkout** for quick and smooth buys.
+Pro vývoj jsem se naučil šablonovací jazyk [Liquid](https://shopify.github.io/liquid/), obdobu oblíbeného [Twigu](https://twig.symfony.com/), alternativy k [PHP](https://www.php.net/). Pomocí Liquid lze postavit šablonu na míru, tak aby vypisovala konkrétní produkty a skupiny produktů, a aby byly různé **části e-shopu plně editovatelné**. Díky tomu Zsolt nemusí každou změnu řešit se mnou nebo jiným developerem, ale může nové produkty, fotografie nebo texty přidávat i sám.
 
-Advanced Custom Fields are used mainly for product pages where different types of information is necessary. Products can have a list of ingredients, additional images, custom description for body text and other features.
+Pomocí několika důležitých rozšíření jsem dokázal přidat možnost **pravidelných objednávek**, tak aby členové choco-klubu byli zásobováni svými sladkými nezbytnostmi každý měsíc. Vytvořil jsem možnost nákupů s rozličnými slevami, a výběru příchutí v balíčku.
 
-Connected Inventory is vital if you want to sell your products in bundles. It allows you to link different products so that a box of five different chocolates registers in the stock quantity of the individual products. I have set up these relationships for the bundle products so that the numbers always match.
+![Ukázka webu Fellow Creatures na mobilu](/image/portfolio/fellow-creatures/fellowcreatures-product-mobile.webp)
 
-Customer Reviews is pretty self explanatory. The key element here is the design. It was important to get the style of the reviews to match the overall theme of the shop.
+## A co teď?
 
-For Order Printer I designed custom labels which were made exactly for particular label sheets. This allows to simply print the labels and streamlines the process of packaging and posting.
+E-shop Fellow Creatures už několik let zajišťuje stabilní odbyt Zsoltových čokolád. Pomohl mu vystavět jeho značku a expandovat do zahraničí. Fellow Creatures prodávají do Britských nákupních řetězců, ale např. i do Jižní Koreji. Jeho webový obchod stále pomáhám udržovat a rozvíjet.
 
-### Images? Large but light
-
-An important requirement for Fellow Creatures was image optimization. As the shop uses large images and gifs, it was essential to optimize them to make the shop load fast.
-
-I use [Bulk Image Resizer](https://bulkresizephotos.com/) and [Tiny PNG](https://tinypng.com/) for optimizing images in advance. However, I also implement a solution which serves different sized images on different devices. On mobile, you might only need a 400x300 image, so why load 1920x1080? This greatly improves the performance for mobile shoppers.
-
-Another important aspect of the Fellow Creatures brand was a fun and playful design. This includes the use of moving elements and images. I have designed an animated SVG strip on the homepage and a logo slider. Also, try going to the [shop page](https://www.fellowcreatures.co.uk/collections/frontpage) and hovering over a product. The image starts moving in a loop! These small touches are really what makes a website special.
-
-## Final thoughts
-
-All this work was worth it in my eyes. Zsolt is very happy with the site, it generates revenue, and we continue to work on further ideas and improvements.
-
-Visit the store on [FellowCreatures.co.uk](https://www.fellowcreatures.co.uk/).
+::alert{icon="ph:eye-duotone"}
+#title
+Obchod si můžete prohlédnout na [www.fellowcreatures.co.uk](https://www.fellowcreatures.co.uk).
+::

@@ -1,0 +1,21 @@
+{
+  "home": "Domů",
+  "send": "Odeslat",
+  "social": {
+    "twitter": "Zobrazit Twitter účet",
+    "github": "Zobrazit GitHub účet"
+  },
+  "contactForm": {
+    "labelName": "Vaše jméno",
+    "labelEmail": "E-mail",
+    "labelMessage": "Zpráva"
+  },
+  "projectFeature": {
+    "selectedProject": "Vybraný projekt",
+    "lookCloser": "Podívat se blíž",
+    "alertMissingData": "No portfolio item found. Try changing the parameters."
+  },
+  "benefitTeaser": {
+    "button": "Přečtěte si o dalších výhodách"
+  }
+}

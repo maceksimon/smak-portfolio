@@ -1,13 +1,15 @@
-import { defineNuxtConfig } from "nuxt";
+import { defineNuxtConfig } from "nuxt/config";
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
-  target: "static",
+  ssr: true,
   modules: [
     "@nuxt/content",
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
     "@nuxt/image-edge",
+    "@nuxtjs/i18n",
+    "@vueuse/nuxt",
   ],
   // https://color-mode.nuxtjs.org
   colorMode: {
@@ -16,17 +18,61 @@ export default defineNuxtConfig({
   // https://content.nuxtjs.org
   content: {
     // note that this option has multiple effects https://content.nuxtjs.org/guide/writing/document-driven
-    documentDriven: true,
+    documentDriven: false,
     navigation: {
-      fields: ["navTitle"],
+      fields: ["navTitle", "language"],
     },
     highlight: {
       // See the available themes on https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-theme
       theme: "dracula",
     },
   },
+  devtools: { enabled: true },
   image: {
     provider: "netlify",
+  },
+  i18n: {
+    locales: [
+      {
+        code: "cs",
+        iso: "cs-CZ",
+        file: "cs-CZ.json",
+      },
+      {
+        code: "en",
+        iso: "en-US",
+        file: "en-US.json",
+      },
+    ],
+    customRoutes: "config",
+    strategy: "prefix_except_default",
+    langDir: "locales",
+    defaultLocale: "cs",
+    detectBrowserLanguage: {
+      alwaysRedirect: true,
+      fallbackLocale: "",
+      redirectOn: "root",
+      useCookie: true,
+      cookieCrossOrigin: false,
+      cookieDomain: null,
+      cookieKey: "i18n_redirected",
+      cookieSecure: false,
+    },
+    parsePages: false,
+    pages: {
+      root: {
+        cs: "/",
+        en: "/en/",
+      },
+      services: {
+        cs: "/sluzby",
+        en: "/en/services",
+      },
+      about: {
+        cs: "/o-mne",
+        en: "/en/about",
+      },
+    },
   },
   build: {
     transpile: ["@headlessui/vue"],

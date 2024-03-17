@@ -1,0 +1,16 @@
+{
+  "home": "Home",
+  "send": "Send",
+  "social": {
+    "twitter": "Display Twitter account",
+    "github": "Display GitHub account"
+  },
+  "contactForm": {
+    "labelName": "Your name",
+    "labelEmail": "Your e-mail",
+    "labelMessage": "Message"
+  },
+  "benefitTeaser": {
+    "button": "Read more about the benefits"
+  }
+}

@@ -1,4 +1,4 @@
-<!-- This component is used to show Markdown code block examples -->
+<!-- This component is used to show MDCSlot code block examples -->
 <template>
-  <pre><Markdown :use="$slots.default" unwrap="p" /></pre>
+  <pre><MDCSlot :use="$slots.default" unwrap="p" /></pre>
 </template>

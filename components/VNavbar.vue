@@ -1,3 +1,35 @@
+<script setup>
+import { Popover, PopoverButton, PopoverPanel } from "@headlessui/vue";
+
+const toggleModal = inject("toggleModal");
+
+const { locale } = useI18n();
+const query = queryContent().where({ language: "en" }).find();
+let { data } = await useAsyncData("navigation", () =>
+  fetchContentNavigation(query)
+);
+
+// localize navigation
+let navigation = [];
+let localeSubtree = null;
+
+// if default locale
+const isDefaultLocale = computed(() => {
+  return locale.value === "cs";
+});
+
+if (isDefaultLocale.value) {
+  navigation = data.value.filter((link) => {
+    return link.language === "cs";
+  });
+} else {
+  [localeSubtree] = data.value.filter((link) => {
+    return link.language === locale.value;
+  });
+  navigation = localeSubtree.children;
+}
+</script>
+
 <template>
   <div class="bg-blue-700">
     <Popover>
@@ -32,17 +64,9 @@
           class="mx-auto hidden w-full max-w-5xl items-center sm:px-8 md:flex md:justify-between"
         >
           <!-- Navigation -->
-          <div class="text-gray-100">
-            <NuxtLink
-              v-for="link of navigation"
-              :key="link._path"
-              :to="link._path"
-              active-class="font-bold"
-              class="mr-4 md:mr-6 lg:mr-8"
-              :data-text="link.navTitle || link.title"
-            >
-              {{ link.navTitle || link.title }}
-            </NuxtLink>
+
+          <div class="flex flex-wrap gap-4 text-gray-100 md:gap-6 lg:gap-8">
+            <VMenuLink v-for="link in navigation" :link="link" />
           </div>
           <!-- Social icons & Color Mode -->
           <div
@@ -56,21 +80,9 @@
               <Icon name="mi:email" class="h-5 w-auto text-blue-600" />
               <span class="ml-2 text-sm font-semibold">Contact Me</span>
             </button>
-            <a
-              href="https://twitter.com/maceksimondev"
-              title="Twitter"
-              class="hover:text-white"
-            >
-              <Icon name="fa-brands:twitter" />
-            </a>
-            <a
-              href="https://github.com/maceksimon"
-              title="GitHub"
-              class="hover:text-white"
-            >
-              <Icon name="fa-brands:github" />
-            </a>
+            <SocialIcons />
             <ColorModeSwitch class="hover:text-white" />
+            <LanguageSwitch />
           </div>
         </div>
       </nav>
@@ -103,34 +115,20 @@
               </div>
             </div>
             <div class="px-2 pt-2 pb-3">
-              <NuxtLink
+              <VMenuLink
                 v-for="link of navigation"
                 :key="link._path"
-                :to="link._path"
+                :link="link"
                 active-class="font-bold"
                 class="menu-link dark:hover-bg-gray-500 dark:hover-text-white block rounded-md px-3 py-2 text-base text-gray-700 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-200"
                 @click="close()"
-              >
-                {{ link.navTitle || link.title }}
-              </NuxtLink>
+              />
               <div class="space-x-3 px-3 py-2 text-gray-500 transition">
-                <a
-                  href="https://twitter.com/maceksimondev"
-                  title="Twitter"
-                  class="hover:text-gray-700 dark:hover:text-gray-300"
-                >
-                  <Icon name="fa-brands:twitter" />
-                </a>
-                <a
-                  href="https://github.com/maceksimon"
-                  title="GitHub"
-                  class="hover:text-gray-700 dark:hover:text-gray-300"
-                >
-                  <Icon name="fa-brands:github" />
-                </a>
+                <SocialIcons />
                 <ColorModeSwitch
                   class="hover:text-gray-700 dark:hover:text-gray-300"
                 />
+                <LanguageSwitch />
               </div>
             </div>
           </div>
@@ -139,14 +137,6 @@
     </Popover>
   </div>
 </template>
-
-<script lang="ts" setup>
-import { Popover, PopoverButton, PopoverPanel } from "@headlessui/vue";
-
-const toggleModal = inject("toggleModal");
-
-const { navigation } = useContent();
-</script>
 
 <style lang="postcss">
 .menu-link::after {

@@ -1,3 +1,30 @@
+<script setup>
+const props = defineProps({
+  name: {
+    type: String,
+    default: "",
+  },
+  role: {
+    type: String,
+    default: "",
+  },
+  image: {
+    type: String,
+    default: "",
+  },
+  twitterUrl: {
+    type: String,
+    default: "",
+  },
+  linkedinUrl: {
+    type: String,
+    default: "",
+  },
+});
+
+const { name, role, image, twitterUrl, linkedinUrl } = props;
+</script>
+
 <template>
   <div
     class="not-prose my-8 flex flex-col space-y-4 sm:my-12 sm:flex-row sm:space-y-0 sm:space-x-8 xl:my-16"
@@ -41,30 +68,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-const props = defineProps({
-  name: {
-    type: String,
-    default: "",
-  },
-  role: {
-    type: String,
-    default: "",
-  },
-  image: {
-    type: String,
-    default: "",
-  },
-  twitterUrl: {
-    type: String,
-    default: "",
-  },
-  linkedinUrl: {
-    type: String,
-    default: "",
-  },
-});
-
-const { name, role, image, twitterUrl, linkedinUrl } = props;
-</script>

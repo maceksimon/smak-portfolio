@@ -1,40 +1,48 @@
 ---
-head.title: Upupaepop
-head.description: Redesigning a Wix site and switching to an open source e-commerce? Piece of cake! 🍰
+head.title: Studio Upupaepop
+head.description: Pro hradecké designové studio jsem připravil web, který teď skvěle funguje i jako internetový obchod.
 head.image: /image/portfolio/upupaepop.jpg
 fields.image: /image/portfolio/upupaepop.jpg
 fields.order: 200
 fields.skills: ["WordPress", "WooCommerce"]
 featured: true
 type: "full"
+rive.mockup: "https://rive.app/s/wi2V2T55e0KhmeUyjB4HMQ/embed"
 ---
 
-# Letterpress in WordPress: Print studio portfolio
+# **Letterpress na WordPressu:** <br>Stránky studia Upupaepop
 
-Building a web for a designer and typographer is a wonderful experience. Not only you get to implement a beautiful design, you also learn a lot during the process!
+_Jak se vyrábějí stránky pro grafiky?_
 
-## Client
+## Grafické duo
 
-Jakub is a graphic designer and a typographer and together with his wife he owns a small printing studio. This project was focused on updating the studio's website.
+Jakub Horský je typograf a grafický designér. Eva ilustrátorka a grafička. Společně tvoří kreativní studio Upupaepop, které se už zapsalo do vizuální paměti české knižní a výtvarné scény mnoha projekty. S kubou sdílíme podobný vizuální styl, ale třeba i lásku k Estonsku a nechuť k fotbalu.
 
-Jakub wanted to **cut down on the maintenance costs** of his old Wix site and combine his web with an eshop. The task was relatively simple, but the webdesign studios and online marketing agencies offered rates that far exceeded the budget. Instead, I managed to offer a **collaboration that was flexible and adaptable**, and I was able to deliver the project at much lower price.
+Starý web studia fungoval na platformě Wix, kde za něj bylo nutné každoročně platit, nesplňoval požadavky rychlosti, a neumožňoval integraci e-shopu. Kuba s Evou hledali **jednoduché low-cost řešení**, které by usnadnilo prezentaci, a distribuci jejich prací.
 
-## Graphics
+![E-shop webu Upupaepop](/image/portfolio/upupaepop/upupaepop-eshop.webp)
 
-Jakub created a simple design that fit his needs. He focused on clean presentation with interesting fonts and a couple of graphic elements, such as the "scroll-to-top" navigation hand at the bottom of the page, or a separator above the menu. The key part was **precision** in transferring the design to the WordPress template.
+## WordPress neboli "Slovotisk"
 
-We decided to customize a [Pinecone](https://themeforest.net/item/pinecone-creative-portfolio-and-blog-for-agency/13200056) theme from Theme Forest. By **creating a child theme**, I was able to apply all the customizations necessary, while preserving the original theme code. This is important in case that the theme needs update - changes made in the original theme would then be _lost forever_!
+Řešením se nakonec stal [WordPress](https://wordpress.com/) web s pluginem [WooCommerce](https://woocommerce.com/). V zájmu efektivity jsme zvolili úpravu existující šablony. Díky tomu jsem zvládl **grafické úpravy dokončit v řádech hodin**. Pomohlo i to, že Kuba měl přesnou vizi o výsledné podobě, a že se sám zhostil sazečských prací a plnění webu.
 
-## Image optimization
+Těžiště webu leží v **bohatém grafickém materiálu**, kterým se prezentuje každý z projektů v portfoliu. Cílem bylo propojit portfolio s e-shopem, tak aby Kuba s Evou mohli přijímat a odbavovat objednávky přímo na webu.
 
-Another important requirement was image optimization. The studio's portfolio is quite image-heavy and **serving the right image sizes in the right quality and format** is therefore crucial for the website's performance. I integrated the [Cloudinary](https://cloudinary.com/) service into the WordPress theme, so that all images loaded into the media gallery get processed, cached and served in the right format and size. This improved the performance greatly, even when viewing a whole set of full-screen images.
+![E-shop webu Upupaepop na mobilu](/image/portfolio/upupaepop/upupaepop-eshop-mobile.webp)
 
-## E-commerce
+## Realizace
 
-Finally, the website was also intended to sell the studio products. I integrated and set up [WooCommerce](https://woocommerce.com/) to easily enable the functionality. I customized the shipping and payment options according to Jakub's needs and **integrated a payment gateway** to allow customers to pay by card. Since then the studio receives the orders directly into their mailbox and all the processing can be done from the website's administration.
+Prvním úkolem bylo rozjet e-shop na WordPressu. Naštěstí, jednoduchý malý e-shop lze vytvořit se základní verzí WooCommerce poměrně snadno. Samozřejmě nemá mnoho doplňkových funkcí (napojení na Zásilkovnu, srovnávače zboží apod.) ale pro udržování menšího obchodu je to ideální řešení. E-shop jsem spustil a nastavil, včetně **integrace platební brány a způsobů dopravy**. Kuba si pak mohl sám doplnit informace o produktech.
 
-By utilizing open source software, pre-built theme, and services which offer free plans, we were able to keep the project cost very low while producing high-quality deliverables. I assisted Jakub with all the necessary steps, such as **changing the hosting service, updating domain records, and setting up WooCommerce**. I also gave him a thorough walk-through of the admin environment and made sure he was comfortable with using the web on his own. This way, Jakub was able to focus on updating his portfolio with beautiful images and descriptions, while I was taking care of the technical details.
+Hlavní součástí webu je obsáhlá fotogalerie projektů. Zároveň Kuba s Evou chtěli aby web běžel rychle jako štíhlá laň. K tomu byla potřeba **optimalizace obrázků**, tentokrát řešená přes službu [Cloudinary](https://cloudinary.com/), která uživatelům poskytuje štědrý bezplatný plán a jednoduchou integraci do WordPress. Umožňuje automaticky komprimovat obrázky nahrané na web a vykreslovat je v moderních formátech. To výrazně šetří čas i objem dat uživatelů.
 
-The collaboration worked out great. Jakub is fond of his new website and we continue working together on other website projects.
+![Hlavní stránka webu Upupaepop](/image/portfolio/upupaepop/upupaepop-homepage.webp)
 
-Read up on the studio projects on [Upupaepop.cz](https://upupaepop.cz/).
+## Černé na bílém
+
+Web Upupaepop se prohání po internetu už přes dva roky. Pomáhá Kubovi a Evě představovat nové projekty, a generuje zisk prodejem jejich knih a tištěných prací. Ještě důležitější pro mě ale je, že s Kubou dál spolupracujeme na nových projektech, jako je např. web Kláštera v Opočně. Vládne spokojenost a zítřky jsou zářivé.
+
+::alert{icon="ph:eye-duotone"}
+#title
+Web je k vidění na [www.upupaepop.cz](https://www.upupaepop.cz).
+::

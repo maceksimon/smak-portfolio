@@ -1,37 +1,7 @@
-<template>
-  <div class="flex min-h-screen flex-col">
-    <Html lang="en" />
-    <Link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <Link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <Link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <Link rel="manifest" href="/site.webmanifest" />
-    <Link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-    <Meta name="msapplication-TileColor" content="#da532c" />
-    <Meta name="theme-color" content="#ffffff" />
-    <Meta property="og:image" content="/image/og-default.jpg" />
-    <Meta name="twitter:card" content="summary_large_image" />
-    <Navbar />
-    <NuxtPage class="flex grow flex-col" />
-    <TheFooter />
-    <ContactModal />
-    <form
-      name="contact-form"
-      data-netlify="true"
-      netlify
-      netlify-honeypot="bot-field"
-      hidden
-    >
-      <input type="text" name="name" />
-      <input type="text" name="email" />
-      <input type="radio" name="job" />
-      <textarea name="message"></textarea>
-    </form>
-  </div>
-</template>
-
 <script setup>
 import useVuelidate from "@vuelidate/core";
-import { required, email, minLength } from "@vuelidate/validators";
+import { required, email, minLength, helpers } from "@vuelidate/validators";
+const { locale } = useI18n();
 
 useHead({
   titleTemplate: (title) =>
@@ -55,25 +25,20 @@ const form = reactive({
   service: "",
 });
 
+const requiredMessage = locale.value === "cs" ? "Povinné pole" : "Required";
+const emailMessage =
+  locale.value === "cs" ? "Neplatný e-mail" : "Invalid email";
+const minLengthMessage =
+  locale.value === "cs" ? "Musí být delší než jedno písmeno" : "Too short";
+
 const rules = {
-  // "name": {
-  //   required: helpers.withMessage("Povinné pole", required),
-  //   minLength: helpers.withMessage(
-  //     "Musí být delší než jedno písmeno",
-  //     minLength(1)
-  //   ),
-  // },
-  // "email": {
-  //   required: helpers.withMessage("Povinné pole", required),
-  //   email: helpers.withMessage("Neplatný e-mail", email),
-  // },
   name: {
-    required: required,
-    minLength: minLength(1),
+    required: helpers.withMessage(requiredMessage, required),
+    minLength: helpers.withMessage(minLengthMessage, minLength(1)),
   },
   email: {
-    required: required,
-    email: email,
+    required: helpers.withMessage(requiredMessage, required),
+    email: helpers.withMessage(emailMessage, email),
   },
 };
 
@@ -97,7 +62,41 @@ provide("formSubmitted", formSubmitted);
 provide("formError", formError);
 </script>
 
+<template>
+  <div class="flex min-h-screen flex-col">
+    <Html lang="en" />
+    <Link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <Link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <Link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <Link rel="manifest" href="/site.webmanifest" />
+    <Link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <Meta name="msapplication-TileColor" content="#da532c" />
+    <Meta name="theme-color" content="#ffffff" />
+    <Meta property="og:image" content="/image/og-default.jpg" />
+    <Meta name="twitter:card" content="summary_large_image" />
+    <VNavbar />
+    <NuxtPage class="flex grow flex-col" />
+    <TheFooter />
+    <ContactModal />
+    <form
+      name="contact-form"
+      data-netlify="true"
+      netlify
+      netlify-honeypot="bot-field"
+      hidden
+    >
+      <input type="text" name="name" />
+      <input type="text" name="email" />
+      <input type="radio" name="job" />
+      <textarea name="message"></textarea>
+    </form>
+  </div>
+</template>
+
 <style lang="postcss">
+html {
+  scroll-behavior: smooth;
+}
 body {
   @apply bg-gray-100;
 }
@@ -127,5 +126,13 @@ body {
 }
 .bg-gradient-animated:hover {
   background-position: 100% 0;
+}
+
+h1 > strong,
+b {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @apply bg-gradient-to-r from-orange-600 via-orange-300 to-orange-400;
 }
 </style>
